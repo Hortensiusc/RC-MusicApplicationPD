@@ -1,4 +1,4 @@
-#N canvas 580 200 497 301 10;
+#N canvas 580 200 635 446 10;
 #X obj 33 61 SuperGuts/MainLoops;
 #X obj 33 32 SuperGuts/MainDrums;
 #X text 31 15 Drums/Synth/Input and Effects;
@@ -9,6 +9,7 @@
 #X obj 248 154 print;
 #X floatatom 248 123 5 0 0 0 - - - 0;
 #X text 52 212 hola k tal;
+#X text 207 277 a ver como va esto;
 #X connect 1 0 0 0;
 #X connect 4 0 5 0;
 #X connect 7 0 6 0;
