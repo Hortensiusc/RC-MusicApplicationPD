@@ -1,4 +1,4 @@
-#N canvas -1847 33 646 249 10;
+#N canvas 26 492 480 158 10;
 #X obj 33 61 SuperGuts/MainLoops;
 #X obj 33 32 SuperGuts/MainDrums;
 #X text 31 15 Drums/Synth/Input and Effects;
@@ -6,6 +6,6 @@
 #X obj 222 25 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000;
 #X obj 222 70 s stopStuff;
-#X obj 349 28 page4;
+#X obj 313 25 page4;
 #X connect 1 0 0 0;
 #X connect 4 0 5 0;
