@@ -1,4 +1,4 @@
-#N canvas 127 53 1505 885 12;
+#N canvas 112 57 1649 885 12;
 #X obj 9 -80 cnv 15 1280 768 empty empty empty 20 12 0 14 #e0e0e0 #404040
 0;
 #X obj 69 290 vradio 30 1 0 4 \$0-speedgrid empty SPEED 0 -8 0 10 #fcfcfc
@@ -24,11 +24,11 @@
 #X connect 7 0 3 0;
 #X connect 8 0 4 0;
 #X restore 1295 -74 pd recievesFromGUI;
-#X obj 78 113 vsl 15 128 60 180 0 0 \$0-bpm-in empty empty 0 -9 0 10
+#X obj 78 113 vsl 15 128 60 180 0 0 \$0-bpm-in empty BPM 0 -9 0 10
 #fcfcfc #000000 #000000 0 1;
-#X obj 458 378 tgl 25 0 \$0-stepAct-0-0-s \$0-stepAct-0-0-r empty 17
+#X obj 464 376 tgl 25 0 \$0-stepAct-0-0-s \$0-stepAct-0-0-r empty 17
 7 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 594 313 hradio 30 1 0 16 empty step-number empty 0 -8 0 10 #fcfcfc
+#X obj 454 286 hradio 46 1 0 16 empty step-number empty 0 -8 0 10 #fcfcfc
 #000000 #000000 0;
 #N canvas 223 87 1193 764 triggerActivations 0;
 #N canvas 495 23 450 300 packActivations 0;
@@ -416,101 +416,101 @@
 #X connect 70 0 18 2;
 #X connect 71 0 18 3;
 #X restore 1295 -46 pd triggerActivations;
-#X obj 504 378 tgl 25 0 \$0-stepAct-0-1-s \$0-stepAct-0-1-r empty 17
+#X obj 510 376 tgl 25 0 \$0-stepAct-0-1-s \$0-stepAct-0-1-r empty 17
 7 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 550 378 tgl 25 0 \$0-stepAct-0-2-s \$0-stepAct-0-2-r empty 17
+#X obj 556 376 tgl 25 0 \$0-stepAct-0-2-s \$0-stepAct-0-2-r empty 17
 7 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 596 378 tgl 25 0 \$0-stepAct-0-3-s \$0-stepAct-0-3-r empty 17
+#X obj 602 376 tgl 25 0 \$0-stepAct-0-3-s \$0-stepAct-0-3-r empty 17
 7 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 642 378 tgl 25 0 \$0-stepAct-0-4-s \$0-stepAct-0-4-r empty 17
+#X obj 648 376 tgl 25 0 \$0-stepAct-0-4-s \$0-stepAct-0-4-r empty 17
 7 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 688 378 tgl 25 0 \$0-stepAct-0-5-s \$0-stepAct-0-5-r empty 17
+#X obj 694 376 tgl 25 0 \$0-stepAct-0-5-s \$0-stepAct-0-5-r empty 17
 7 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 734 378 tgl 25 0 \$0-stepAct-0-6-s \$0-stepAct-0-6-r empty 17
+#X obj 740 376 tgl 25 0 \$0-stepAct-0-6-s \$0-stepAct-0-6-r empty 17
 7 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 780 378 tgl 25 0 \$0-stepAct-0-7-s \$0-stepAct-0-7-r empty 17
+#X obj 786 376 tgl 25 0 \$0-stepAct-0-7-s \$0-stepAct-0-7-r empty 17
 7 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 826 378 tgl 25 0 \$0-stepAct-0-8-s \$0-stepAct-0-8-r empty 17
+#X obj 832 376 tgl 25 0 \$0-stepAct-0-8-s \$0-stepAct-0-8-r empty 17
 7 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 872 378 tgl 25 0 \$0-stepAct-0-9-s \$0-stepAct-0-9-r empty 17
+#X obj 878 376 tgl 25 0 \$0-stepAct-0-9-s \$0-stepAct-0-9-r empty 17
 7 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 918 378 tgl 25 0 \$0-stepAct-0-10-s \$0-stepAct-0-10-r empty
+#X obj 924 376 tgl 25 0 \$0-stepAct-0-10-s \$0-stepAct-0-10-r empty
 17 7 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 964 378 tgl 25 0 \$0-stepAct-0-11-s \$0-stepAct-0-11-r empty
+#X obj 970 376 tgl 25 0 \$0-stepAct-0-11-s \$0-stepAct-0-11-r empty
 17 7 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 1010 378 tgl 25 0 \$0-stepAct-0-12-s \$0-stepAct-0-12-r empty
+#X obj 1016 376 tgl 25 0 \$0-stepAct-0-12-s \$0-stepAct-0-12-r empty
 17 7 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 1056 378 tgl 25 0 \$0-stepAct-0-13-s \$0-stepAct-0-13-r empty
+#X obj 1062 376 tgl 25 0 \$0-stepAct-0-13-s \$0-stepAct-0-13-r empty
 17 7 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 1102 378 tgl 25 0 \$0-stepAct-0-14-s \$0-stepAct-0-14-r empty
+#X obj 1108 376 tgl 25 0 \$0-stepAct-0-14-s \$0-stepAct-0-14-r empty
 17 7 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 1148 378 tgl 25 0 \$0-stepAct-0-15-s \$0-stepAct-0-15-r empty
+#X obj 1154 376 tgl 25 0 \$0-stepAct-0-15-s \$0-stepAct-0-15-r empty
 17 7 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 458 444 tgl 25 0 \$0-stepAct-1-0-s \$0-stepAct-1-0-r empty 17
+#X obj 464 442 tgl 25 0 \$0-stepAct-1-0-s \$0-stepAct-1-0-r empty 17
 7 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 504 444 tgl 25 0 \$0-stepAct-1-1-s \$0-stepAct-1-1-r empty 17
+#X obj 510 442 tgl 25 0 \$0-stepAct-1-1-s \$0-stepAct-1-1-r empty 17
 7 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 550 444 tgl 25 0 \$0-stepAct-1-2-s \$0-stepAct-1-2-r empty 17
+#X obj 556 442 tgl 25 0 \$0-stepAct-1-2-s \$0-stepAct-1-2-r empty 17
 7 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 596 444 tgl 25 0 \$0-stepAct-1-3-s \$0-stepAct-1-3-r empty 17
+#X obj 602 442 tgl 25 0 \$0-stepAct-1-3-s \$0-stepAct-1-3-r empty 17
 7 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 642 444 tgl 25 0 \$0-stepAct-1-4-s \$0-stepAct-1-4-r empty 17
+#X obj 648 442 tgl 25 0 \$0-stepAct-1-4-s \$0-stepAct-1-4-r empty 17
 7 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 688 444 tgl 25 0 \$0-stepAct-1-5-s \$0-stepAct-1-5-r empty 17
+#X obj 694 442 tgl 25 0 \$0-stepAct-1-5-s \$0-stepAct-1-5-r empty 17
 7 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 734 444 tgl 25 0 \$0-stepAct-1-6-s \$0-stepAct-1-6-r empty 17
+#X obj 740 442 tgl 25 0 \$0-stepAct-1-6-s \$0-stepAct-1-6-r empty 17
 7 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 780 444 tgl 25 0 \$0-stepAct-1-7-s \$0-stepAct-1-7-r empty 17
+#X obj 786 442 tgl 25 0 \$0-stepAct-1-7-s \$0-stepAct-1-7-r empty 17
 7 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 826 444 tgl 25 0 \$0-stepAct-1-8-s \$0-stepAct-1-8-r empty 17
+#X obj 832 442 tgl 25 0 \$0-stepAct-1-8-s \$0-stepAct-1-8-r empty 17
 7 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 872 444 tgl 25 0 \$0-stepAct-1-9-s \$0-stepAct-1-9-r empty 17
+#X obj 878 442 tgl 25 0 \$0-stepAct-1-9-s \$0-stepAct-1-9-r empty 17
 7 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 918 444 tgl 25 0 \$0-stepAct-1-10-s \$0-stepAct-1-10-r empty
+#X obj 924 442 tgl 25 0 \$0-stepAct-1-10-s \$0-stepAct-1-10-r empty
 17 7 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 964 444 tgl 25 0 \$0-stepAct-1-11-s \$0-stepAct-1-11-r empty
+#X obj 970 442 tgl 25 0 \$0-stepAct-1-11-s \$0-stepAct-1-11-r empty
 17 7 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 1010 444 tgl 25 0 \$0-stepAct-1-12-s \$0-stepAct-1-12-r empty
+#X obj 1016 442 tgl 25 0 \$0-stepAct-1-12-s \$0-stepAct-1-12-r empty
 17 7 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 1056 444 tgl 25 0 \$0-stepAct-1-13-s \$0-stepAct-1-13-r empty
+#X obj 1062 442 tgl 25 0 \$0-stepAct-1-13-s \$0-stepAct-1-13-r empty
 17 7 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 1102 444 tgl 25 0 \$0-stepAct-1-14-s \$0-stepAct-1-14-r empty
+#X obj 1108 442 tgl 25 0 \$0-stepAct-1-14-s \$0-stepAct-1-14-r empty
 17 7 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 1148 444 tgl 25 0 \$0-stepAct-1-15-s \$0-stepAct-1-15-r empty
+#X obj 1154 442 tgl 25 0 \$0-stepAct-1-15-s \$0-stepAct-1-15-r empty
 17 7 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 458 510 tgl 25 0 \$0-stepAct-2-0-s \$0-stepAct-2-0-r empty 17
+#X obj 464 508 tgl 25 0 \$0-stepAct-2-0-s \$0-stepAct-2-0-r empty 17
 7 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 504 510 tgl 25 0 \$0-stepAct-2-1-s \$0-stepAct-2-1-r empty 17
+#X obj 510 508 tgl 25 0 \$0-stepAct-2-1-s \$0-stepAct-2-1-r empty 17
 7 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 550 510 tgl 25 0 \$0-stepAct-2-2-s \$0-stepAct-2-2-r empty 17
+#X obj 556 508 tgl 25 0 \$0-stepAct-2-2-s \$0-stepAct-2-2-r empty 17
 7 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 596 510 tgl 25 0 \$0-stepAct-2-3-s \$0-stepAct-2-3-r empty 17
+#X obj 602 508 tgl 25 0 \$0-stepAct-2-3-s \$0-stepAct-2-3-r empty 17
 7 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 642 510 tgl 25 0 \$0-stepAct-2-4-s \$0-stepAct-2-4-r empty 17
+#X obj 648 508 tgl 25 0 \$0-stepAct-2-4-s \$0-stepAct-2-4-r empty 17
 7 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 688 510 tgl 25 0 \$0-stepAct-2-5-s \$0-stepAct-2-5-r empty 17
+#X obj 694 508 tgl 25 0 \$0-stepAct-2-5-s \$0-stepAct-2-5-r empty 17
 7 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 734 510 tgl 25 0 \$0-stepAct-2-6-s \$0-stepAct-2-6-r empty 17
+#X obj 740 508 tgl 25 0 \$0-stepAct-2-6-s \$0-stepAct-2-6-r empty 17
 7 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 780 510 tgl 25 0 \$0-stepAct-2-7-s \$0-stepAct-2-7-r empty 17
+#X obj 786 508 tgl 25 0 \$0-stepAct-2-7-s \$0-stepAct-2-7-r empty 17
 7 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 826 510 tgl 25 0 \$0-stepAct-2-8-s \$0-stepAct-2-8-r empty 17
+#X obj 832 508 tgl 25 0 \$0-stepAct-2-8-s \$0-stepAct-2-8-r empty 17
 7 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 872 510 tgl 25 0 \$0-stepAct-2-9-s \$0-stepAct-2-9-r empty 17
+#X obj 878 508 tgl 25 0 \$0-stepAct-2-9-s \$0-stepAct-2-9-r empty 17
 7 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 918 510 tgl 25 0 \$0-stepAct-2-10-s \$0-stepAct-2-10-r empty
+#X obj 924 508 tgl 25 0 \$0-stepAct-2-10-s \$0-stepAct-2-10-r empty
 17 7 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 964 510 tgl 25 0 \$0-stepAct-2-11-s \$0-stepAct-2-11-r empty
+#X obj 970 508 tgl 25 0 \$0-stepAct-2-11-s \$0-stepAct-2-11-r empty
 17 7 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 1010 510 tgl 25 0 \$0-stepAct-2-12-s \$0-stepAct-2-12-r empty
+#X obj 1016 508 tgl 25 0 \$0-stepAct-2-12-s \$0-stepAct-2-12-r empty
 17 7 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 1056 510 tgl 25 0 \$0-stepAct-2-13-s \$0-stepAct-2-13-r empty
+#X obj 1062 508 tgl 25 0 \$0-stepAct-2-13-s \$0-stepAct-2-13-r empty
 17 7 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 1102 510 tgl 25 0 \$0-stepAct-2-14-s \$0-stepAct-2-14-r empty
+#X obj 1108 508 tgl 25 0 \$0-stepAct-2-14-s \$0-stepAct-2-14-r empty
 17 7 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 1148 510 tgl 25 0 \$0-stepAct-2-15-s \$0-stepAct-2-15-r empty
+#X obj 1154 508 tgl 25 0 \$0-stepAct-2-15-s \$0-stepAct-2-15-r empty
 17 7 0 10 #fcfcfc #000000 #000000 0 1;
-#N canvas 927 244 450 300 counter 0;
+#N canvas 927 244 450 300 counter 1;
 #X obj 32 14 r \$0-bpm-in;
 #X obj 106 51 r \$0-play;
 #X obj 32 115 int 1;
@@ -531,10 +531,10 @@
 #X connect 8 0 2 0;
 #X restore 1295 -18 pd counter;
 #X f 11;
-#X obj 188 121 tgl 45 0 \$0-play empty empty 17 7 0 10 #fcfcfc #000000
+#X obj 132 115 tgl 45 0 \$0-play empty empty 17 7 0 10 #fcfcfc #000000
 #000000 0 1;
-#X text 192 102 PLAY;
-#N canvas 684 77 993 753 sequencer 1;
+#X text 136 96 PLAY;
+#N canvas 588 92 1075 753 sequencer 1;
 #N canvas 1144 156 699 565 seq2trigger 0;
 #X text 270 25 Step Count;
 #X obj 105 145 tgl 20 0 empty empty empty 17 7 0 10 #fcfcfc #000000
@@ -1529,6 +1529,9 @@
 #X obj 1295 62 catch~;
 #X obj 1294 89 *~ 0.5;
 #X obj 1293 149 dac~;
+#X text 418 382 KICK;
+#X text 412 448 SNARE;
+#X text 415 515 HIHAT;
 #X connect 61 0 62 0;
 #X connect 62 0 63 0;
 #X connect 62 0 63 1;
