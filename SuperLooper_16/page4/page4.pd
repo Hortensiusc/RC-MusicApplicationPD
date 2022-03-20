@@ -3,8 +3,8 @@
 0;
 #X obj 69 290 vradio 30 1 0 4 \$0-speedgrid empty SPEED 0 -8 0 10 #fcfcfc
 #000000 #000000 0;
-#X obj 70 506 vradio 30 1 0 4 \$0-drumkits empty DRUM\ BANK 0 -8 0
-10 #fcfcfc #000000 #000000 0;
+#X obj 70 506 vradio 30 1 0 4 \$0-drumkits empty DRUM\\\ BANK 0 -8
+0 10 #fcfcfc #000000 #000000 0;
 #X obj 69 443 bng 30 250 50 0 \$0-clearseqBang empty empty 17 7 0 10
 #fcfcfc #000000 #000000;
 #X text 63 424 CLEAR;
@@ -24,11 +24,11 @@
 #X connect 7 0 3 0;
 #X connect 8 0 4 0;
 #X restore 1295 -74 pd recievesFromGUI;
-#X obj 78 113 vsl 15 128 0 127 0 0 \$0-bpm-in empty empty 0 -9 0 10
+#X obj 78 113 vsl 15 128 60 180 0 0 \$0-bpm-in empty empty 0 -9 0 10
 #fcfcfc #000000 #000000 0 1;
 #X obj 458 378 tgl 25 0 \$0-stepAct-0-0-s \$0-stepAct-0-0-r empty 17
 7 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 594 313 hradio 30 1 0 16 empty empty empty 0 -8 0 10 #fcfcfc
+#X obj 594 313 hradio 30 1 0 16 empty step-number empty 0 -8 0 10 #fcfcfc
 #000000 #000000 0;
 #N canvas 128 128 1193 764 triggerActivations 0;
 #N canvas 495 23 450 300 packActivations 0;
@@ -510,7 +510,28 @@
 17 7 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 1148 510 tgl 25 0 \$0-stepAct-2-15-s \$0-stepAct-2-15-r empty
 17 7 0 10 #fcfcfc #000000 #000000 0 1;
-#N canvas 392 190 629 415 counter 1;
-#X obj 21 18 bpm2trigger;
-#X restore 1294 72 pd counter;
+#N canvas 927 244 450 300 counter 1;
+#X obj 32 81 bpm2trigger;
+#X obj 32 23 r \$0-bpm-in;
+#X obj 106 51 r \$0-play;
+#X obj 32 115 int 1;
+#X obj 95 115 + 1;
+#X floatatom 32 211 5 0 0 0 - - - 0;
+#X obj 32 145 - 1;
+#X obj 32 172 % 16;
+#X obj 32 239 s step-number;
+#X connect 0 0 3 0;
+#X connect 1 0 0 0;
+#X connect 2 0 0 1;
+#X connect 3 0 4 0;
+#X connect 3 0 6 0;
+#X connect 4 0 3 1;
+#X connect 5 0 8 0;
+#X connect 6 0 7 0;
+#X connect 7 0 5 0;
+#X restore 1295 -18 pd counter;
+#X f 11;
+#X obj 188 121 tgl 45 0 \$0-play empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X text 192 102 PLAY;
 #X coords 0 885 1 884 1080 720 0;
