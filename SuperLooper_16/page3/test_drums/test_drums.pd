@@ -883,3 +883,4 @@
 #X connect 29 0 7 0;
 #X connect 30 0 29 0;
 #X restore 415 52 pd drums;
+#X text 311 292 hola;
