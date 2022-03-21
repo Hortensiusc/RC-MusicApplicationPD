@@ -1,0 +1,2 @@
+#N canvas 135 45 1097 733 12;
+#X obj 7 6 synth_drums;
