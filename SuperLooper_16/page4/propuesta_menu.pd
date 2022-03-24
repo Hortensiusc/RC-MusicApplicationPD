@@ -1,0 +1,37 @@
+#N canvas 923 105 633 435 12;
+#N canvas 294 149 571 300 menu_superlooper 0;
+#X obj 35 64 r \$0-option1-s;
+#X msg 35 104 0;
+#X obj 170 64 r \$0-option2-s;
+#X msg 170 104 1;
+#N canvas 483 38 1181 819 menu-option1 0;
+#X text 152 109 cvasbldj;
+#X restore 343 161 pd menu-option1;
+#N canvas 483 38 380 118 menu-option2 0;
+#X text 139 109 GG;
+#X restore 343 182 pd menu-option2;
+#X msg 35 176 vis \$1;
+#X msg 170 173 vis \$1;
+#X floatatom 35 140 5 0 0 0 - - - 0;
+#X floatatom 170 138 5 0 0 0 - - - 0;
+#X obj 35 243 s pd-menu-option1;
+#X obj 170 205 s pd-menu-option2;
+#X obj 348 26 loadbang;
+#X msg 348 59 \; pd-menu-option1 vis \$1;
+#X connect 0 0 1 0;
+#X connect 1 0 8 0;
+#X connect 2 0 3 0;
+#X connect 3 0 9 0;
+#X connect 6 0 10 0;
+#X connect 7 0 11 0;
+#X connect 8 0 6 0;
+#X connect 9 0 7 0;
+#X connect 12 0 13 0;
+#X restore 411 349 pd menu_superlooper;
+#X obj 11 11 cnv 15 538 358 empty empty empty 20 12 0 14 #e0e0e0 #404040
+0;
+#X obj 89 156 bng 150 250 50 0 \$0-option1-s \$0-option1-r empty 17
+7 0 10 #fcfcfc #000000 #000000;
+#X obj 332 157 bng 150 250 50 0 \$0-option2-s \$0-option2-r empty 17
+7 0 10 #fcfcfc #000000 #000000;
+#X coords 0 -1 1 1 540 360 1 10 10;
