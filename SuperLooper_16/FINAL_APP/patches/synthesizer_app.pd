@@ -1,0 +1,56 @@
+#N canvas 527 25 993 754 12;
+#X obj 10 10 cnv 15 600 600 empty empty empty 20 12 0 14 #cddcdc #404040
+0;
+#X obj 108 43 cnv 15 400 150 empty empty empty 20 12 0 14 #82ccd6 #404040
+0;
+#X obj 158 118 tgl 40 0 c c empty 17 7 0 10 #ffffff #000000 #000000
+0 1;
+#X obj 202 118 tgl 40 0 d d empty 17 7 0 10 #ffffff #000000 #000000
+0 1;
+#X obj 246 118 tgl 40 0 e e empty 17 7 0 10 #ffffff #000000 #000000
+0 1;
+#X obj 290 118 tgl 40 0 fN fN empty 17 7 0 10 #ffffff #000000 #000000
+0 1;
+#X obj 334 118 tgl 40 0 g g empty 17 7 0 10 #ffffff #000000 #000000
+0 1;
+#X obj 378 118 tgl 40 0 a a empty 17 7 0 10 #ffffff #000000 #000000
+0 1;
+#X obj 422 118 tgl 40 0 b b empty 17 7 0 10 #ffffff #000000 #000000
+0 1;
+#X obj 403 74 tgl 40 0 aS aS empty 17 7 0 10 #606060 #000000 #000000
+0 1;
+#X obj 359 74 tgl 40 0 gS gS empty 17 7 0 10 #606060 #000000 #000000
+0 1;
+#X obj 315 74 tgl 40 0 fs fs empty 17 7 0 10 #606060 #000000 #000000
+0 1;
+#X obj 226 74 tgl 40 0 dS dS empty 17 7 0 10 #606060 #000000 #000000
+0 1;
+#X obj 182 74 tgl 40 0 cS cS empty 17 7 0 10 #606060 #000000 #000000
+0 1;
+#X obj 128 221 hradio 40 1 0 3 octave octave empty 0 -8 0 10 #027da0
+#00314b #000000 0;
+#X text 166 267 octave;
+#X text 394 265 volume;
+#X obj 356 220 hsl 128 40 0 127 0 0 synthvol synthvol empty -2 -8 0
+10 #027da0 #00314b #000000 0 1;
+#X obj 113 308 cnv 15 400 250 empty empty empty 20 12 0 14 #82cbd5
+#404040 0;
+#X text 204 330 attack;
+#X text 201 407 release;
+#X text 211 488 shape;
+#X text 346 408 vibrato rate;
+#X text 375 487 glide;
+#X obj 167 355 hsl 128 15 0 127 0 0 attack attack empty -2 -8 0 10
+#9bd1d1 #000000 #000000 0 1;
+#X obj 168 435 hsl 128 15 0 127 0 0 release release empty -2 -8 0 10
+#9bd1d1 #000000 #000000 0 1;
+#X obj 168 513 hsl 128 15 0 127 0 0 synthshape synthshape empty -2
+-8 0 10 #9bd1d1 #000000 #000000 0 1;
+#X obj 328 355 hsl 128 15 0 127 0 0 index index empty -2 -8 0 10 #9bd1d0
+#000000 #000000 0 1;
+#X obj 328 435 hsl 128 15 0 127 0 0 synthrate synthrate empty -2 -8
+0 10 #9bd1cf #000000 #000000 0 1;
+#X obj 329 513 hsl 128 15 0 127 0 0 glide glide empty -2 -8 0 10 #9bd0ce
+#000000 #000000 0 1;
+#X text 341 331 vibrato index;
+#X coords 0 -1 1 1 600 600 1 10 10;

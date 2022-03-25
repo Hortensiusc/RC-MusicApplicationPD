@@ -1,5 +1,5 @@
-#N canvas 1058 110 569 386 12;
-#N canvas 1253 67 571 526 menu_superlooper 1;
+#N canvas 757 77 561 381 12;
+#N canvas 1253 67 571 526 menu_superlooper 0;
 #X obj 95 24 r \$0-option1-s;
 #X msg 95 103 0;
 #X obj 141 63 r \$0-option2-s;
@@ -9,7 +9,7 @@
 #X obj 95 147 tgl 30 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000 0 1;
 #X obj 239 210 == 0;
-#N canvas 31 54 1111 759 drumsapp 0;
+#N canvas 31 54 1129 759 drumsapp 0;
 #X obj 6 8 patches/synth_drums;
 #X restore 280 134 pd drumsapp;
 #X obj 239 318 s pd-drumsapp;
