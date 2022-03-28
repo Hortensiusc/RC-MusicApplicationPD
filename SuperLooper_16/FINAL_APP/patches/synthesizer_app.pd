@@ -1,4 +1,4 @@
-#N canvas 527 25 993 754 12;
+#N canvas 447 25 993 754 12;
 #X obj 10 10 cnv 15 600 600 empty empty empty 20 12 0 14 #cddcdc #404040
 0;
 #X obj 108 43 cnv 15 400 150 empty empty empty 20 12 0 14 #82ccd6 #404040
@@ -52,5 +52,5 @@
 0 10 #9bd1cf #000000 #000000 0 1;
 #X obj 329 513 hsl 128 15 0 127 0 0 glide glide empty -2 -8 0 10 #9bd0ce
 #000000 #000000 0 1;
-#X text 341 331 vibrato index;
+#X text 361 331 vibrato;
 #X coords 0 -1 1 1 600 600 1 10 10;
