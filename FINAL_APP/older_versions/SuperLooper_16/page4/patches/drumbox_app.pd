@@ -1,0 +1,43 @@
+#N canvas 380 123 523 526 12;
+#X obj 10 10 cnv 15 500 500 empty empty empty 20 12 0 14 #cddcdc #404040
+0;
+#X obj 57 115 cnv 15 400 350 empty empty empty 20 12 0 14 #82ccd6 #404040
+0;
+#X obj 136 161 bng 60 250 50 0 click1 q-click1 empty 17 7 0 10 #037da4
+#00314b #000000;
+#X obj 226 161 bng 60 250 50 0 click2 w-click2 empty 17 7 0 10 #037da3
+#00314b #000000;
+#X obj 314 161 bng 60 250 50 0 click3 e-click3 empty 17 7 0 10 #027da2
+#00314b #000000;
+#X obj 138 250 bng 60 250 50 0 click4 a-click4 empty 17 7 0 10 #037da3
+#00314b #000000;
+#X obj 227 250 bng 60 250 50 0 click5 s-click5 empty 17 7 0 10 #027da2
+#00314b #000000;
+#X obj 315 250 bng 60 250 50 0 click6 d-click6 empty 17 7 0 10 #027da1
+#00314b #000000;
+#X obj 139 342 bng 60 250 50 0 click7 z-click7 empty 17 7 0 10 #027da2
+#00314b #000000;
+#X obj 228 342 bng 60 250 50 0 click8 x-click8 empty 17 7 0 10 #027da1
+#00314b #000000;
+#X obj 316 341 bng 60 250 50 0 click9 c-click9 empty 17 7 0 10 #027da0
+#00314b #000000;
+#X obj 58 55 hradio 40 1 0 4 drumkit drumkit empty 0 -8 0 10 #027da0
+#00314b #000000 0;
+#X text 107 31 drum kit;
+#X text 349 31 drum volume;
+#X text 73 97 A;
+#X text 113 97 B;
+#X text 152 97 C;
+#X text 193 97 D;
+#X text 161 224 Q;
+#X text 250 226 W;
+#X text 336 224 E;
+#X text 162 314 A;
+#X text 252 313 S;
+#X text 339 313 D;
+#X text 164 408 Z;
+#X text 253 406 X;
+#X text 340 405 C;
+#X obj 325 55 hsl 128 40 0 127 0 0 drumvol drumvol empty -2 -8 0 10
+#037da4 #00314b #000000 0 1;
+#X coords 0 -1 1 1 500 500 1 10 10;

@@ -1,0 +1,55 @@
+#N canvas 757 77 561 381 12;
+#N canvas 1253 67 571 526 menu_superlooper 0;
+#X obj 95 24 r \$0-option1-s;
+#X msg 95 103 0;
+#X obj 141 63 r \$0-option2-s;
+#X msg 141 103 1;
+#X msg 95 265 vis \$1;
+#X msg 239 288 vis \$1;
+#X obj 95 147 tgl 30 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 239 210 == 0;
+#N canvas 31 54 1129 759 drumsapp 0;
+#X obj 6 8 patches/synth_drums;
+#X restore 280 134 pd drumsapp;
+#X obj 239 318 s pd-drumsapp;
+#N canvas 602 80 1100 743 sequencerapp 0;
+#X obj 5 7 patches/page4;
+#X restore 280 113 pd sequencerapp;
+#X obj 95 292 s pd-sequencerapp;
+#X obj 95 194 == 1;
+#X floatatom 34 321 5 0 0 0 - - - 0;
+#X obj 34 357 sel 1;
+#X obj 34 439 s closevolume;
+#X msg 34 395 0;
+#X obj 114 355 loadbang;
+#X msg 141 392 60;
+#X obj 141 421 s drumvol;
+#X connect 0 0 1 0;
+#X connect 1 0 6 0;
+#X connect 2 0 3 0;
+#X connect 3 0 6 0;
+#X connect 4 0 11 0;
+#X connect 5 0 9 0;
+#X connect 6 0 7 0;
+#X connect 6 0 12 0;
+#X connect 6 0 13 0;
+#X connect 7 0 5 0;
+#X connect 12 0 4 0;
+#X connect 13 0 14 0;
+#X connect 14 0 16 0;
+#X connect 14 1 18 0;
+#X connect 16 0 15 0;
+#X connect 17 0 16 0;
+#X connect 18 0 19 0;
+#X restore 411 349 pd menu_superlooper;
+#X obj 11 11 cnv 15 538 358 empty empty empty 20 12 0 14 #e0e0e0 #404040
+0;
+#X obj 89 156 bng 150 250 50 0 \$0-option1-s \$0-option1-r empty 17
+7 0 10 #fcfcfc #000000 #000000;
+#X obj 332 157 bng 150 250 50 0 \$0-option2-s \$0-option2-r empty 17
+7 0 10 #fcfcfc #000000 #000000;
+#X text 229 35 MENU PRINCIPAL;
+#X text 139 134 DRUMBOX;
+#X text 378 136 SEQUENCER;
+#X coords 0 -1 1 1 540 360 1 10 10;
