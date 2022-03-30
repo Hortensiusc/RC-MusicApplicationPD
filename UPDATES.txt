@@ -1,0 +1,2 @@
+CARLOS HORTENSIUS:
+- 30/03, 18:30: Añadida la opcion de poder subir un sonido a elegir en el sequencer, unicamente solo en la ultima barra del sequencer

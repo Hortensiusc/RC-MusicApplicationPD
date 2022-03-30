@@ -1,4 +1,4 @@
-#N canvas 102 35 1129 762 12;
+#N canvas 342 31 1299 762 12;
 #N canvas 112 47 888 551 codiPage4 0;
 #N canvas 1005 49 445 764 triggerActivations 0;
 #N canvas 134 13 1617 926 clearsequencer 0;
@@ -1159,7 +1159,7 @@
 #X connect 19 0 3 3;
 #X restore 35 267 pd cymbal-activations;
 #X restore 12 44 pd triggerActivations;
-#N canvas 492 88 1249 869 sequencer 0;
+#N canvas 521 35 1249 869 sequencer 0;
 #X obj 34 103 r act-00-03;
 #X obj 63 139 r act-04-07;
 #X obj 92 173 r act-08-011;
@@ -3834,6 +3834,363 @@
 #X connect 16 0 3 0;
 #X connect 17 0 3 0;
 #X restore 554 606 pd cymbal-selector;
+#N canvas 496 372 1122 545 seqtrigger 0;
+#X obj 96 66 inlet;
+#X obj 295 63 inlet;
+#X obj 525 63 inlet;
+#X obj 736 66 inlet;
+#N canvas 1144 156 699 565 seq2trigger 0;
+#X text 270 25 Step Count;
+#X obj 105 145 tgl 20 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 136 144 tgl 20 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 176 144 tgl 20 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 212 144 tgl 20 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 89 288 sel 0 1;
+#X obj 112 321 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 149 288 sel 0 1;
+#X obj 172 321 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 209 288 sel 0 1;
+#X obj 232 321 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 271 288 sel 0 1;
+#X obj 294 321 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 105 44 inlet;
+#X obj 116 441 outlet;
+#X obj 275 46 inlet;
+#X text 86 19 Step Activations;
+#X text 116 464 Trigger;
+#X obj 89 173 sel 0 1 2 3, f 24;
+#X obj 275 86 - 0;
+#X obj 112 382 t b b;
+#X obj 232 397 t b b;
+#X obj 162 367 t b b;
+#X obj 294 351 t b b;
+#X obj 105 84 unpack f f f f;
+#X obj 89 203 f;
+#X obj 130 202 f;
+#X obj 171 202 f;
+#X obj 212 202 f;
+#X obj 381 45 inlet;
+#X text 376 24 Step Shift;
+#X connect 1 0 25 1;
+#X connect 2 0 26 1;
+#X connect 3 0 27 1;
+#X connect 4 0 28 1;
+#X connect 5 1 6 0;
+#X connect 6 0 20 0;
+#X connect 7 1 8 0;
+#X connect 8 0 22 0;
+#X connect 9 1 10 0;
+#X connect 10 0 21 0;
+#X connect 11 1 12 0;
+#X connect 12 0 23 0;
+#X connect 13 0 24 0;
+#X connect 15 0 19 0;
+#X connect 18 0 25 0;
+#X connect 18 1 26 0;
+#X connect 18 2 27 0;
+#X connect 18 3 28 0;
+#X connect 19 0 18 0;
+#X connect 20 0 14 0;
+#X connect 21 0 14 0;
+#X connect 22 0 14 0;
+#X connect 23 0 14 0;
+#X connect 24 0 1 0;
+#X connect 24 1 2 0;
+#X connect 24 2 3 0;
+#X connect 24 3 4 0;
+#X connect 25 0 5 0;
+#X connect 26 0 7 0;
+#X connect 27 0 9 0;
+#X connect 28 0 11 0;
+#X connect 29 0 19 1;
+#X restore 96 169 pd seq2trigger;
+#N canvas 67 121 699 565 seq2trigger 0;
+#X text 270 25 Step Count;
+#X obj 105 145 tgl 20 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 136 144 tgl 20 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 176 144 tgl 20 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 212 144 tgl 20 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 89 288 sel 0 1;
+#X obj 112 321 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 149 288 sel 0 1;
+#X obj 172 321 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 209 288 sel 0 1;
+#X obj 232 321 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 271 288 sel 0 1;
+#X obj 294 321 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 105 44 inlet;
+#X obj 116 441 outlet;
+#X obj 275 46 inlet;
+#X text 86 19 Step Activations;
+#X text 116 464 Trigger;
+#X obj 89 173 sel 0 1 2 3, f 24;
+#X obj 275 86 - 0;
+#X obj 112 382 t b b;
+#X obj 232 397 t b b;
+#X obj 162 367 t b b;
+#X obj 294 351 t b b;
+#X obj 105 84 unpack f f f f;
+#X obj 89 203 f;
+#X obj 130 202 f;
+#X obj 171 202 f;
+#X obj 212 202 f;
+#X obj 381 45 inlet;
+#X text 376 24 Step Shift;
+#X connect 1 0 25 1;
+#X connect 2 0 26 1;
+#X connect 3 0 27 1;
+#X connect 4 0 28 1;
+#X connect 5 1 6 0;
+#X connect 6 0 20 0;
+#X connect 7 1 8 0;
+#X connect 8 0 22 0;
+#X connect 9 1 10 0;
+#X connect 10 0 21 0;
+#X connect 11 1 12 0;
+#X connect 12 0 23 0;
+#X connect 13 0 24 0;
+#X connect 15 0 19 0;
+#X connect 18 0 25 0;
+#X connect 18 1 26 0;
+#X connect 18 2 27 0;
+#X connect 18 3 28 0;
+#X connect 19 0 18 0;
+#X connect 20 0 14 0;
+#X connect 21 0 14 0;
+#X connect 22 0 14 0;
+#X connect 23 0 14 0;
+#X connect 24 0 1 0;
+#X connect 24 1 2 0;
+#X connect 24 2 3 0;
+#X connect 24 3 4 0;
+#X connect 25 0 5 0;
+#X connect 26 0 7 0;
+#X connect 27 0 9 0;
+#X connect 28 0 11 0;
+#X connect 29 0 19 1;
+#X restore 295 169 pd seq2trigger;
+#N canvas 67 121 699 565 seq2trigger 0;
+#X text 270 25 Step Count;
+#X obj 105 145 tgl 20 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 136 144 tgl 20 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 176 144 tgl 20 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 212 144 tgl 20 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 89 288 sel 0 1;
+#X obj 112 321 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 149 288 sel 0 1;
+#X obj 172 321 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 209 288 sel 0 1;
+#X obj 232 321 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 271 288 sel 0 1;
+#X obj 294 321 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 105 44 inlet;
+#X obj 116 441 outlet;
+#X obj 275 46 inlet;
+#X text 86 19 Step Activations;
+#X text 116 464 Trigger;
+#X obj 89 173 sel 0 1 2 3, f 24;
+#X obj 275 86 - 0;
+#X obj 112 382 t b b;
+#X obj 232 397 t b b;
+#X obj 162 367 t b b;
+#X obj 294 351 t b b;
+#X obj 105 84 unpack f f f f;
+#X obj 89 203 f;
+#X obj 130 202 f;
+#X obj 171 202 f;
+#X obj 212 202 f;
+#X obj 381 45 inlet;
+#X text 376 24 Step Shift;
+#X connect 1 0 25 1;
+#X connect 2 0 26 1;
+#X connect 3 0 27 1;
+#X connect 4 0 28 1;
+#X connect 5 1 6 0;
+#X connect 6 0 20 0;
+#X connect 7 1 8 0;
+#X connect 8 0 22 0;
+#X connect 9 1 10 0;
+#X connect 10 0 21 0;
+#X connect 11 1 12 0;
+#X connect 12 0 23 0;
+#X connect 13 0 24 0;
+#X connect 15 0 19 0;
+#X connect 18 0 25 0;
+#X connect 18 1 26 0;
+#X connect 18 2 27 0;
+#X connect 18 3 28 0;
+#X connect 19 0 18 0;
+#X connect 20 0 14 0;
+#X connect 21 0 14 0;
+#X connect 22 0 14 0;
+#X connect 23 0 14 0;
+#X connect 24 0 1 0;
+#X connect 24 1 2 0;
+#X connect 24 2 3 0;
+#X connect 24 3 4 0;
+#X connect 25 0 5 0;
+#X connect 26 0 7 0;
+#X connect 27 0 9 0;
+#X connect 28 0 11 0;
+#X connect 29 0 19 1;
+#X restore 525 167 pd seq2trigger;
+#N canvas 67 121 699 565 seq2trigger 0;
+#X text 270 25 Step Count;
+#X obj 105 145 tgl 20 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 136 144 tgl 20 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 176 144 tgl 20 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 212 144 tgl 20 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 89 288 sel 0 1;
+#X obj 112 321 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 149 288 sel 0 1;
+#X obj 172 321 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 209 288 sel 0 1;
+#X obj 232 321 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 271 288 sel 0 1;
+#X obj 294 321 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 105 44 inlet;
+#X obj 116 441 outlet;
+#X obj 275 46 inlet;
+#X text 86 19 Step Activations;
+#X text 116 464 Trigger;
+#X obj 89 173 sel 0 1 2 3, f 24;
+#X obj 275 86 - 0;
+#X obj 112 382 t b b;
+#X obj 232 397 t b b;
+#X obj 162 367 t b b;
+#X obj 294 351 t b b;
+#X obj 105 84 unpack f f f f;
+#X obj 89 203 f;
+#X obj 130 202 f;
+#X obj 171 202 f;
+#X obj 212 202 f;
+#X obj 381 45 inlet;
+#X text 376 24 Step Shift;
+#X connect 1 0 25 1;
+#X connect 2 0 26 1;
+#X connect 3 0 27 1;
+#X connect 4 0 28 1;
+#X connect 5 1 6 0;
+#X connect 6 0 20 0;
+#X connect 7 1 8 0;
+#X connect 8 0 22 0;
+#X connect 9 1 10 0;
+#X connect 10 0 21 0;
+#X connect 11 1 12 0;
+#X connect 12 0 23 0;
+#X connect 13 0 24 0;
+#X connect 15 0 19 0;
+#X connect 18 0 25 0;
+#X connect 18 1 26 0;
+#X connect 18 2 27 0;
+#X connect 18 3 28 0;
+#X connect 19 0 18 0;
+#X connect 20 0 14 0;
+#X connect 21 0 14 0;
+#X connect 22 0 14 0;
+#X connect 23 0 14 0;
+#X connect 24 0 1 0;
+#X connect 24 1 2 0;
+#X connect 24 2 3 0;
+#X connect 24 3 4 0;
+#X connect 25 0 5 0;
+#X connect 26 0 7 0;
+#X connect 27 0 9 0;
+#X connect 28 0 11 0;
+#X connect 29 0 19 1;
+#X restore 736 169 pd seq2trigger;
+#X obj 956 121 loadbang;
+#X msg 211 142 0;
+#X msg 395 141 4;
+#X msg 639 140 8;
+#X msg 863 140 12;
+#X obj 143 105 r step-number;
+#X obj 342 100 r step-number;
+#X obj 572 99 r step-number;
+#X obj 783 93 r step-number;
+#X obj 96 212 outlet;
+#X obj 295 214 outlet;
+#X obj 525 215 outlet;
+#X obj 736 214 outlet;
+#X connect 0 0 4 0;
+#X connect 1 0 5 0;
+#X connect 2 0 6 0;
+#X connect 3 0 7 0;
+#X connect 4 0 17 0;
+#X connect 5 0 18 0;
+#X connect 6 0 19 0;
+#X connect 7 0 20 0;
+#X connect 8 0 12 0;
+#X connect 8 0 11 0;
+#X connect 8 0 10 0;
+#X connect 8 0 9 0;
+#X connect 9 0 4 2;
+#X connect 10 0 5 2;
+#X connect 11 0 6 2;
+#X connect 12 0 7 2;
+#X connect 13 0 4 1;
+#X connect 14 0 5 1;
+#X connect 15 0 6 1;
+#X connect 16 0 7 1;
+#X restore 768 559 pd seqtrigger;
+#X obj 768 444 r act-60-63;
+#X obj 826 500 r act-68-611;
+#X obj 797 472 r act-64-67;
+#X obj 856 527 r act-612-615;
+#X text 765 420 OPEN FILE;
+#N canvas 1164 188 450 564 selectsound 0;
+#X obj 67 100 inlet;
+#X obj 141 160 openpanel;
+#X obj 141 92 r \$0-selectsound-s;
+#X msg 141 269 open \$1;
+#X obj 67 164 t b b;
+#X listbox 141 199 20 0 0 0 - - - 0;
+#X obj 141 302 readsf~;
+#X obj 142 335 outlet~;
+#X msg 67 226 1;
+#X connect 0 0 4 0;
+#X connect 1 0 5 0;
+#X connect 2 0 1 0;
+#X connect 3 0 6 0;
+#X connect 4 0 8 0;
+#X connect 4 1 5 0;
+#X connect 5 0 3 0;
+#X connect 6 0 7 0;
+#X connect 8 0 6 0;
+#X restore 768 624 pd selectsound;
+#X obj 769 661 throw~;
 #X connect 0 0 22 0;
 #X connect 1 0 22 1;
 #X connect 2 0 22 2;
@@ -3894,16 +4251,19 @@
 #X connect 52 0 47 2;
 #X connect 53 0 47 3;
 #X connect 54 0 46 0;
-#X connect 56 0 55 0;
-#X connect 57 0 63 0;
-#X connect 57 1 63 0;
-#X connect 57 2 63 0;
-#X connect 57 3 63 0;
 #X connect 59 0 57 0;
 #X connect 60 0 57 2;
 #X connect 61 0 57 1;
 #X connect 62 0 57 3;
-#X connect 63 0 56 0;
+#X connect 64 0 70 0;
+#X connect 64 1 70 0;
+#X connect 64 2 70 0;
+#X connect 64 3 70 0;
+#X connect 65 0 64 0;
+#X connect 66 0 64 2;
+#X connect 67 0 64 1;
+#X connect 68 0 64 3;
+#X connect 70 0 71 0;
 #X restore 12 69 pd sequencer;
 #X obj 12 121 catch~;
 #X obj 12 348 dac~;
@@ -3932,7 +4292,7 @@
 #X connect 8 0 7 0;
 #X connect 9 0 3 0;
 #X connect 9 0 3 1;
-#X restore 960 658 pd codiPage4;
+#X restore 999 705 pd codiPage4;
 #X obj 11 11 cnv 15 1078 718 empty empty empty 20 12 0 14 #cddcdc #404040
 0;
 #X obj 545 644 bng 45 250 50 0 \$0-clearseqBang empty empty 17 7 0
@@ -4051,7 +4411,7 @@ MAIN\\\ VOLUME -2 -8 0 10 #00324b #ffffff #000000 0 1;
 #X text 60 395 OPEN HIHAT;
 #X text 102 451 CLAP;
 #X text 109 507 TOM;
-#X text 88 563 CYMBAL;
+#X text 85 602 CYMBAL;
 #X obj 143 377 tgl 55 0 \$0-stepAct-3-0-s \$0-stepAct-3-0-r empty 17
 7 0 10 #007da5 #000000 #000000 0 1;
 #X obj 143 432 tgl 55 0 \$0-stepAct-4-0-s \$0-stepAct-4-0-r empty 17
@@ -4184,4 +4544,6 @@ MAIN\\\ VOLUME -2 -8 0 10 #00324b #ffffff #000000 0 1;
 0 -8 0 10 #fcfcfc #000000 #000000 0;
 #X obj 797 643 hsl 220 45 60 180 0 0 \$0-bpm-in \$0-bpm-out BPM -2
 -8 0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 89 547 bng 45 250 50 0 \$0-selectsound-s empty empty 17 7 0
+10 #007da5 #ffffff #000000;
 #X coords 0 -1 1 1 1080 720 1 10 10;
