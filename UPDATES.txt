@@ -1,2 +1,5 @@
 CARLOS HORTENSIUS:
 - 30/03, 18:30: Añadida la opcion de poder subir un sonido a elegir en el sequencer, unicamente solo en la ultima barra del sequencer
+- 30/03, 19:45: En la penultima barra del sequencer, al darle al boton se puede grabar un audio de 1s de duracion, que se guarda como recorded sound.
+El problema principal es que no se puede reporducir el audio dos veces simultaneamente, por lo tanto, si en el sequencer tenemos dos toggles activados muy seguidos,
+los sonidos se entrecortan
