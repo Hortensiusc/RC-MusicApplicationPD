@@ -1,46 +1,36 @@
-#N canvas 49 25 1344 755 12;
+#N canvas 174 25 1206 744 12;
 #X obj 10 10 cnv 15 1080 720 empty empty empty 20 12 0 14 #cddcdc #404040
 0;
-#X obj 110 242 cnv 15 400 350 empty empty empty 20 12 0 14 #82ccd6
+#X obj 129 128 cnv 15 400 550 empty empty empty 20 12 0 14 #82ccd6
 #404040 0;
-#X obj 189 288 bng 60 250 50 0 \$0-click1 \$0-q-click1 empty 17 7 0
+#X obj 207 152 bng 60 250 50 0 \$0-click1 \$0-q-click1 empty 17 7 0
 10 #037da4 #00314b #000000;
-#X obj 279 288 bng 60 250 50 0 \$0-click2 \$0-w-click2 empty 17 7 0
+#X obj 297 152 bng 60 250 50 0 \$0-click2 \$0-w-click2 empty 17 7 0
 10 #037da3 #00314b #000000;
-#X obj 367 288 bng 60 250 50 0 \$0-click3 \$0-e-click3 empty 17 7 0
+#X obj 385 152 bng 60 250 50 0 \$0-click3 \$0-e-click3 empty 17 7 0
 10 #027da2 #00314b #000000;
-#X obj 191 377 bng 60 250 50 0 \$0-click4 \$0-a-click4 empty 17 7 0
+#X obj 207 238 bng 60 250 50 0 \$0-click4 \$0-a-click4 empty 17 7 0
 10 #037da3 #00314b #000000;
-#X obj 280 377 bng 60 250 50 0 \$0-click5 \$0-s-click5 empty 17 7 0
+#X obj 296 238 bng 60 250 50 0 \$0-click5 \$0-s-click5 empty 17 7 0
 10 #027da2 #00314b #000000;
-#X obj 368 377 bng 60 250 50 0 \$0-click6 \$0-d-click6 empty 17 7 0
+#X obj 384 238 bng 60 250 50 0 \$0-click6 \$0-d-click6 empty 17 7 0
 10 #027da1 #00314b #000000;
-#X obj 192 469 bng 60 250 50 0 \$0-click7 \$0-z-click7 empty 17 7 0
-10 #027da2 #00314b #000000;
-#X obj 281 469 bng 60 250 50 0 \$0-click8 \$0-x-click8 empty 17 7 0
+#X obj 208 326 bng 60 250 50 0 \$0-click7 \$0-z-click7 empty 17 7 0
+10 #037da4 #00314b #000000;
+#X obj 296 325 bng 60 250 50 0 \$0-click8 \$0-x-click8 empty 17 7 0
 10 #027da1 #00314b #000000;
-#X obj 369 468 bng 60 250 50 0 \$0-click9 \$0-c-click9 empty 17 7 0
+#X obj 384 324 bng 60 250 50 0 \$0-click9 \$0-c-click9 empty 17 7 0
 10 #027da0 #00314b #000000;
-#X obj 111 182 hradio 40 1 0 4 \$0-drumkit \$0-drumkit empty 0 -8 0
-10 #027da0 #00314b #000000 0;
-#X text 160 158 drum kit;
-#X text 402 158 drum volume;
-#X text 126 224 A;
-#X text 166 224 B;
-#X text 205 224 C;
-#X text 246 224 D;
-#X text 214 351 Q;
-#X text 303 353 W;
-#X text 389 351 E;
-#X text 215 441 A;
-#X text 305 440 S;
-#X text 392 440 D;
-#X text 217 535 Z;
-#X text 306 533 X;
-#X text 393 532 C;
-#X obj 378 182 hsl 128 40 0 127 0 0 \$0-drumvol drumvol empty -2 -8
-0 10 #037da4 #00314b #000000 0 1;
-#N canvas 613 139 358 381 drumkeys 0;
+#X text 232 215 Q;
+#X text 321 217 W;
+#X text 407 215 E;
+#X text 231 302 A;
+#X text 321 301 S;
+#X text 408 301 D;
+#X text 232 391 Z;
+#X text 321 389 X;
+#X text 408 388 C;
+#N canvas 886 93 477 572 drumkeys 0;
 #X obj 45 41 key;
 #X msg 45 93 1;
 #X obj 142 40 key;
@@ -77,11 +67,37 @@
 #X obj 50 324 s \$0-z-click7;
 #X obj 147 325 s \$0-x-click8;
 #X obj 244 326 s \$0-c-click9;
+#X obj 51 355 key;
+#X msg 51 407 1;
+#X obj 178 355 key;
+#X msg 178 407 1;
+#X obj 306 355 key;
+#X msg 306 407 1;
+#X obj 53 459 key;
+#X msg 53 511 1;
+#X obj 187 459 key;
+#X msg 187 511 1;
+#X obj 321 459 key;
+#X msg 321 511 1;
+#X floatatom 293 31 5 0 0 0 - - - 0;
+#X obj 51 382 select 105;
+#X obj 178 382 select 111;
+#X obj 306 382 select 112;
+#X obj 51 431 s \$0-myclick1-set;
+#X obj 306 431 s \$0-myclick3-set;
+#X obj 178 431 s \$0-myclick2-set;
+#X obj 53 486 select 98;
+#X obj 187 486 select 110;
+#X obj 321 486 select 109;
+#X obj 53 535 s \$0-selclick1-set;
+#X obj 187 535 s \$0-selclick2-set;
+#X obj 321 535 s \$0-selclick3-set;
 #X connect 0 0 6 0;
 #X connect 1 0 27 0;
 #X connect 2 0 7 0;
 #X connect 3 0 28 0;
 #X connect 4 0 8 0;
+#X connect 4 0 48 0;
 #X connect 5 0 29 0;
 #X connect 6 0 1 0;
 #X connect 7 0 3 0;
@@ -104,9 +120,27 @@
 #X connect 24 0 19 0;
 #X connect 25 0 21 0;
 #X connect 26 0 23 0;
-#X restore 1096 10 pd drumkeys;
-#N canvas 637 171 246 362 FX 0;
-#N canvas 486 181 624 510 drums 0;
+#X connect 36 0 49 0;
+#X connect 37 0 52 0;
+#X connect 38 0 50 0;
+#X connect 39 0 54 0;
+#X connect 40 0 51 0;
+#X connect 41 0 53 0;
+#X connect 42 0 55 0;
+#X connect 43 0 58 0;
+#X connect 44 0 56 0;
+#X connect 45 0 59 0;
+#X connect 46 0 57 0;
+#X connect 47 0 60 0;
+#X connect 49 0 37 0;
+#X connect 50 0 39 0;
+#X connect 51 0 41 0;
+#X connect 55 0 43 0;
+#X connect 56 0 45 0;
+#X connect 57 0 47 0;
+#X restore 1094 10 pd drumkeys;
+#N canvas 796 168 247 367 FX 0;
+#N canvas 123 163 751 504 drums 0;
 #N canvas 94 94 1199 364 initA 0;
 #X obj 463 13 loadbang;
 #X obj 455 142 soundfiler;
@@ -219,16 +253,12 @@
 #X connect 31 0 22 0;
 #X connect 32 0 23 0;
 #X connect 33 0 24 0;
-#X restore 13 24 pd initA;
-#X obj 106 261 *~;
-#X obj 143 133 select 0;
-#X msg 143 188 1 10;
-#X msg 196 188 0 10;
-#X obj 124 230 line~;
-#X obj 176 425 *~;
-#X obj 474 354 / 127;
-#X msg 474 379 \$1 15;
-#X obj 474 403 line~;
+#X restore 135 27 pd initA;
+#X obj 228 264 *~;
+#X obj 265 136 select 0;
+#X msg 265 191 1 10;
+#X msg 318 191 0 10;
+#X obj 246 233 line~;
 #N canvas 149 115 1202 355 initB 0;
 #X obj 463 13 loadbang;
 #X obj 455 142 soundfiler;
@@ -341,12 +371,12 @@
 #X connect 31 0 22 0;
 #X connect 32 0 23 0;
 #X connect 33 0 24 0;
-#X restore 79 24 pd initB;
-#X obj 255 133 select 1;
-#X msg 255 188 1 10;
-#X msg 308 188 0 10;
-#X obj 236 230 line~;
-#X obj 218 264 *~;
+#X restore 201 27 pd initB;
+#X obj 377 136 select 1;
+#X msg 377 191 1 10;
+#X msg 430 191 0 10;
+#X obj 358 233 line~;
+#X obj 340 267 *~;
 #N canvas 173 157 1200 361 initC 0;
 #X obj 463 13 loadbang;
 #X obj 455 142 soundfiler;
@@ -458,17 +488,17 @@
 #X connect 31 0 22 0;
 #X connect 32 0 23 0;
 #X connect 33 0 24 0;
-#X restore 149 25 pd initC;
-#X obj 393 133 select 2;
-#X msg 390 193 1 10;
-#X msg 443 193 0 10;
-#X obj 371 235 line~;
-#X obj 353 267 *~;
-#X obj 517 131 select 3;
-#X msg 518 188 1 10;
-#X msg 571 188 0 10;
-#X obj 499 230 line~;
-#X obj 481 270 *~;
+#X restore 271 28 pd initC;
+#X obj 515 136 select 2;
+#X msg 512 196 1 10;
+#X msg 565 196 0 10;
+#X obj 493 238 line~;
+#X obj 475 270 *~;
+#X obj 639 134 select 3;
+#X msg 640 191 1 10;
+#X msg 693 191 0 10;
+#X obj 621 233 line~;
+#X obj 603 273 *~;
 #N canvas 63 131 1358 648 initD 0;
 #X obj 463 13 loadbang;
 #X obj 455 142 soundfiler;
@@ -580,59 +610,255 @@
 #X connect 31 0 22 0;
 #X connect 32 0 23 0;
 #X connect 33 0 24 0;
-#X restore 224 25 pd initD;
-#N canvas 560 230 289 177 init 0;
+#X restore 346 28 pd initD;
+#N canvas 560 230 185 177 init 0;
 #X obj 47 40 loadbang;
 #X obj 47 65 float \$0;
-#X obj 178 39 loadbang;
-#X msg 178 71 \; drumvol 60 \;;
 #X msg 47 91 \; pd dsp 1 \; \$1-drumkit 1 \;;
 #X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X restore 577 25 pd init;
+#X obj 298 459 outlet~;
+#X obj 362 73 r \$0-drumkit;
+#N canvas 44 26 1094 777 mysamples 0;
+#X obj 36 365 adc~;
+#X obj 128 442 delay 1000;
+#X msg 128 473 stop;
+#X obj 135 141 metro 1000;
+#X msg 176 45 stop, f 5;
+#X obj 135 251 int;
+#X msg 153 211 5;
+#X obj 182 253 - 1;
+#X floatatom 135 289 5 0 0 0 - - - 0;
+#X obj 269 316 sel 0;
+#X obj 153 184 loadbang;
+#X obj 349 350 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 35 507 writesf~ 1;
+#X obj 135 15 r \$0-mysound1;
+#X msg 79 412 open sounds/recorded/mysound1.wav \, start;
+#X obj 385 367 adc~;
+#X obj 477 444 delay 1000;
+#X msg 477 475 stop;
+#X obj 484 143 metro 1000;
+#X msg 525 47 stop, f 5;
+#X obj 484 253 int;
+#X msg 502 213 5;
+#X obj 531 255 - 1;
+#X floatatom 484 291 5 0 0 0 - - - 0;
+#X obj 618 318 sel 0;
+#X obj 502 186 loadbang;
+#X obj 698 352 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 384 509 writesf~ 1;
+#X obj 731 385 adc~;
+#X obj 823 462 delay 1000;
+#X msg 823 493 stop;
+#X obj 830 161 metro 1000;
+#X msg 871 65 stop, f 5;
+#X obj 830 271 int;
+#X msg 848 231 5;
+#X obj 877 273 - 1;
+#X floatatom 830 309 5 0 0 0 - - - 0;
+#X obj 964 336 sel 0;
+#X obj 848 204 loadbang;
+#X obj 1044 370 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 730 527 writesf~ 1;
+#X obj 484 17 r \$0-mysound2;
+#X obj 830 35 r \$0-mysound3;
+#X msg 428 414 open sounds/recorded/mysound2.wav \, start;
+#X msg 774 432 open sounds/recorded/mysound3.wav \, start;
+#X obj 34 607 list;
+#X msg 34 639 open \$1 \, 1;
+#X obj 34 673 readsf~;
+#X obj 34 548 r \$0-myclick1;
+#X obj 385 611 list;
+#X msg 385 643 open \$1 \, 1;
+#X obj 385 677 readsf~;
+#X obj 385 552 r \$0-myclick2;
+#X msg 34 577 sounds/recorded/mysound1.wav;
+#X msg 385 581 sounds/recorded/mysound2.wav;
+#X obj 731 618 list;
+#X msg 731 650 open \$1 \, 1;
+#X obj 731 684 readsf~;
+#X obj 731 559 r \$0-myclick3;
+#X msg 731 588 sounds/recorded/mysound3.wav;
+#X obj 34 703 outlet~;
+#X obj 385 705 outlet~;
+#X obj 731 710 outlet~;
+#X obj 74 320 s \$0-counter1;
+#X obj 423 322 s \$0-counter2;
+#X obj 769 340 s \$0-counter3;
+#X connect 0 0 12 0;
+#X connect 1 0 2 0;
+#X connect 2 0 12 0;
+#X connect 3 0 5 0;
+#X connect 4 0 3 0;
+#X connect 5 0 7 0;
+#X connect 5 0 8 0;
+#X connect 6 0 5 1;
+#X connect 7 0 5 1;
+#X connect 8 0 9 0;
+#X connect 8 0 63 0;
+#X connect 9 0 6 0;
+#X connect 9 0 4 0;
+#X connect 9 0 14 0;
+#X connect 9 0 11 0;
+#X connect 9 0 1 0;
+#X connect 10 0 6 0;
+#X connect 13 0 3 0;
+#X connect 14 0 12 0;
+#X connect 15 0 27 0;
+#X connect 16 0 17 0;
+#X connect 17 0 27 0;
+#X connect 18 0 20 0;
+#X connect 19 0 18 0;
+#X connect 20 0 22 0;
+#X connect 20 0 23 0;
+#X connect 21 0 20 1;
+#X connect 22 0 20 1;
+#X connect 23 0 24 0;
+#X connect 23 0 64 0;
+#X connect 24 0 21 0;
+#X connect 24 0 19 0;
+#X connect 24 0 43 0;
+#X connect 24 0 26 0;
+#X connect 24 0 16 0;
+#X connect 25 0 21 0;
+#X connect 28 0 40 0;
+#X connect 29 0 30 0;
+#X connect 30 0 40 0;
+#X connect 31 0 33 0;
+#X connect 32 0 31 0;
+#X connect 33 0 35 0;
+#X connect 33 0 36 0;
+#X connect 34 0 33 1;
+#X connect 35 0 33 1;
+#X connect 36 0 37 0;
+#X connect 36 0 65 0;
+#X connect 37 0 34 0;
+#X connect 37 0 32 0;
+#X connect 37 0 44 0;
+#X connect 37 0 39 0;
+#X connect 37 0 29 0;
+#X connect 38 0 34 0;
+#X connect 41 0 18 0;
+#X connect 42 0 31 0;
+#X connect 43 0 27 0;
+#X connect 44 0 40 0;
+#X connect 45 0 46 0;
+#X connect 46 0 47 0;
+#X connect 47 0 60 0;
+#X connect 48 0 53 0;
+#X connect 49 0 50 0;
+#X connect 50 0 51 0;
+#X connect 51 0 61 0;
+#X connect 52 0 54 0;
+#X connect 53 0 45 0;
+#X connect 54 0 49 0;
+#X connect 55 0 56 0;
+#X connect 56 0 57 0;
+#X connect 57 0 62 0;
+#X connect 58 0 59 0;
+#X connect 59 0 55 0;
+#X restore 29 185 pd mysamples;
+#N canvas 213 65 750 354 selectsamples 0;
+#X obj 118 130 openpanel;
+#X msg 118 239 open \$1;
+#X obj 44 134 t b b;
+#X listbox 118 169 20 0 0 0 - - - 0;
+#X obj 118 272 readsf~;
+#X obj 119 305 outlet~;
+#X msg 44 196 1;
+#X obj 44 36 r \$0-selclick1;
+#X obj 351 133 openpanel;
+#X msg 351 242 open \$1;
+#X obj 277 137 t b b;
+#X listbox 351 172 20 0 0 0 - - - 0;
+#X obj 351 275 readsf~;
+#X obj 352 308 outlet~;
+#X msg 277 199 1;
+#X obj 277 39 r \$0-selclick2;
+#X obj 118 62 r \$0-selectsound1;
+#X obj 351 65 r \$0-selectsound2;
+#X obj 584 130 openpanel;
+#X msg 584 239 open \$1;
+#X obj 510 134 t b b;
+#X listbox 584 169 20 0 0 0 - - - 0;
+#X obj 584 272 readsf~;
+#X obj 585 305 outlet~;
+#X msg 510 196 1;
+#X obj 510 36 r \$0-selclick3;
+#X obj 584 62 r \$0-selectsound3;
+#X connect 0 0 3 0;
 #X connect 1 0 4 0;
-#X connect 2 0 3 0;
-#X restore 492 18 pd init;
-#X obj 176 456 outlet~;
-#X obj 240 70 r \$0-drumkit;
-#X obj 474 328 r \$0-drumvol;
-#X obj 393 329 r closevol;
+#X connect 2 0 6 0;
+#X connect 2 1 3 0;
+#X connect 3 0 1 0;
+#X connect 4 0 5 0;
+#X connect 6 0 4 0;
+#X connect 7 0 2 0;
+#X connect 8 0 11 0;
+#X connect 9 0 12 0;
+#X connect 10 0 14 0;
+#X connect 10 1 11 0;
+#X connect 11 0 9 0;
+#X connect 12 0 13 0;
+#X connect 14 0 12 0;
+#X connect 15 0 10 0;
+#X connect 16 0 0 0;
+#X connect 17 0 8 0;
+#X connect 18 0 21 0;
+#X connect 19 0 22 0;
+#X connect 20 0 24 0;
+#X connect 20 1 21 0;
+#X connect 21 0 19 0;
+#X connect 22 0 23 0;
+#X connect 24 0 22 0;
+#X connect 25 0 20 0;
+#X connect 26 0 18 0;
+#X restore 38 316 pd selectsamples;
+#X obj 298 428 *~ 0.5;
 #X connect 0 0 1 0;
-#X connect 1 0 6 0;
+#X connect 1 0 29 0;
 #X connect 2 0 3 0;
 #X connect 2 1 4 0;
 #X connect 3 0 5 0;
 #X connect 4 0 5 0;
 #X connect 5 0 1 1;
-#X connect 6 0 29 0;
+#X connect 6 0 11 0;
 #X connect 7 0 8 0;
-#X connect 8 0 9 0;
-#X connect 9 0 6 1;
-#X connect 10 0 15 0;
-#X connect 11 0 12 0;
-#X connect 11 1 13 0;
-#X connect 12 0 14 0;
+#X connect 7 1 9 0;
+#X connect 8 0 10 0;
+#X connect 9 0 10 0;
+#X connect 10 0 11 1;
+#X connect 11 0 29 0;
+#X connect 12 0 17 0;
 #X connect 13 0 14 0;
-#X connect 14 0 15 1;
-#X connect 15 0 6 0;
-#X connect 16 0 21 0;
-#X connect 17 0 18 0;
-#X connect 17 1 19 0;
-#X connect 18 0 20 0;
-#X connect 19 0 20 0;
-#X connect 20 0 21 1;
-#X connect 21 0 6 0;
-#X connect 22 0 23 0;
-#X connect 22 1 24 0;
-#X connect 23 0 25 0;
-#X connect 24 0 25 0;
-#X connect 25 0 26 1;
-#X connect 26 0 6 0;
-#X connect 27 0 26 0;
-#X connect 30 0 2 0;
-#X connect 30 0 11 0;
-#X connect 30 0 17 0;
-#X connect 30 0 22 0;
-#X connect 31 0 7 0;
-#X connect 32 0 7 0;
+#X connect 13 1 15 0;
+#X connect 14 0 16 0;
+#X connect 15 0 16 0;
+#X connect 16 0 17 1;
+#X connect 17 0 29 0;
+#X connect 18 0 19 0;
+#X connect 18 1 20 0;
+#X connect 19 0 21 0;
+#X connect 20 0 21 0;
+#X connect 21 0 22 1;
+#X connect 22 0 29 0;
+#X connect 23 0 22 0;
+#X connect 26 0 2 0;
+#X connect 26 0 7 0;
+#X connect 26 0 13 0;
+#X connect 26 0 18 0;
+#X connect 27 0 29 0;
+#X connect 27 1 29 0;
+#X connect 27 2 29 0;
+#X connect 28 0 29 0;
+#X connect 28 1 29 0;
+#X connect 28 2 29 0;
+#X connect 29 0 25 0;
 #X restore 41 45 pd drums;
 #N canvas 336 228 744 505 reverb 0;
 #X obj 51 375 outlet~;
@@ -640,13 +866,13 @@
 #X obj 310 293 expr 1 - $f1;
 #X obj 296 59 loadbang;
 #X obj 112 119 hsl 128 15 0 1 0 1 empty empty 'roomsize' 20 8 0 10
-#fcfcfc #fc8000 #000000 5000 0;
+#fcfcfc #fc8000 #000000 8000 0;
 #X obj 127 162 hsl 128 15 0 2.4 0 1 empty empty damp 20 8 0 10 #fcfcfc
 #fc8000 #000000 0 0;
 #X obj 157 255 hsl 128 15 0 1 0 1 empty empty wet 20 8 0 10 #fcfcfc
-#fc8000 #000000 1250 0;
+#fc8000 #000000 2000 0;
 #X obj 142 205 hsl 128 15 0 1 0 1 empty empty dry 20 8 0 10 #fcfcfc
-#fc8000 #000000 11450 0;
+#fc8000 #000000 10700 0;
 #N canvas 256 339 634 321 vfreeverb~ 0;
 #N canvas 824 312 778 367 combfilters-left1 0;
 #X obj 46 244 +~;
@@ -1559,19 +1785,20 @@ milliseconds \, based on samplerate.;
 #X connect 13 0 12 0;
 #X restore 41 163 pd distortion;
 #X obj 41 295 *~;
-#X obj 120 189 r \$0-FXvol;
 #X obj 120 215 / 127;
 #X msg 120 241 \$1 15;
 #X obj 120 267 line~;
-#N canvas 256 150 513 476 init 0;
+#N canvas 256 150 237 265 init 0;
 #X obj 34 39 loadbang;
 #X obj 34 71 float \$0;
-#X msg 34 105 \; pd dsp 1 \; \$1-FXvol-set 50 \; \$1-reverb-set 50
-\; \$1-bitcrush-set 0 \; \$1-ringMod-set 0 \; \$1-distortion-set 20
-\; \$1-delaytime-set 30 \; \$1-feedback-set 50 \;;
+#X msg 34 103 \; pd dsp 1 \; drumvol 60 \; \$1-reverb-set 50 \; \$1-bitcrush-set
+0 \; \$1-ringMod-set 0 \; \$1-distortion-set 20 \; \$1-delaytime-set
+30 \; \$1-feedback-set 50 \;;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X restore 41 12 pd init;
+#X obj 147 165 r closevol;
+#X obj 120 190 r \$0-drumvol;
 #X connect 0 0 1 0;
 #X connect 1 0 3 0;
 #X connect 3 0 4 0;
@@ -1582,30 +1809,100 @@ milliseconds \, based on samplerate.;
 #X connect 7 0 2 1;
 #X connect 8 0 9 0;
 #X connect 9 0 10 0;
-#X connect 10 0 11 0;
-#X connect 11 0 7 1;
-#X restore 1096 37 pd FX;
-#X obj 593 96 cnv 15 400 550 empty empty empty 20 12 0 14 #82cbd5 #404040
-0;
-#X obj 731 137 hsl 128 60 0 127 0 0 \$0-FXvol \$0-FXvol-set empty -2
--8 0 10 #00314b #027da2 #000000 0 1;
-#X text 686 230 reverb;
-#X text 843 230 distortion;
-#X text 675 361 delay time;
-#X text 684 494 feedback;
-#X obj 646 251 hsl 128 60 0 127 0 0 \$0-reverb \$0-reverb-set empty
+#X connect 10 0 7 1;
+#X connect 12 0 8 0;
+#X connect 13 0 8 0;
+#X restore 1094 32 pd FX;
+#X obj 591 142 cnv 15 400 550 empty empty empty 20 12 0 14 #82cbd5
+#404040 0;
+#X text 679 167 reverb;
+#X text 836 167 distortion;
+#X text 668 298 delay time;
+#X text 677 431 feedback;
+#X obj 639 188 hsl 128 60 0 127 0 0 \$0-reverb \$0-reverb-set empty
 -2 -8 0 10 #027da2 #00314b #000000 0 1;
-#X obj 648 382 hsl 128 60 0 127 0 0 \$0-delaytime \$0-delaytime-set
+#X obj 641 319 hsl 128 60 0 127 0 0 \$0-delaytime \$0-delaytime-set
 empty -2 -8 0 10 #027da1 #00314b #000000 0 1;
-#X obj 649 517 hsl 128 60 0 127 0 0 \$0-feedback \$0-feedback-set empty
+#X obj 642 454 hsl 128 60 0 127 0 0 \$0-feedback \$0-feedback-set empty
 -2 -8 0 10 #027da2 #00314b #000000 0 1;
-#X text 776 111 volume;
-#X obj 817 517 hsl 128 60 0 127 0 0 \$0-ringMod \$0-ringMod-set empty
+#X obj 810 454 hsl 128 60 0 127 0 0 \$0-ringMod \$0-ringMod-set empty
 -2 -8 0 10 #027da2 #00314b #000000 0 1;
-#X obj 818 382 hsl 128 60 0 127 0 0 \$0-bitcrush \$0-bitcrush-set empty
+#X obj 811 319 hsl 128 60 0 127 0 0 \$0-bitcrush \$0-bitcrush-set empty
 -2 -8 0 10 #027da2 #00314b #000000 0 1;
-#X obj 817 251 hsl 128 60 0 127 0 0 \$0-distortion \$0-distortion-set
+#X obj 810 188 hsl 128 60 0 127 0 0 \$0-distortion \$0-distortion-set
 empty -2 -8 0 10 #027da2 #00314b #000000 0 1;
-#X text 865 360 crush;
-#X text 865 495 ring;
+#X text 858 297 crush;
+#X text 858 432 ring;
+#X obj 209 444 bng 60 250 50 0 \$0-myclick1 \$0-myclick1-set empty
+17 7 0 10 #027da1 #00314b #000000;
+#X obj 297 443 bng 60 250 50 0 \$0-myclick2 \$0-myclick2-set empty
+17 7 0 10 #037da4 #00314b #000000;
+#X obj 385 442 bng 60 250 50 0 \$0-myclick3 \$0-myclick3-set empty
+17 7 0 10 #037da4 #00314b #000000;
+#X text 33 425 record your samples -->;
+#X text 75 464 play your samples;
+#X obj 233 423 bng 15 250 50 0 \$0-mysound1 \$0-mysound1 empty 17 7
+0 10 #5aa4d6 #376ea5 #000000;
+#X obj 320 423 bng 15 250 50 0 \$0-mysound2 \$0-mysound2 empty 17 7
+0 10 #5aa4d6 #376ea5 #000000;
+#X obj 406 422 bng 15 250 50 0 \$0-mysound3 \$0-mysound3 empty 17 7
+0 10 #5aa4d6 #376ea5 #000000;
+#X text 54 609 try selected samples;
+#X text 75 572 select samples-->;
+#X obj 229 567 bng 15 250 50 0 \$0-selectsound1 \$0-selectsound1 empty
+17 7 0 10 #5aa4d6 #376ea5 #000000;
+#X obj 323 567 bng 15 250 50 0 \$0-selectsound2 \$0-selectsound2 empty
+17 7 0 10 #5aa4d6 #376ea5 #000000;
+#X obj 410 566 bng 15 250 50 0 \$0-selectsound3 \$0-selectsound3 empty
+17 7 0 10 #5aa4d6 #376ea5 #000000;
+#X obj 208 586 bng 60 250 50 0 \$0-selclick1 \$0-selclick1-set empty
+17 7 0 10 #037da4 #00314b #000000;
+#X obj 298 586 bng 60 250 50 0 \$0-selclick2 \$0-selclick2-set empty
+17 7 0 10 #037da4 #00314b #000000;
+#X obj 387 586 bng 60 250 50 0 \$0-selclick3 \$0-selclick3-set empty
+17 7 0 10 #037da4 #00314b #000000;
+#X floatatom 223 531 5 0 0 0 - \$0-counter1 \$0-counter1-s 0;
+#X text 89 530 recording in...;
+#X floatatom 313 531 5 0 0 0 - \$0-counter2 \$0-counter2-s 0;
+#X floatatom 400 531 5 0 0 0 - \$0-counter3 \$0-counter3-s 0;
+#N canvas 183 93 442 261 FXpresets 0;
+#X obj 40 52 r \$0-preset1-s;
+#X obj 40 87 float \$0;
+#X msg 40 116 \; \$1-reverb-set 80 \; \$1-delaytime-set 30 \; \$1-feedback-set
+30 \; \$1-distortion-set 0 \; \$1-bitcrush-set 0 \; \$1-ringMod-set
+0 \;;
+#X obj 233 89 float \$0;
+#X obj 233 54 r \$0-preset2-s;
+#X msg 233 118 \; \$1-reverb-set 0 \; \$1-delaytime-set 0 \; \$1-feedback-set
+0 \; \$1-distortion-set 20 \; \$1-bitcrush-set 30 \; \$1-ringMod-set
+40 \;;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 3 0 5 0;
+#X connect 4 0 3 0;
+#X restore 1094 54 pd FXpresets;
+#X text 233 509 I;
+#X text 322 507 O;
+#X text 412 505 P;
+#X text 231 650 B;
+#X text 322 650 N;
+#X text 410 651 M;
+#X obj 10 10 cnv 15 1080 100 empty empty empty 20 12 0 14 #5aa4d6 #404040
+0;
+#X obj 216 26 hradio 60 1 0 4 \$0-drumkit \$0-drumkit empty 0 -8 0
+10 #00314b #037da4 #000000 0;
+#X text 147 47 drum kit;
+#X text 621 47 drum volume;
+#X text 242 89 A;
+#X text 301 88 B;
+#X text 361 88 C;
+#X text 422 88 D;
+#X obj 714 28 hsl 235 60 0 127 0 0 \$0-drumvol drumvol empty -2 -8
+0 10 #00314b #037da4 #000000 0 1;
+#X obj 682 561 bng 60 250 50 0 \$0-preset1-s \$0-preset1-r empty 17
+7 0 10 #00314b #037da4 #091418;
+#X obj 851 562 bng 60 250 50 0 \$0-preset2-s \$0-preset2-r empty 17
+7 0 10 #00314b #037da4 #000000;
+#X text 680 636 preset 1;
+#X text 851 635 preset 2;
 #X coords 0 -1 1 1 1080 720 1 10 10;

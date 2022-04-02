@@ -7,3 +7,9 @@ los sonidos se entrecortan
 
 
 RAUL:
+-(01/04): Separación de las apps de Synth y Drumbox, ahora son INDEPENDIENTES y cada una se abre desde el menú principal
+-(01/04): Añadidos los dos botones en el menú principal para Synth y Drumbox
+PROBLEMA: Una vez abierto el Drumbox, si lo cerramos y no abrimos una de las otras dos herramientas, las teclas usadas en el Drumbox siguen activando el sonido, debemos abrir el Sequencer o el Synth para que esto no ocurra
+-(02/04): Implementación de 3 botones para grabar audio samples en el Drumbox
+-(02/04): Implementación de 3 botones para seleccionar audio samples de la carpeta de sonidos en el Drumbox
+-(02/04): Implementación de 2 opciones predeterminadas de presets en Synth y Drumbox
