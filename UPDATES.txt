@@ -20,3 +20,4 @@ PROBLEMA: Una vez abierto el Drumbox, si lo cerramos y no abrimos una de las otr
 -(20/04): Asignación de teclas a los toggles que conforman las teclas del piano del Synth.
 -(20/04): Corrección en el menú principal--> Cuando se abre el menú las teclas asignadas al piano del Synth no suenan.
 PROBLEMA: Una vez abierto el Synth, si lo cerramos y no abrimos el Drumbox, las teclas del Synth siguen activando el sonido, debemos abrir el Drumbox para que no ocurra, pero posteriormente tendremos el mismo problema con el Drumbox.
+-(22/04): Implementación de dos opciones para grabar composiciones de 5s de Drumbox y Synth y reproducirlas en bucle.
