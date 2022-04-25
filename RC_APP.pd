@@ -5,7 +5,7 @@
 #X msg 21 165 vis \$1;
 #X msg 156 164 vis \$1;
 #X obj 156 187 s pd-drumsapp;
-#N canvas 0 60 1100 743 sequencerapp 0;
+#N canvas 303 37 1100 743 sequencerapp 0;
 #X obj 5 7 patches/page4;
 #X restore 531 25 pd sequencerapp;
 #X obj 21 188 s pd-sequencerapp;
@@ -101,8 +101,8 @@
 #X connect 44 0 47 0;
 #X connect 45 0 42 0;
 #X connect 45 1 44 0;
-#X restore 571 349 pd menu_superlooper;
-#X obj 10 10 cnv 15 1080 720 empty empty empty 20 12 0 14 #e0e0e0 #404040
+#X restore 948 709 pd menu_superlooper;
+#X obj 11 11 cnv 15 1078 718 empty empty empty 20 12 0 14 #e0e0e0 #404040
 0;
 #X obj 276 179 bng 150 250 50 0 \$0-option1-s \$0-option1-r empty 17
 7 0 10 #fcfcfc #000000 #000000;
@@ -178,7 +178,7 @@ audio1;
 #X connect 25 0 9 0;
 #X connect 26 0 23 0;
 #X connect 27 0 10 0;
-#X restore 1097 10 pd audio1;
+#X restore 1097 11 pd audio1;
 #N canvas 620 78 820 541 audio2 0;
 #X msg 205 447 stop;
 #X obj 212 115 metro 1000;
@@ -243,7 +243,7 @@ audio2;
 #X connect 25 0 9 0;
 #X connect 26 0 18 0;
 #X connect 27 0 10 0;
-#X restore 1097 33 pd audio2;
+#X restore 1097 34 pd audio2;
 #X obj 36 355 cnv 15 500 300 empty empty empty 20 12 0 14 #bbbbbb #404040
 0;
 #X obj 559 355 cnv 15 500 300 empty empty empty 20 12 0 14 #bbbbbb
@@ -254,7 +254,7 @@ audio2;
 7 0 10 #fcfcfc #000000 #000000;
 #X text 74 483 play audio;
 #X text 157 423 recording in ....;
-#X listbox 304 425 20 0 0 0 - - - 0;
+#X listbox 304 425 7 0 0 0 - - - 0;
 #X obj 304 398 r \$0-audiocounter1;
 #X msg 148 579 0;
 #X text 51 579 stop playing;
@@ -270,7 +270,7 @@ audio2;
 17 7 0 10 #fcfcfc #000000 #000000;
 #X text 594 490 play audio;
 #X text 677 430 recording in ....;
-#X listbox 824 432 20 0 0 0 - - - 0;
+#X listbox 824 432 8 0 0 0 - - - 0;
 #X msg 668 586 0;
 #X text 571 586 stop playing;
 #N canvas 0 22 450 278 (subpatch) 0;
