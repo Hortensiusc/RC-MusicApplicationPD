@@ -4691,7 +4691,7 @@
 #X obj 32 218 line~;
 #X msg 32 189 \$1 30;
 #X obj 12 301 *~ 0.9;
-#N canvas 1116 12 599 763 presets 1;
+#N canvas 1116 12 599 763 presets 0;
 #X obj 21 33 r \$0-preset1;
 #X obj 21 185 f \$0;
 #X msg 21 218 \; \$1-stepAct-0-0-r 1 \; \$1-stepAct-2-1-r 1 \; \$1-stepAct-1-2-r
@@ -4722,6 +4722,7 @@
 #X connect 7 0 3 0;
 #X connect 7 1 9 0;
 #X restore 283 91 pd presets;
+#X obj 111 358 s~ sequenceraudio;
 #X connect 2 0 5 0;
 #X connect 5 0 9 0;
 #X connect 6 0 8 0;
@@ -4729,6 +4730,7 @@
 #X connect 8 0 7 0;
 #X connect 9 0 3 0;
 #X connect 9 0 3 1;
+#X connect 9 0 11 0;
 #X restore 996 707 pd codiPage4;
 #X obj 11 11 cnv 15 1078 718 empty empty empty 20 12 0 14 #cddcdc #404040
 0;
