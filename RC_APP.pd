@@ -1,5 +1,5 @@
-#N canvas 698 32 1234 741 12;
-#N canvas 299 51 1440 661 audio1 0;
+#N canvas 136 25 1234 741 12;
+#N canvas 0 90 1440 661 audio1 0;
 #X msg 207 537 stop;
 #X obj 212 115 metro 1000;
 #X msg 252 69 stop, f 5;
@@ -29,8 +29,7 @@
 #X obj 890 264 pack s s;
 #X listbox 943 234 20 0 0 0 - - - 0;
 #X obj 943 200 list;
-#X msg 890 435 C:/Users/horte/OneDrive/Escritorio/pruebaspd/audiodrumbox.wav
-, f 63;
+#X msg 890 435 /Users/raul/Desktop/audiodrumbox.wav, f 63;
 #X obj 943 143 loadbang;
 #X msg 943 175 audiodrumbox.wav;
 #X msg 890 337 set \$1/\$2;
@@ -94,7 +93,7 @@
 #X connect 41 0 28 0;
 #X connect 42 0 0 0;
 #X restore 1019 15 pd audio1;
-#N canvas 36 74 1380 645 audio2 0;
+#N canvas 60 118 1380 645 audio2 0;
 #X msg 205 517 stop;
 #X obj 212 115 metro 1000;
 #X msg 252 69 stop, f 5;
@@ -110,17 +109,14 @@
 #X msg 487 182 open \$1 \, 1;
 #X obj 487 216 readsf~;
 #X msg 230 185 5;
-#X obj 205 486 delay 5000;
 #X obj 476 263 dac~;
-#X obj 711 23 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000;
 #X obj 347 608 soundfiler;
 #X listbox 890 78 59 0 0 0 - - - 0;
 #X obj 890 45 openpanel 1;
 #X obj 890 264 pack s s;
 #X listbox 943 234 20 0 0 0 - - - 0;
 #X obj 943 200 list;
-#X msg 890 435 /Users/raul/Desktop/audiodrumbox.wav, f 63;
+#X msg 890 435 /Users/raul/Desktop/audiosynth.wav, f 63;
 #X obj 943 143 loadbang;
 #X msg 890 337 set \$1/\$2;
 #X msg 487 110 \$2;
@@ -142,6 +138,7 @@
 #X obj 151 294 s \$0-audiocounter2;
 #X obj 212 36 r \$0-audiorec2;
 #X msg 943 175 audiosynth.wav;
+#X obj 205 490 r \$0-stopaudio2-s;
 #X connect 0 0 9 0;
 #X connect 1 0 3 0;
 #X connect 2 0 1 0;
@@ -149,49 +146,46 @@
 #X connect 3 0 5 0;
 #X connect 4 0 3 1;
 #X connect 5 0 6 0;
-#X connect 5 0 41 0;
+#X connect 5 0 39 0;
 #X connect 6 0 13 0;
 #X connect 6 0 2 0;
 #X connect 6 0 8 0;
-#X connect 6 0 14 0;
-#X connect 6 0 29 0;
+#X connect 6 0 27 0;
 #X connect 7 0 13 0;
 #X connect 10 0 11 0;
 #X connect 11 0 12 0;
-#X connect 12 0 15 0;
-#X connect 12 0 15 1;
-#X connect 12 1 16 0;
+#X connect 12 0 14 0;
+#X connect 12 0 14 1;
 #X connect 13 0 3 1;
-#X connect 14 0 0 0;
-#X connect 16 0 27 0;
-#X connect 18 0 20 0;
-#X connect 19 0 18 0;
-#X connect 20 0 25 0;
-#X connect 20 0 34 0;
-#X connect 21 0 20 1;
-#X connect 22 0 21 0;
-#X connect 23 0 32 0;
-#X connect 24 0 43 0;
-#X connect 25 0 23 0;
-#X connect 26 0 10 0;
-#X connect 27 0 26 0;
-#X connect 28 0 39 0;
-#X connect 29 0 30 0;
-#X connect 30 0 9 0;
-#X connect 31 0 29 0;
-#X connect 32 0 33 0;
-#X connect 33 0 27 1;
-#X connect 33 0 29 1;
-#X connect 33 0 28 1;
-#X connect 34 0 23 0;
-#X connect 35 0 19 0;
-#X connect 36 0 27 0;
-#X connect 37 0 12 0;
-#X connect 38 0 28 0;
-#X connect 39 0 17 0;
-#X connect 40 0 9 0;
-#X connect 42 0 1 0;
-#X connect 43 0 22 0;
+#X connect 16 0 18 0;
+#X connect 17 0 16 0;
+#X connect 18 0 23 0;
+#X connect 18 0 32 0;
+#X connect 19 0 18 1;
+#X connect 20 0 19 0;
+#X connect 21 0 30 0;
+#X connect 22 0 41 0;
+#X connect 23 0 21 0;
+#X connect 24 0 10 0;
+#X connect 25 0 24 0;
+#X connect 26 0 37 0;
+#X connect 27 0 28 0;
+#X connect 28 0 9 0;
+#X connect 29 0 27 0;
+#X connect 30 0 31 0;
+#X connect 31 0 25 1;
+#X connect 31 0 27 1;
+#X connect 31 0 26 1;
+#X connect 32 0 21 0;
+#X connect 33 0 17 0;
+#X connect 34 0 25 0;
+#X connect 35 0 12 0;
+#X connect 36 0 26 0;
+#X connect 37 0 15 0;
+#X connect 38 0 9 0;
+#X connect 40 0 1 0;
+#X connect 41 0 20 0;
+#X connect 42 0 0 0;
 #X restore 1019 38 pd audio2;
 #N canvas 0 62 1440 661 audio3 0;
 #X msg 205 517 stop;
@@ -209,18 +203,14 @@
 #X msg 487 182 open \$1 \, 1;
 #X obj 487 216 readsf~;
 #X msg 230 185 5;
-#X obj 205 486 delay 5000;
 #X obj 476 263 dac~;
-#X obj 711 23 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000;
 #X obj 347 608 soundfiler;
 #X listbox 890 78 59 0 0 0 - - - 0;
 #X obj 890 45 openpanel 1;
 #X obj 890 264 pack s s;
 #X listbox 943 234 20 0 0 0 - - - 0;
 #X obj 943 200 list;
-#X msg 890 435 C:/Users/horte/OneDrive/Escritorio/pruebaspd/audiosequencer.wav
-, f 63;
+#X msg 890 435 /Users/raul/Desktop/audiosequencer.wav, f 63;
 #X obj 943 143 loadbang;
 #X msg 890 337 set \$1/\$2;
 #X msg 487 110 \$2;
@@ -242,6 +232,7 @@
 #X msg 347 578 read -resize \$2 audio3;
 #X obj 11 318 r~ sequenceraudio;
 #X obj 366 120 r \$0-stopaudio3;
+#X obj 205 490 r \$0-stopaudio3-s;
 #X connect 0 0 9 0;
 #X connect 1 0 3 0;
 #X connect 2 0 1 0;
@@ -249,49 +240,46 @@
 #X connect 3 0 5 0;
 #X connect 4 0 3 1;
 #X connect 5 0 6 0;
-#X connect 5 0 39 0;
+#X connect 5 0 37 0;
 #X connect 6 0 13 0;
 #X connect 6 0 2 0;
 #X connect 6 0 8 0;
-#X connect 6 0 14 0;
-#X connect 6 0 29 0;
+#X connect 6 0 27 0;
 #X connect 7 0 13 0;
 #X connect 10 0 11 0;
 #X connect 11 0 12 0;
-#X connect 12 0 15 0;
-#X connect 12 0 15 1;
-#X connect 12 1 16 0;
+#X connect 12 0 14 0;
+#X connect 12 0 14 1;
 #X connect 13 0 3 1;
-#X connect 14 0 0 0;
-#X connect 16 0 27 0;
-#X connect 18 0 20 0;
-#X connect 19 0 18 0;
-#X connect 20 0 25 0;
-#X connect 20 0 34 0;
-#X connect 21 0 20 1;
-#X connect 22 0 21 0;
-#X connect 23 0 32 0;
-#X connect 24 0 38 0;
-#X connect 25 0 23 0;
-#X connect 26 0 10 0;
-#X connect 27 0 26 0;
-#X connect 28 0 41 0;
-#X connect 29 0 30 0;
-#X connect 30 0 9 0;
-#X connect 31 0 29 0;
-#X connect 32 0 33 0;
-#X connect 33 0 27 1;
-#X connect 33 0 29 1;
-#X connect 33 0 28 1;
-#X connect 34 0 23 0;
-#X connect 35 0 27 0;
-#X connect 36 0 1 0;
-#X connect 37 0 19 0;
-#X connect 38 0 22 0;
-#X connect 40 0 28 0;
-#X connect 41 0 17 0;
-#X connect 42 0 9 0;
-#X connect 43 0 12 0;
+#X connect 16 0 18 0;
+#X connect 17 0 16 0;
+#X connect 18 0 23 0;
+#X connect 18 0 32 0;
+#X connect 19 0 18 1;
+#X connect 20 0 19 0;
+#X connect 21 0 30 0;
+#X connect 22 0 36 0;
+#X connect 23 0 21 0;
+#X connect 24 0 10 0;
+#X connect 25 0 24 0;
+#X connect 26 0 39 0;
+#X connect 27 0 28 0;
+#X connect 28 0 9 0;
+#X connect 29 0 27 0;
+#X connect 30 0 31 0;
+#X connect 31 0 25 1;
+#X connect 31 0 27 1;
+#X connect 31 0 26 1;
+#X connect 32 0 21 0;
+#X connect 33 0 25 0;
+#X connect 34 0 1 0;
+#X connect 35 0 17 0;
+#X connect 36 0 20 0;
+#X connect 38 0 26 0;
+#X connect 39 0 15 0;
+#X connect 40 0 9 0;
+#X connect 41 0 12 0;
+#X connect 42 0 0 0;
 #X restore 1020 61 pd audio3;
 #N canvas 226 184 776 462 menu_superlooper 0;
 #X obj 21 29 r \$0-option1-s;
@@ -299,14 +287,14 @@
 #X msg 21 165 vis \$1;
 #X msg 156 164 vis \$1;
 #X obj 156 187 s pd-drumsapp;
-#N canvas 314 29 1100 743 sequencerapp 0;
+#N canvas 617 124 1100 743 sequencerapp 0;
 #X obj 5 7 patches/page4;
 #X restore 531 25 pd sequencerapp;
 #X obj 21 188 s pd-sequencerapp;
-#N canvas 747 33 1112 744 drumsapp 0;
+#N canvas 328 58 1112 744 drumsapp 0;
 #X obj 10 11 patches/drumbox_app;
 #X restore 531 49 pd drumsapp;
-#N canvas 475 43 1093 732 synthapp 0;
+#N canvas 769 105 1093 732 synthapp 0;
 #X obj 5 8 patches/synthesizer_app;
 #X restore 531 74 pd synthapp;
 #X msg 270 165 vis \$1;
@@ -396,81 +384,87 @@
 #X connect 45 0 42 0;
 #X connect 45 1 44 0;
 #X restore 948 709 pd menu_superlooper;
-#X obj 11 11 cnv 15 1078 718 empty empty empty 20 12 0 14 #e0e0e0 #404040
+#X obj 11 11 cnv 15 1078 718 empty empty empty 20 12 0 14 #9bd1d1 #404040
 0;
-#X obj 40 150 bng 130 250 50 0 \$0-option1-s \$0-option1-r empty 17
-7 0 10 #fcfcfc #000000 #000000;
-#X obj 201 150 bng 130 250 50 0 \$0-option2-s \$0-option2-r empty 17
-7 0 10 #fcfcfc #000000 #000000;
-#X text 227 80 MENU PRINCIPAL;
-#X text 246 128 DRUMBOX;
-#X text 76 128 SEQUENCER;
-#X obj 365 150 bng 130 250 50 0 \$0-option3-s \$0-option3-r empty 17
-7 0 10 #fcfcfc #000000 #000000;
-#X text 414 126 SYNTH;
-#X obj 36 385 cnv 15 500 300 empty empty empty 20 12 0 14 #bbbbbb #404040
+#X obj 36 385 cnv 15 500 300 empty empty empty 20 12 0 14 #ccdbdc #404040
 0;
-#X obj 559 385 cnv 15 500 300 empty empty empty 20 12 0 14 #bbbbbb
+#X obj 559 385 cnv 15 500 300 empty empty empty 20 12 0 14 #ccdbdc
 #404040 0;
-#X obj 70 505 bng 60 250 50 0 \$0-audiorec1 \$0-audiorec1 empty 17
-7 0 10 #fcfcfc #000000 #000000;
-#X obj 449 451 bng 60 250 50 0 \$0-audioplay1 \$0-audioplay1 empty
-17 7 0 10 #fcfcfc #000000 #000000;
-#X text 439 428 play audio;
-#X text 142 525 recording in ....;
-#X listbox 146 546 7 0 0 0 - \$0-audiocounter1 -- 0;
-#N canvas 0 22 450 278 (subpatch) 0;
-#X array audio1 452928 float 2;
-#X coords 0 1 452928 -1 200 140 1;
-#X restore 308 531 graph;
-#X obj 605 440 bng 60 250 50 0 \$0-audiorec2 \$0-audiorec2 empty 17
-7 0 10 #fcfcfc #000000 #000000;
-#X obj 604 543 bng 60 250 50 0 \$0-audioplay2 \$0-audioplay2 empty
-17 7 0 10 #fcfcfc #000000 #000000;
-#X text 594 520 play audio;
-#X text 677 460 recording in ....;
-#X listbox 824 462 8 0 0 0 - - - 0;
-#X msg 668 616 0;
-#X text 571 616 stop playing;
-#N canvas 0 22 450 278 (subpatch) 0;
-#X array audio2 220480 float 2;
-#X coords 0 1 220480 -1 200 140 1;
-#X restore 821 509 graph;
-#X text 586 418 record synth;
-#X obj 668 643 s \$0-stopaudio2;
-#X obj 824 435 r \$0-audiocounter2;
-#X obj 71 427 bng 40 250 50 0 \$0-selectpatch-drumbox-s \$0-selectpatch-drumbox-r
-empty 17 7 0 10 #fcfcfc #000000 #000000;
-#X obj 560 55 cnv 15 500 300 empty empty empty 20 12 0 14 #bbbbbb #404040
+#X obj 68 500 bng 60 250 50 0 \$0-audiorec1 \$0-audiorec1 empty 17
+7 0 10 #007da4 #00324b #000000;
+#X obj 439 427 bng 60 250 50 0 \$0-audioplay1 \$0-audioplay1 empty
+17 7 0 10 #007da4 #00324b #000000;
+#X text 139 507 recording in ....;
+#X listbox 143 528 7 0 0 0 - \$0-audiocounter1 -- 0;
+#X obj 600 499 bng 60 250 50 0 \$0-audiorec2 \$0-audiorec2 empty 17
+7 0 10 #007da4 #00324b #000000;
+#X obj 960 424 bng 60 250 50 0 \$0-audioplay2 \$0-audioplay2 empty
+17 7 0 10 #007da4 #00324b #000000;
+#X text 671 507 recording in ....;
+#X listbox 674 528 8 0 0 0 - \$0-audiocounter2 -- 0;
+#X obj 68 422 bng 40 250 50 0 \$0-selectpatch-drumbox-s \$0-selectpatch-drumbox-r
+empty 17 7 0 10 #82ccd6 #007da4 #000000;
+#X obj 560 55 cnv 15 500 300 empty empty empty 20 12 0 14 #ccdbdc #404040
 0;
-#X obj 609 103 bng 60 250 50 0 \$0-audiorec3 \$0-audiorec3 empty 17
-7 0 10 #fcfcfc #000000 #000000;
-#X obj 608 206 bng 60 250 50 0 \$0-audioplay3 \$0-audioplay3 empty
-17 7 0 10 #fcfcfc #000000 #000000;
-#X text 598 183 play audio;
-#X text 681 123 recording in ....;
-#X listbox 828 145 7 0 0 0 - - - 0;
-#X msg 672 279 0;
-#X text 575 279 stop playing;
+#X obj 596 172 bng 60 250 50 0 \$0-audiorec3 \$0-audiorec3 empty 17
+7 0 10 #007da4 #00324b #000000;
+#X obj 962 95 bng 60 250 50 0 \$0-audioplay3 \$0-audioplay3 empty 17
+7 0 10 #007da4 #00324b #000000;
+#X text 667 179 recording in ....;
+#X listbox 671 199 7 0 0 0 - \$0-audiocounter3 -- 0;
+#X obj 594 96 bng 40 250 50 0 \$0-selectpatch-sequencer-s \$0-selectpatch-sequencer-r
+empty 17 7 0 10 #82ccd6 #007da4 #000000;
+#X obj 600 421 bng 40 250 50 0 \$0-selectpatch-synth-s \$0-selectpatch-synth-r
+empty 17 7 0 10 #82ccd6 #007da4 #000000;
+#X obj 69 599 bng 60 250 50 0 \$0-stopaudio1-s \$0-stopaudio1-r empty
+17 7 0 10 #007da4 #00324b #000000;
+#X text 217 367 DRUMBOX RECORDING;
+#X text 64 479 START RECORDING;
+#X text 66 577 STOP RECORDING;
+#X text 593 477 START RECORDING;
+#X text 950 401 PLAY AUDIO;
+#X text 431 400 PLAY AUDIO;
+#X obj 597 598 bng 60 250 50 0 \$0-stopaudio2-s \$0-stopaudio2-r empty
+17 7 0 10 #007da4 #00324b #000000;
+#X text 592 575 STOP RECORDING;
+#X text 756 367 SYNTH RECORDING;
+#X obj 596 269 bng 60 250 50 0 \$0-stopaudio3-s \$0-stopaudio3-r empty
+17 7 0 10 #007da4 #00324b #000000;
+#X text 591 149 START RECORDING;
+#X text 952 72 PLAY AUDIO;
+#X text 592 249 STOP RECORDING;
+#X text 590 71 SELECT FOLDER TO SAVE AUDIO FILE;
+#X text 741 37 SEQUENCER RECORDING;
+#X obj 300 522 cnv 15 200 140 empty empty empty 20 12 0 14 #82ccd6
+#404040 0;
 #N canvas 0 22 450 278 (subpatch) 0;
-#X array audio3 220480 float 2;
-#X coords 0 1 220480 -1 200 140 1 0 0;
+#X array audio1 798784 float 2;
+#X coords 0 1 798784 -1 200 140 1;
+#X restore 300 522 graph;
+#X obj 825 192 cnv 15 200 140 empty empty empty 20 12 0 14 #82ccd6
+#404040 0;
+#N canvas 0 22 450 278 (subpatch) 0;
+#X array audio3 625536 float 2;
+#X coords 0 1 625536 -1 200 140 1 0 0;
 #X restore 825 192 graph;
-#X obj 1009 66 bng 40 250 50 0 \$0-selectpatch-sequencer-s \$0-selectpatch-sequencer-r
-empty 17 7 0 10 #fcfcfc #000000 #000000;
-#X text 590 81 record sequencer;
-#X obj 672 306 s \$0-stopaudio3;
-#X obj 828 118 r \$0-audiocounter3;
-#X obj 1008 394 bng 40 250 50 0 \$0-selectpatch-synth-s \$0-selectpatch-synth-r
-empty 17 7 0 10 #fcfcfc #000000 #000000;
-#X obj 70 603 bng 60 250 50 0 \$0-stopaudio1-s \$0-stopaudio1-r empty
-17 7 0 10 #fcfcfc #000000 #000000;
-#X text 220 388 DRUMBOX RECORDING;
-#X text 66 484 START RECORDING;
-#X text 113 430 SELECT FOLDER TO SAVE THE RECORDED AUDIO;
-#X text 67 581 STOP RECORDING;
-#X connect 25 0 29 0;
-#X connect 30 0 24 0;
-#X connect 38 0 43 0;
-#X connect 44 0 37 0;
+#X obj 823 522 cnv 15 200 140 empty empty empty 20 12 0 14 #82ccd6
+#404040 0;
+#N canvas 0 22 450 278 (subpatch) 0;
+#X array audio2 772288 float 2;
+#X coords 0 1 772288 -1 200 140 1;
+#X restore 823 522 graph;
+#X text 65 399 SELECT FOLDER TO SAVE AUDIO FILE;
+#X text 593 400 SELECT FOLDER TO SAVE AUDIO FILE;
+#X obj 38 54 cnv 15 500 300 empty empty empty 20 12 0 14 #ccdbdc #404040
+0;
+#X obj 60 137 bng 130 250 50 0 \$0-option1-s \$0-option1-r empty 17
+7 0 10 #007da4 #00324b #000000;
+#X obj 221 137 bng 130 250 50 0 \$0-option2-s \$0-option2-r empty 17
+7 0 10 #007da4 #00324b #000000;
+#X text 233 35 MENU PRINCIPAL;
+#X text 266 115 DRUMBOX;
+#X text 96 115 SEQUENCER;
+#X obj 385 137 bng 130 250 50 0 \$0-option3-s \$0-option3-r empty 17
+7 0 10 #007da4 #00324b #000000;
+#X text 434 113 SYNTH;
 #X coords 0 -1 1 1 1080 720 1 10 10;
