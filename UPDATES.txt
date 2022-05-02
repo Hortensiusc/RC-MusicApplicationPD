@@ -10,6 +10,7 @@ el sonido que hemos grabado nos gusta, o  si el sonido que se ha subido se ha he
 pero por ejemplo borrar de forma dinamica es mucho mas complicado)
 - (26/04), hemos añadido las funcionalidades de grabar cada uno de los modulos y seleccionar la carpeta donde se guarda el archivo de audio
 - (29/04), ahora estos archivos de audio no tienen una duraciín concreta, puede el usuario inicia la grabación y la para cuando lo cree conveniente
+- (02/05), ya se puede poner nombre al archivo
 
 
 RAUL:

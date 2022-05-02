@@ -139,7 +139,7 @@
 #X connect 56 0 45 0;
 #X connect 57 0 47 0;
 #X restore 1094 10 pd drumkeys;
-#N canvas 796 168 247 367 FX 1;
+#N canvas 796 168 247 343 FX 0;
 #N canvas 123 163 751 504 drums 0;
 #N canvas 94 94 1199 364 initA 0;
 #X obj 463 13 loadbang;
