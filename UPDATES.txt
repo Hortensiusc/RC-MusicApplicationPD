@@ -25,3 +25,4 @@ PROBLEMA: Una vez abierto el Drumbox, si lo cerramos y no abrimos una de las otr
 PROBLEMA: Una vez abierto el Synth, si lo cerramos y no abrimos el Drumbox, las teclas del Synth siguen activando el sonido, debemos abrir el Drumbox para que no ocurra, pero posteriormente tendremos el mismo problema con el Drumbox.
 -(22/04): Implementación de dos opciones para grabar composiciones de 5s de Drumbox y Synth y reproducirlas en bucle.
 -(29/04): Implementación de botones para para grabación de audio de Synth y Sequencer (en MENÚ PRINCIPAL) + Eliminación de reproducción en bucle + Aplicación de gama de colores en MENÚ.
+-(05/05): Bloque de Synth y Drumbox implementado en APP_V2.
