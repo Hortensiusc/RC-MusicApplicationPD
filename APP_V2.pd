@@ -1,0 +1,12 @@
+#N canvas 114 6 1733 985 12;
+#N canvas 447 210 450 300 codigo 0;
+#N canvas 32 32 450 300 sequencer 0;
+#X restore 14 10 pd sequencer;
+#N canvas 64 64 450 300 drumbox 0;
+#X restore 14 34 pd drumbox;
+#N canvas 96 96 450 300 synth 0;
+#X restore 14 57 pd synth;
+#N canvas 128 128 450 300 general 0;
+#X restore 15 110 pd general;
+#X restore 1630 14 pd codigo;
+#X coords 0 -1 1 1 1690 950 1 10 10;
