@@ -1,4 +1,4 @@
-#N canvas 0 25 1920 976 12;
+#N canvas 0 8 1920 976 12;
 #N canvas 0 53 1440 750 codigo 0;
 #N canvas 410 27 1440 778 sequencer 0;
 #N canvas 1005 49 445 764 triggerActivations 0;
@@ -1227,7 +1227,7 @@
 #X obj 648 185 r act-212-215;
 #X obj 35 387 throw~;
 #X obj 34 352 readsf~;
-#N canvas 735 188 450 426 counter 0;
+#N canvas 1008 152 450 462 counter 0;
 #X obj 32 14 r \$0-bpm-in;
 #X obj 162 44 r \$0-play;
 #X obj 32 195 int 1;
@@ -8212,45 +8212,45 @@ milliseconds \, based on samplerate.;
 #X connect 7 0 8 0;
 #X connect 8 0 4 1;
 #X restore 1630 14 pd codigo;
-#X obj 1217 420 cnv 15 400 500 empty empty empty 20 12 0 14 #e0e0e0
+#X obj 1217 506 cnv 15 400 400 empty empty empty 20 12 0 14 #e0e0e0
 #404040 0;
-#X obj 1271 501 tgl 40 0 \$0-c \$0-qc empty 17 7 0 10 #ffffff #000000
+#X obj 1271 581 tgl 40 0 \$0-c \$0-qc empty 17 7 0 10 #ffffff #000000
 #000000 0 1;
-#X obj 1315 501 tgl 40 0 \$0-d \$0-wd empty 17 7 0 10 #ffffff #000000
+#X obj 1315 581 tgl 40 0 \$0-d \$0-wd empty 17 7 0 10 #ffffff #000000
 #000000 0 1;
-#X obj 1359 501 tgl 40 0 \$0-e \$0-ee empty 17 7 0 10 #ffffff #000000
+#X obj 1359 581 tgl 40 0 \$0-e \$0-ee empty 17 7 0 10 #ffffff #000000
 #000000 0 1;
-#X obj 1403 501 tgl 40 0 \$0-fN \$0-rfN empty 17 7 0 10 #ffffff #000000
+#X obj 1403 581 tgl 40 0 \$0-fN \$0-rfN empty 17 7 0 10 #ffffff #000000
 #000000 0 1;
-#X obj 1447 501 tgl 40 0 \$0-g \$0-tg empty 17 7 0 10 #ffffff #000000
+#X obj 1447 581 tgl 40 0 \$0-g \$0-tg empty 17 7 0 10 #ffffff #000000
 #000000 0 1;
-#X obj 1491 501 tgl 40 0 \$0-a \$0-ya empty 17 7 0 10 #ffffff #000000
+#X obj 1491 581 tgl 40 0 \$0-a \$0-ya empty 17 7 0 10 #ffffff #000000
 #000000 0 1;
-#X obj 1535 501 tgl 40 0 \$0-b \$0-ub empty 17 7 0 10 #ffffff #000000
+#X obj 1535 581 tgl 40 0 \$0-b \$0-ub empty 17 7 0 10 #ffffff #000000
 #000000 0 1;
-#X obj 1516 457 tgl 40 0 \$0-aS \$0-7aS empty 17 7 0 10 #606060 #000000
+#X obj 1516 537 tgl 40 0 \$0-aS \$0-7aS empty 17 7 0 10 #606060 #000000
 #000000 0 1;
-#X obj 1472 457 tgl 40 0 \$0-gS \$0-6gS empty 17 7 0 10 #606060 #000000
+#X obj 1472 537 tgl 40 0 \$0-gS \$0-6gS empty 17 7 0 10 #606060 #000000
 #000000 0 1;
-#X obj 1428 457 tgl 40 0 \$0-fs \$0-5fs empty 17 7 0 10 #606060 #000000
+#X obj 1428 537 tgl 40 0 \$0-fs \$0-5fs empty 17 7 0 10 #606060 #000000
 #000000 0 1;
-#X obj 1339 457 tgl 40 0 \$0-dS \$0-3dS empty 17 7 0 10 #606060 #000000
+#X obj 1339 537 tgl 40 0 \$0-dS \$0-3dS empty 17 7 0 10 #606060 #000000
 #000000 0 1;
-#X obj 1295 457 tgl 40 0 \$0-cS \$0-2cS empty 17 7 0 10 #606060 #000000
+#X obj 1295 537 tgl 40 0 \$0-cS \$0-2cS empty 17 7 0 10 #606060 #000000
 #000000 0 1;
-#X obj 1297 583 hradio 30 1 0 3 \$0-octave \$0-octave OCTAVE 0 -8 0
+#X obj 1297 663 hradio 30 1 0 3 \$0-octave \$0-octave OCTAVE 0 -8 0
 10 #00314b #037da4 #000000 0;
-#X obj 1469 584 hsl 90 30 0 127 0 0 \$0-synthvol synthvol VOLUME -2
+#X obj 1469 664 hsl 90 30 0 127 0 0 \$0-synthvol synthvol VOLUME -2
 -8 0 10 #00314b #037da4 #000000 0 1;
-#X obj 1282 654 hsl 128 15 0 127 0 0 \$0-attack \$0-attack ATTACK -2
+#X obj 1282 734 hsl 128 15 0 127 0 0 \$0-attack \$0-attack ATTACK -2
 -8 0 10 #9bd1d1 #000000 #000000 0 1;
-#X obj 1283 734 hsl 128 15 0 127 0 0 \$0-release \$0-release RELEASE
+#X obj 1283 774 hsl 128 15 0 127 0 0 \$0-release \$0-release RELEASE
 -2 -8 0 10 #9bd1d1 #000000 #000000 0 1;
 #X obj 1283 812 hsl 128 15 0 127 0 0 \$0-synthshape \$0-synthshape
 SHAPE -2 -8 0 10 #9bd1d1 #000000 #000000 0 1;
-#X obj 1443 654 hsl 128 15 0 127 0 0 \$0-index \$0-index VIBRATO -2
+#X obj 1443 734 hsl 128 15 0 127 0 0 \$0-index \$0-index VIBRATO -2
 -8 0 10 #9bd1d0 #000000 #000000 0 1;
-#X obj 1443 734 hsl 128 15 0 127 0 0 \$0-synthrate \$0-synthrate VIBRATO\\\ RATE
+#X obj 1443 774 hsl 128 15 0 127 0 0 \$0-synthrate \$0-synthrate VIBRATO\\\ RATE
 -2 -8 0 10 #9bd1cf #000000 #000000 0 1;
 #X obj 1444 812 hsl 128 15 0 127 0 0 \$0-glide \$0-glide GLIDE -2 -8
 0 10 #9bd0ce #000000 #000000 0 1;
@@ -8275,7 +8275,7 @@ empty -2 -8 0 10 #027da2 #00314b #000000 0 1;
 #X text 258 158 crush;
 #X text 258 293 ring;
 #X restore 1438 875 pd FXsynth;
-#X obj 1218 93 cnv 15 400 300 empty empty empty 20 12 0 14 #e0e0e0
+#X obj 1218 93 cnv 15 400 400 empty empty empty 20 12 0 14 #e0e0e0
 #404040 0;
 #X text 1404 115 sound effects;
 #N canvas 0 25 1440 778 FXdrumbox 0;
@@ -8298,13 +8298,13 @@ empty -2 -8 0 10 #027da2 #00314b #000000 0 1;
 #X text 273 163 crush;
 #X text 273 298 ring;
 #X restore 1509 114 pd FXdrumbox;
-#X obj 167 105 hradio 40 1 0 4 \$0-drumkit \$0-drumkit empty 0 -8 0
-10 #00314b #037da4 #000000 0;
-#X text 99 117 drum kit;
-#X text 182 85 A;
-#X text 222 86 B;
-#X text 263 86 C;
-#X text 306 85 D;
+#X obj 1438 437 hradio 40 1 0 4 \$0-drumkit \$0-drumkit empty 0 -8
+0 10 #00314b #037da4 #000000 0;
+#X text 1370 449 drum kit;
+#X text 1453 417 A;
+#X text 1493 418 B;
+#X text 1534 418 C;
+#X text 1577 417 D;
 #X obj 1233 116 hsl 120 40 0 127 0 0 \$0-drumvol \$0-drumvol DRUM\\\ VOLUME
 -2 -8 0 10 #00314b #037da4 #000000 0 1;
 #X obj 1076 226 bng 55 250 50 0 \$0-click1 \$0-z-click1 empty 17 7
@@ -8328,18 +8328,18 @@ empty -2 -8 0 10 #027da2 #00314b #000000 0 1;
 #X obj 1077 655 bng 55 250 50 0 \$0-myclick \$0-myclick-set empty 17
 7 0 10 #027da1 #00314b #000000;
 #X text 1102 714 M;
-#X text 1285 542 Q;
-#X text 1328 541 W;
-#X text 1374 541 E;
-#X text 1417 540 R;
-#X text 1463 541 T;
-#X text 1506 541 Y;
-#X text 1551 541 U;
-#X text 1308 440 2;
-#X text 1353 440 3;
-#X text 1443 439 5;
-#X text 1486 439 6;
-#X text 1531 439 7;
+#X text 1285 622 Q;
+#X text 1328 621 W;
+#X text 1374 621 E;
+#X text 1417 620 R;
+#X text 1463 621 T;
+#X text 1506 621 Y;
+#X text 1551 621 U;
+#X text 1308 520 2;
+#X text 1353 520 3;
+#X text 1443 519 5;
+#X text 1486 519 6;
+#X text 1531 519 7;
 #X obj 165 229 tgl 55 0 \$0-stepAct-0-0-s \$0-stepAct-0-0-r empty 17
 7 0 10 #007da5 #000000 #000000 0 1;
 #X obj 220 229 tgl 55 0 \$0-stepAct-0-1-s \$0-stepAct-0-1-r empty 17
@@ -8436,8 +8436,8 @@ empty -2 -8 0 10 #027da2 #00314b #000000 0 1;
 17 7 0 10 #82cdcd #000000 #000000 0 1;
 #X obj 990 399 tgl 55 0 \$0-stepAct-2-15-s \$0-stepAct-2-15-r empty
 17 7 0 10 #82cdd7 #000000 #000000 0 1;
-#X text 124 244 KICK;
-#X text 119 332 SNARE;
+#X text 128 246 KICK;
+#X text 121 330 SNARE;
 #X text 118 414 HIHAT;
 #X text 86 500 OPEN HIHAT;
 #X text 124 588 CLAP;
@@ -8569,11 +8569,11 @@ empty -2 -8 0 10 #027da2 #00314b #000000 0 1;
 17 7 0 10 #82cdd7 #000000 #000000 0 1;
 #X obj 990 739 tgl 55 0 \$0-stepAct-6-15-s \$0-stepAct-6-15-r empty
 17 7 0 10 #82cdd7 #000000 #000000 0 1;
-#X obj 111 744 bng 45 250 50 0 \$0-selectsound empty empty 17 7 0 10
-#007da5 #ffffff #000000;
-#X obj 111 658 bng 45 250 50 0 \$0-mysound empty empty 17 7 0 10 #ff0400
+#X obj 1387 316 bng 20 250 50 0 \$0-selectsound empty empty 17 7 0
+10 #007da5 #ffffff #000000;
+#X obj 1310 315 bng 20 250 50 0 \$0-mysound empty empty 17 7 0 10 #ff0400
 #ffffff #000000;
-#X floatatom 47 678 5 0 0 2 RECORD \$0-counter - 16;
+#X floatatom 47 678 5 0 0 2 MIC \$0-counter -- 16;
 #X obj 125 851 bng 45 250 50 0 \$0-clearseqBang empty empty 17 7 0
 10 #007da5 #ffffff #000000;
 #X text 126 832 CLEAR;
@@ -8594,28 +8594,28 @@ SEQUENCER\\\ VOLUME -2 -8 0 10 #00324b #ffffff #000000 0 1;
 #X floatatom 223 34 5 0 0 0 BPM \$0-bpm-display - 24;
 #X obj 166 156 hradio 55 1 0 16 empty step-number empty 0 -8 0 10 #00324b
 #ffffff #000000 0;
-#X obj 1248 185 bng 55 250 50 0 \$0-click1 \$0-z-click1 empty 17 7
+#X obj 1239 219 bng 55 250 50 0 \$0-click1 \$0-z-click1 empty 17 7
 0 10 #037da4 #00314b #000000;
-#X text 1268 242 Z;
-#X obj 1323 185 bng 55 250 50 0 \$0-click2 \$0-x-click2 empty 17 7
+#X text 1246 279 Z;
+#X obj 1314 219 bng 55 250 50 0 \$0-click2 \$0-x-click2 empty 17 7
 0 10 #027da1 #00314b #000000;
-#X text 1346 244 X;
-#X obj 1390 186 bng 55 250 50 0 \$0-click3 \$0-c-click3 empty 17 7
+#X text 1323 283 X, f 2;
+#X obj 1381 220 bng 55 250 50 0 \$0-click3 \$0-c-click3 empty 17 7
 0 10 #027da0 #00314b #000000;
-#X text 1413 243 C;
-#X obj 1463 184 bng 55 250 50 0 \$0-click4 \$0-v-click4 empty 17 7
+#X text 1390 282 C;
+#X obj 1440 339 bng 55 250 50 0 \$0-click4 \$0-v-click4 empty 17 7
 0 10 #037da4 #00314b #000000;
-#X text 1486 241 V;
-#X obj 1537 186 bng 55 250 50 0 \$0-click5 \$0-b-click5 empty 17 7
+#X text 1451 395 V;
+#X obj 1449 220 bng 55 250 50 0 \$0-click5 \$0-b-click5 empty 17 7
 0 10 #027da1 #00314b #000000;
-#X text 1561 242 B;
-#X obj 1436 268 bng 55 250 50 0 \$0-selclick \$0-selclick-set empty
+#X text 1459 278 B;
+#X obj 1369 340 bng 55 250 50 0 \$0-selclick \$0-selclick-set empty
 17 7 0 10 #037da4 #00314b #000000;
-#X text 1460 326 N;
-#X obj 1361 267 bng 55 250 50 0 \$0-myclick \$0-myclick-set empty 17
+#X text 1381 397 N;
+#X obj 1294 339 bng 55 250 50 0 \$0-myclick \$0-myclick-set empty 17
 7 0 10 #027da1 #00314b #000000;
-#X text 1386 326 M;
-#N canvas 615 257 834 482 metronomo 1;
+#X text 1307 397 M;
+#N canvas 164 156 834 448 metronomo 1;
 #X obj 218 115 expr (60/$f1)*1000;
 #X text 379 86 convert to ms;
 #X obj 186 202 metro;
@@ -8636,6 +8636,7 @@ volume) in 20 ms after waiting 20 ms;
 #X floatatom 218 153 5 0 0 0 - - - 0;
 #X obj 46 223 s \$0-metro-onplay;
 #X obj 46 14 r \$0-play;
+#X obj 384 30 r \$0-stepnumber;
 #X connect 0 0 16 0;
 #X connect 2 0 8 0;
 #X connect 5 0 6 1;
@@ -8653,4 +8654,6 @@ volume) in 20 ms after waiting 20 ms;
 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 983 40 hsl 128 30 0 127 0 0 \$0-mastervolume \$0-mastervolume
 MASTER\\\ VOLUME -2 -8 0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 1508 340 bng 55 250 50 0 \$0-click4 \$0-v-click4 empty 17 7
+0 10 #037da4 #00314b #000000;
 #X coords 0 -1 1 1 1690 950 1 10 10;
