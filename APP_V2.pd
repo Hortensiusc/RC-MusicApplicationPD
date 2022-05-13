@@ -1,4 +1,4 @@
-#N canvas 10 7 1920 976 12;
+#N canvas 30 -11 1920 976 12;
 #N canvas 592 28 436 349 codigo 0;
 #N canvas 1010 77 430 402 sequencer 0;
 #N canvas 995 39 445 764 triggerActivations 0;
@@ -8943,7 +8943,6 @@ milliseconds \, based on samplerate.;
 #X obj 547 711 s \$0-stepAct-0-13-r;
 #X obj 845 710 s \$0-stepAct-0-14-r;
 #X obj 1070 712 s \$0-stepAct-0-15-r;
-#X obj 497 458 print;
 #X obj 30 388 r \$0-presets;
 #X connect 0 0 2 0;
 #X connect 1 0 2 1;
@@ -9012,7 +9011,6 @@ milliseconds \, based on samplerate.;
 #X connect 80 0 81 0;
 #X connect 82 0 83 0;
 #X connect 83 1 88 0;
-#X connect 83 1 127 0;
 #X connect 84 0 85 0;
 #X connect 85 2 89 0;
 #X connect 86 0 87 0;
@@ -9041,7 +9039,7 @@ milliseconds \, based on samplerate.;
 #X connect 112 14 125 0;
 #X connect 113 0 114 0;
 #X connect 114 15 126 0;
-#X connect 128 0 80 0;
+#X connect 127 0 80 0;
 #X restore 188 26 pd lospresets;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
@@ -9396,23 +9394,14 @@ empty -2 -8 0 10 #027da2 #00314b #000000 0 1;
 17 7 0 10 #82cdd7 #000000 #000000 0 1;
 #X obj 1489 317 bng 20 250 50 0 \$0-selectsound2 - empty 17 7 0 10
 #007da5 #ffffff #000000;
-#X obj 288 904 bng 45 250 50 0 \$0-clearseqBang empty empty 17 7 0
+#X obj 288 897 bng 45 250 50 0 \$0-clearseqBang empty empty 17 7 0
 10 #007da5 #ffffff #000000;
-#X text 289 885 CLEAR;
-#X obj 691 902 hsl 220 45 60 180 0 0 \$0-bpm-in \$0-bpm-out BPM -2
+#X text 289 878 CLEAR;
+#X obj 701 893 hsl 220 45 60 180 0 0 \$0-bpm-in \$0-bpm-out BPM -2
 -8 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 494 904 bng 45 250 50 0 \$0-preset1 empty empty 17 7 0 10 #007da5
-#ffffff #000000;
-#X obj 550 904 bng 45 250 50 0 \$0-preset2 empty empty 17 7 0 10 #007da5
-#ffffff #000000;
-#X text 516 882 PRESETS;
-#X text 512 919 1;
-#X text 567 919 2;
 #X obj 257 182 tgl 40 0 \$0-play empty empty 17 7 0 10 #007da5 #000000
 #000000 0 1;
 #X text 259 164 PLAY;
-#X obj 913 156 hsl 128 40 0 1 0 0 \$0-mainvolume-s \$0-mainvolume-r
-SEQUENCER\\\ VOLUME -2 -8 0 10 #00324b #ffffff #000000 0 1;
 #X obj 186 236 hradio 55 1 0 16 empty step-number empty 0 -8 0 10 #00324b
 #ffffff #000000 0;
 #X obj 1242 229 bng 55 250 50 0 \$0-click1 \$0-a-click1 empty 17 7
@@ -9499,14 +9488,12 @@ SEQUENCER\\\ VOLUME -2 -8 0 10 #00324b #ffffff #000000 0 1;
 #X text 1522 246 RECORD;
 #X text 1557 358 RECORD;
 #X text 1366 127 DRUM KIT;
-#X floatatom 17 590 5 0 0 0 - \$0-counter1 \$0-counter1-s 0;
 #X text 99 591 RECORDING 1;
 #X obj 132 20 cnv 15 1000 100 empty empty empty 20 12 0 14 #e0e0e0
 #404040 0;
 #X floatatom 204 51 5 0 0 0 BPM \$0-bpm-display - 24;
 #X obj 911 55 hsl 128 30 0 127 0 0 \$0-mastervolume \$0-mastervolume
 MASTER\\\ VOLUME -2 -8 0 10 #fcfcfc #000000 #000000 0 1;
-#X text 1362 354 OPEN HIHAT;
 #X obj 185 749 tgl 55 0 \$0-stepAct-8-0-s \$0-stepAct-8-0-r empty 17
 7 0 10 #007da5 #000000 #000000 0 1;
 #X obj 240 749 tgl 55 0 \$0-stepAct-8-1-s \$0-stepAct-8-1-r empty 17
@@ -9608,15 +9595,15 @@ de 20 ms;
 #X text 568 207 ON/OFF;
 #X text 493 184 METRONOME;
 #X text 433 150 funciona cuando el sequencer está activado;
-#N canvas 713 47 825 598 presets 0;
+#N canvas 90 105 1687 743 presets 0;
 #X obj 238 204 textfile;
 #X obj 258 39 bng 15 250 50 0 empty empty load 20 7 0 10 #fcfcfc #000000
 #000000;
-#X obj 361 565 textfile;
+#X obj 361 635 textfile;
 #X obj 204 39 bng 15 250 50 0 empty empty save 20 7 0 10 #fcfcfc #000000
 #000000;
-#X msg 204 389 write \$1;
-#X obj 204 337 t s b b;
+#X msg 204 453 write \$1;
+#X obj 204 376 t s b b;
 #X msg 262 175 read \$1;
 #X msg 238 144 rewind \, bang;
 #X symbolatom 307 38 12 0 0 0 - - - 0;
@@ -9644,14 +9631,19 @@ de 20 ms;
 #X obj 635 256 r \$0-stepAct-0-15;
 #X obj 238 237 s \$0-presets;
 #X listbox 361 489 59 0 0 0 - - - 0;
-#X msg 361 519 \$1 \$2 \$3 \$4 \$5 \$6 \$7 \$8 \$9 \$10 \$11 \$12 \$13
-\$14 \$15 \$16 \$17;
+#X obj 369 308 f;
+#X msg 298 426 set;
+#X obj 361 520 list prepend add2;
+#X obj 361 554 list trim;
+#X msg 361 589 set 1 1 1 1 0 0 0 0 1 0 0 0 1 1 1 1;
+#X obj 204 414 t s b;
 #X connect 0 0 31 0;
 #X connect 1 0 10 0;
 #X connect 3 0 11 0;
 #X connect 4 0 2 0;
-#X connect 5 0 4 0;
-#X connect 5 2 14 0;
+#X connect 5 0 38 0;
+#X connect 5 1 33 0;
+#X connect 5 2 34 0;
 #X connect 6 0 0 0;
 #X connect 7 0 0 0;
 #X connect 9 0 32 0;
@@ -9662,7 +9654,7 @@ de 20 ms;
 #X connect 13 1 7 0;
 #X connect 13 2 6 0;
 #X connect 14 0 9 0;
-#X connect 15 0 14 0;
+#X connect 15 0 33 1;
 #X connect 16 0 14 1;
 #X connect 17 0 14 2;
 #X connect 18 0 14 3;
@@ -9678,8 +9670,15 @@ de 20 ms;
 #X connect 28 0 14 13;
 #X connect 29 0 14 14;
 #X connect 30 0 14 15;
-#X connect 32 0 33 0;
-#X connect 33 0 2 0;
+#X connect 32 0 35 0;
+#X connect 33 0 14 0;
+#X connect 34 0 37 0;
+#X connect 35 0 36 0;
+#X connect 36 0 37 0;
+#X connect 37 0 2 0;
+#X connect 38 0 4 0;
+#X connect 38 1 37 0;
 #X coords 0 -1 1 1 200 65 2 200 10;
 #X restore 1139 22 pd presets;
+#X text 1362 354 OPEN HIHAT;
 #X coords 0 -1 1 1 1690 950 1 10 10;
