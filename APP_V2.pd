@@ -1,5 +1,5 @@
-#N canvas 30 -11 1920 976 12;
-#N canvas 592 28 436 349 codigo 0;
+#N canvas 0 25 1440 778 12;
+#N canvas 446 222 436 349 codigo 0;
 #N canvas 1010 77 430 402 sequencer 0;
 #N canvas 995 39 445 764 triggerActivations 0;
 #N canvas 134 13 1756 926 clearsequencer 0;
@@ -9041,525 +9041,6 @@ milliseconds \, based on samplerate.;
 #X connect 114 15 126 0;
 #X connect 127 0 80 0;
 #X restore 188 26 pd lospresets;
-#X connect 0 0 1 0;
-#X connect 1 0 2 0;
-#X restore 272 17 pd general;
-#X obj 21 235 *~;
-#X obj 70 137 r \$0-mastervolume;
-#X obj 70 160 / 127;
-#X msg 70 183 \$1 15;
-#X obj 70 209 line~;
-#X obj 17 272 dac~;
-#X connect 1 0 4 0;
-#X connect 2 0 4 0;
-#X connect 4 0 9 0;
-#X connect 4 0 9 1;
-#X connect 5 0 6 0;
-#X connect 6 0 7 0;
-#X connect 7 0 8 0;
-#X connect 8 0 4 1;
-#X restore 1630 14 pd codigo;
-#X obj 1217 506 cnv 15 420 400 empty empty empty 20 12 0 14 #e0e0e0
-#404040 0;
-#X obj 1271 581 tgl 40 0 \$0-c \$0-qc empty 17 7 0 10 #ffffff #000000
-#000000 0 1;
-#X obj 1315 581 tgl 40 0 \$0-d \$0-wd empty 17 7 0 10 #ffffff #000000
-#000000 0 1;
-#X obj 1359 581 tgl 40 0 \$0-e \$0-ee empty 17 7 0 10 #ffffff #000000
-#000000 0 1;
-#X obj 1403 581 tgl 40 0 \$0-fN \$0-rfN empty 17 7 0 10 #ffffff #000000
-#000000 0 1;
-#X obj 1447 581 tgl 40 0 \$0-g \$0-tg empty 17 7 0 10 #ffffff #000000
-#000000 0 1;
-#X obj 1491 581 tgl 40 0 \$0-a \$0-ya empty 17 7 0 10 #ffffff #000000
-#000000 0 1;
-#X obj 1535 581 tgl 40 0 \$0-b \$0-ub empty 17 7 0 10 #ffffff #000000
-#000000 0 1;
-#X obj 1516 537 tgl 40 0 \$0-aS \$0-7aS empty 17 7 0 10 #606060 #000000
-#000000 0 1;
-#X obj 1472 537 tgl 40 0 \$0-gS \$0-6gS empty 17 7 0 10 #606060 #000000
-#000000 0 1;
-#X obj 1428 537 tgl 40 0 \$0-fs \$0-5fs empty 17 7 0 10 #606060 #000000
-#000000 0 1;
-#X obj 1339 537 tgl 40 0 \$0-dS \$0-3dS empty 17 7 0 10 #606060 #000000
-#000000 0 1;
-#X obj 1295 537 tgl 40 0 \$0-cS \$0-2cS empty 17 7 0 10 #606060 #000000
-#000000 0 1;
-#X obj 1297 663 hradio 30 1 0 3 \$0-octave \$0-octave OCTAVE 0 -8 0
-10 #00314b #037da4 #000000 0;
-#X obj 1469 664 hsl 90 30 0 127 0 0 \$0-synthvol synthvol VOLUME -2
--8 0 10 #00314b #037da4 #000000 0 1;
-#X obj 1282 734 hsl 128 15 0 127 0 0 \$0-attack \$0-attack ATTACK -2
--8 0 10 #9bd1d1 #000000 #000000 0 1;
-#X obj 1283 774 hsl 128 15 0 127 0 0 \$0-release \$0-release RELEASE
--2 -8 0 10 #9bd1d1 #000000 #000000 0 1;
-#X obj 1283 812 hsl 128 15 0 127 0 0 \$0-synthshape \$0-synthshape
-SHAPE -2 -8 0 10 #9bd1d1 #000000 #000000 0 1;
-#X obj 1443 734 hsl 128 15 0 127 0 0 \$0-index \$0-index VIBRATO -2
--8 0 10 #9bd1d0 #000000 #000000 0 1;
-#X obj 1443 774 hsl 128 15 0 127 0 0 \$0-synthrate \$0-synthrate VIBRATO\\\ RATE
--2 -8 0 10 #9bd1cf #000000 #000000 0 1;
-#X obj 1444 812 hsl 128 15 0 127 0 0 \$0-glide \$0-glide GLIDE -2 -8
-0 10 #9bd0ce #000000 #000000 0 1;
-#X text 1316 874 sound effects;
-#N canvas 0 28 1440 872 FXsynth 0;
-#X text 79 28 reverb;
-#X text 236 28 distortion;
-#X text 68 159 delay time;
-#X text 77 292 feedback;
-#X obj 39 49 hsl 128 60 0 127 0 0 \$0-reverb \$0-reverb-set empty -2
--8 0 10 #027da2 #00314b #000000 0 1;
-#X obj 41 180 hsl 128 60 0 127 0 0 \$0-delaytime \$0-delaytime-set
-empty -2 -8 0 10 #027da1 #00314b #000000 0 1;
-#X obj 42 315 hsl 128 60 0 127 0 0 \$0-feedback \$0-feedback-set empty
--2 -8 0 10 #027da2 #00314b #000000 0 1;
-#X obj 210 315 hsl 128 60 0 127 0 0 \$0-ringMod \$0-ringMod-set empty
--2 -8 0 10 #027da2 #00314b #000000 0 1;
-#X obj 211 180 hsl 128 60 0 127 0 0 \$0-bitcrush \$0-bitcrush-set empty
--2 -8 0 10 #027da2 #00314b #000000 0 1;
-#X obj 210 49 hsl 128 60 0 127 0 0 \$0-distortion \$0-distortion-set
-empty -2 -8 0 10 #027da2 #00314b #000000 0 1;
-#X text 258 158 crush;
-#X text 258 293 ring;
-#X restore 1438 875 pd FXsynth;
-#X obj 1218 93 cnv 15 420 400 empty empty empty 20 12 0 14 #e0e0e0
-#404040 0;
-#X text 1338 472 sound effects;
-#N canvas 0 25 1440 778 FXdrumbox 0;
-#X text 94 33 reverb;
-#X text 251 33 distortion;
-#X text 83 164 delay time;
-#X text 92 297 feedback;
-#X obj 54 54 hsl 128 60 0 127 0 0 \$0-drumreverb \$0-drumreverb-set
-empty -2 -8 0 10 #027da2 #00314b #000000 0 1;
-#X obj 56 185 hsl 128 60 0 127 0 0 \$0-drumdelaytime \$0-drumdelaytime-set
-empty -2 -8 0 10 #027da1 #00314b #000000 0 1;
-#X obj 57 320 hsl 128 60 0 127 0 0 \$0-drumfeedback \$0-drumfeedback-set
-empty -2 -8 0 10 #027da2 #00314b #000000 0 1;
-#X obj 225 320 hsl 128 60 0 127 0 0 \$0-drumringMod \$0-drumringMod-set
-empty -2 -8 0 10 #027da2 #00314b #000000 0 1;
-#X obj 226 185 hsl 128 60 0 127 0 0 \$0-drumbitcrush \$0-drumbitcrush-set
-empty -2 -8 0 10 #027da2 #00314b #000000 0 1;
-#X obj 225 54 hsl 128 60 0 127 0 0 \$0-drumdistortion \$0-drumdistortion-set
-empty -2 -8 0 10 #027da2 #00314b #000000 0 1;
-#X text 273 163 crush;
-#X text 273 298 ring;
-#X restore 1443 471 pd FXdrumbox;
-#X obj 1434 115 hradio 40 1 0 4 \$0-drumkit \$0-drumkit empty 0 -8
-0 10 #00314b #037da4 #000000 0;
-#X text 1449 95 A;
-#X text 1489 96 B;
-#X text 1530 96 C;
-#X text 1573 95 D;
-#X obj 1233 116 hsl 120 40 0 127 0 0 \$0-drumvol \$0-drumvol DRUM\\\ VOLUME
--2 -8 0 10 #00314b #037da4 #000000 0 1;
-#X text 1285 622 Q;
-#X text 1328 621 W;
-#X text 1374 621 E;
-#X text 1417 620 R;
-#X text 1463 621 T;
-#X text 1506 621 Y;
-#X text 1551 621 U;
-#X text 1308 520 2;
-#X text 1353 520 3;
-#X text 1443 519 5;
-#X text 1486 519 6;
-#X text 1531 519 7;
-#X obj 185 309 tgl 55 0 \$0-stepAct-0-0-s \$0-stepAct-0-0-r empty 17
-7 0 10 #007da5 #000000 #000000 0 1;
-#X obj 240 309 tgl 55 0 \$0-stepAct-0-1-s \$0-stepAct-0-1-r empty 17
-7 0 10 #82cdcd #000000 #000000 0 1;
-#X obj 295 309 tgl 55 0 \$0-stepAct-0-2-s \$0-stepAct-0-2-r empty 17
-7 0 10 #82cdcd #000000 #000000 0 1;
-#X obj 350 309 tgl 55 0 \$0-stepAct-0-3-s \$0-stepAct-0-3-r empty 17
-7 0 10 #82cdd7 #000000 #000000 0 1;
-#X obj 405 309 tgl 55 0 \$0-stepAct-0-4-s \$0-stepAct-0-4-r empty 17
-7 0 10 #007da5 #000000 #000000 0 1;
-#X obj 460 309 tgl 55 0 \$0-stepAct-0-5-s \$0-stepAct-0-5-r empty 17
-7 0 10 #82cdcd #000000 #000000 0 1;
-#X obj 515 309 tgl 55 0 \$0-stepAct-0-6-s \$0-stepAct-0-6-r empty 17
-7 0 10 #82cdcd #000000 #000000 0 1;
-#X obj 570 309 tgl 55 0 \$0-stepAct-0-7-s \$0-stepAct-0-7-r empty 17
-7 0 10 #82cdd7 #000000 #000000 0 1;
-#X obj 625 309 tgl 55 0 \$0-stepAct-0-8-s \$0-stepAct-0-8-r empty 17
-7 0 10 #007da5 #000000 #000000 0 1;
-#X obj 680 309 tgl 55 0 \$0-stepAct-0-9-s \$0-stepAct-0-9-r empty 17
-7 0 10 #82cdcd #000000 #000000 0 1;
-#X obj 735 309 tgl 55 0 \$0-stepAct-0-10-s \$0-stepAct-0-10-r empty
-17 7 0 10 #82cdcd #000000 #000000 0 1;
-#X obj 790 309 tgl 55 0 \$0-stepAct-0-11-s \$0-stepAct-0-11-r empty
-17 7 0 10 #82cdd7 #000000 #000000 0 1;
-#X obj 845 309 tgl 55 0 \$0-stepAct-0-12-s \$0-stepAct-0-12-r empty
-17 7 0 10 #007da5 #000000 #000000 0 1;
-#X obj 900 309 tgl 55 0 \$0-stepAct-0-13-s \$0-stepAct-0-13-r empty
-17 7 0 10 #82cdcd #000000 #000000 0 1;
-#X obj 955 309 tgl 55 0 \$0-stepAct-0-14-s \$0-stepAct-0-14-r empty
-17 7 0 10 #82cdcd #000000 #000000 0 1;
-#X obj 1010 309 tgl 55 0 \$0-stepAct-0-15-s \$0-stepAct-0-15-r empty
-17 7 0 10 #82cdd7 #000000 #000000 0 1;
-#X obj 185 364 tgl 55 0 \$0-stepAct-1-0-s \$0-stepAct-1-0-r empty 17
-7 0 10 #007da5 #000000 #000000 0 1;
-#X obj 240 364 tgl 55 0 \$0-stepAct-1-1-s \$0-stepAct-1-1-r empty 17
-7 0 10 #82cdcd #000000 #000000 0 1;
-#X obj 295 364 tgl 55 0 \$0-stepAct-1-2-s \$0-stepAct-1-2-r empty 17
-7 0 10 #82cdcd #000000 #000000 0 1;
-#X obj 350 364 tgl 55 0 \$0-stepAct-1-3-s \$0-stepAct-1-3-r empty 17
-7 0 10 #82cdd7 #000000 #000000 0 1;
-#X obj 405 364 tgl 55 0 \$0-stepAct-1-4-s \$0-stepAct-1-4-r empty 17
-7 0 10 #007da5 #000000 #000000 0 1;
-#X obj 460 364 tgl 55 0 \$0-stepAct-1-5-s \$0-stepAct-1-5-r empty 17
-7 0 10 #82cdcd #000000 #000000 0 1;
-#X obj 515 364 tgl 55 0 \$0-stepAct-1-6-s \$0-stepAct-1-6-r empty 17
-7 0 10 #82cdcd #000000 #000000 0 1;
-#X obj 570 364 tgl 55 0 \$0-stepAct-1-7-s \$0-stepAct-1-7-r empty 17
-7 0 10 #82cdd7 #000000 #000000 0 1;
-#X obj 625 364 tgl 55 0 \$0-stepAct-1-8-s \$0-stepAct-1-8-r empty 17
-7 0 10 #007da5 #000000 #000000 0 1;
-#X obj 680 364 tgl 55 0 \$0-stepAct-1-9-s \$0-stepAct-1-9-r empty 17
-7 0 10 #82cdcd #000000 #000000 0 1;
-#X obj 735 364 tgl 55 0 \$0-stepAct-1-10-s \$0-stepAct-1-10-r empty
-17 7 0 10 #82cdcd #000000 #000000 0 1;
-#X obj 790 364 tgl 55 0 \$0-stepAct-1-11-s \$0-stepAct-1-11-r empty
-17 7 0 10 #82cdd7 #000000 #000000 0 1;
-#X obj 845 364 tgl 55 0 \$0-stepAct-1-12-s \$0-stepAct-1-12-r empty
-17 7 0 10 #007da5 #000000 #000000 0 1;
-#X obj 900 364 tgl 55 0 \$0-stepAct-1-13-s \$0-stepAct-1-13-r empty
-17 7 0 10 #82cdcd #000000 #000000 0 1;
-#X obj 955 364 tgl 55 0 \$0-stepAct-1-14-s \$0-stepAct-1-14-r empty
-17 7 0 10 #82cdcd #000000 #000000 0 1;
-#X obj 1010 364 tgl 55 0 \$0-stepAct-1-15-s \$0-stepAct-1-15-r empty
-17 7 0 10 #82cdd7 #000000 #000000 0 1;
-#X obj 185 419 tgl 55 0 \$0-stepAct-2-0-s \$0-stepAct-2-0-r empty 17
-7 0 10 #007da5 #000000 #000000 0 1;
-#X obj 240 419 tgl 55 0 \$0-stepAct-2-1-s \$0-stepAct-2-1-r empty 17
-7 0 10 #82cdcd #000000 #000000 0 1;
-#X obj 295 419 tgl 55 0 \$0-stepAct-2-2-s \$0-stepAct-2-2-r empty 17
-7 0 10 #82cdcd #000000 #000000 0 1;
-#X obj 350 419 tgl 55 0 \$0-stepAct-2-3-s \$0-stepAct-2-3-r empty 17
-7 0 10 #82cdd7 #000000 #000000 0 1;
-#X obj 405 419 tgl 55 0 \$0-stepAct-2-4-s \$0-stepAct-2-4-r empty 17
-7 0 10 #007da5 #000000 #000000 0 1;
-#X obj 460 419 tgl 55 0 \$0-stepAct-2-5-s \$0-stepAct-2-5-r empty 17
-7 0 10 #82cdcd #000000 #000000 0 1;
-#X obj 515 419 tgl 55 0 \$0-stepAct-2-6-s \$0-stepAct-2-6-r empty 17
-7 0 10 #82cdcd #000000 #000000 0 1;
-#X obj 570 419 tgl 55 0 \$0-stepAct-2-7-s \$0-stepAct-2-7-r empty 17
-7 0 10 #82cdd7 #000000 #000000 0 1;
-#X obj 625 419 tgl 55 0 \$0-stepAct-2-8-s \$0-stepAct-2-8-r empty 17
-7 0 10 #007da5 #000000 #000000 0 1;
-#X obj 680 419 tgl 55 0 \$0-stepAct-2-9-s \$0-stepAct-2-9-r empty 17
-7 0 10 #82cdcd #000000 #000000 0 1;
-#X obj 735 419 tgl 55 0 \$0-stepAct-2-10-s \$0-stepAct-2-10-r empty
-17 7 0 10 #82cdcd #000000 #000000 0 1;
-#X obj 790 419 tgl 55 0 \$0-stepAct-2-11-s \$0-stepAct-2-11-r empty
-17 7 0 10 #82cdd7 #000000 #000000 0 1;
-#X obj 845 419 tgl 55 0 \$0-stepAct-2-12-s \$0-stepAct-2-12-r empty
-17 7 0 10 #007da5 #000000 #000000 0 1;
-#X obj 900 419 tgl 55 0 \$0-stepAct-2-13-s \$0-stepAct-2-13-r empty
-17 7 0 10 #82cdcd #000000 #000000 0 1;
-#X obj 955 419 tgl 55 0 \$0-stepAct-2-14-s \$0-stepAct-2-14-r empty
-17 7 0 10 #82cdcd #000000 #000000 0 1;
-#X obj 1010 419 tgl 55 0 \$0-stepAct-2-15-s \$0-stepAct-2-15-r empty
-17 7 0 10 #82cdd7 #000000 #000000 0 1;
-#X text 141 380 SNARE;
-#X text 138 434 HIHAT;
-#X text 144 548 CLAP;
-#X obj 185 474 tgl 55 0 \$0-stepAct-3-0-s \$0-stepAct-3-0-r empty 17
-7 0 10 #007da5 #000000 #000000 0 1;
-#X obj 185 529 tgl 55 0 \$0-stepAct-4-0-s \$0-stepAct-4-0-r empty 17
-7 0 10 #007da5 #000000 #000000 0 1;
-#X obj 185 584 tgl 55 0 \$0-stepAct-5-0-s \$0-stepAct-5-0-r empty 17
-7 0 10 #007da5 #000000 #000000 0 1;
-#X obj 185 639 tgl 55 0 \$0-stepAct-6-0-s \$0-stepAct-6-0-r empty 17
-7 0 10 #007da5 #000000 #000000 0 1;
-#X obj 240 474 tgl 55 0 \$0-stepAct-3-1-s \$0-stepAct-3-1-r empty 17
-7 0 10 #82cdcd #000000 #000000 0 1;
-#X obj 240 529 tgl 55 0 \$0-stepAct-4-1-s \$0-stepAct-4-1-r empty 17
-7 0 10 #82cdcd #000000 #000000 0 1;
-#X obj 240 584 tgl 55 0 \$0-stepAct-5-1-s \$0-stepAct-5-1-r empty 17
-7 0 10 #82cdcd #000000 #000000 0 1;
-#X obj 240 639 tgl 55 0 \$0-stepAct-6-1-s \$0-stepAct-6-1-r empty 17
-7 0 10 #82cdcd #000000 #000000 0 1;
-#X obj 295 474 tgl 55 0 \$0-stepAct-3-2-s \$0-stepAct-3-2-r empty 17
-7 0 10 #82cdcd #000000 #000000 0 1;
-#X obj 295 529 tgl 55 0 \$0-stepAct-4-2-s \$0-stepAct-4-2-r empty 17
-7 0 10 #82cdcd #000000 #000000 0 1;
-#X obj 295 584 tgl 55 0 \$0-stepAct-5-2-s \$0-stepAct-5-2-r empty 17
-7 0 10 #82cdcd #000000 #000000 0 1;
-#X obj 295 639 tgl 55 0 \$0-stepAct-6-2-s \$0-stepAct-6-2-r empty 17
-7 0 10 #82cdcd #000000 #000000 0 1;
-#X obj 350 474 tgl 55 0 \$0-stepAct-3-3-s \$0-stepAct-3-3-r empty 17
-7 0 10 #82cdd7 #000000 #000000 0 1;
-#X obj 350 529 tgl 55 0 \$0-stepAct-4-3-s \$0-stepAct-4-3-r empty 17
-7 0 10 #82cdd7 #000000 #000000 0 1;
-#X obj 350 584 tgl 55 0 \$0-stepAct-5-3-s \$0-stepAct-5-3-r empty 17
-7 0 10 #82cdd7 #000000 #000000 0 1;
-#X obj 350 639 tgl 55 0 \$0-stepAct-6-3-s \$0-stepAct-6-3-r empty 17
-7 0 10 #82cdd7 #000000 #000000 0 1;
-#X obj 405 474 tgl 55 0 \$0-stepAct-3-4-s \$0-stepAct-3-4-r empty 17
-7 0 10 #007da5 #000000 #000000 0 1;
-#X obj 405 529 tgl 55 0 \$0-stepAct-4-4-s \$0-stepAct-4-4-r empty 17
-7 0 10 #007da5 #000000 #000000 0 1;
-#X obj 405 584 tgl 55 0 \$0-stepAct-5-4-s \$0-stepAct-5-4-r empty 17
-7 0 10 #007da5 #000000 #000000 0 1;
-#X obj 405 639 tgl 55 0 \$0-stepAct-6-4-s \$0-stepAct-6-4-r empty 17
-7 0 10 #007da5 #000000 #000000 0 1;
-#X obj 460 474 tgl 55 0 \$0-stepAct-3-5-s \$0-stepAct-3-5-r empty 17
-7 0 10 #82cdcd #000000 #000000 0 1;
-#X obj 460 529 tgl 55 0 \$0-stepAct-4-5-s \$0-stepAct-4-5-r empty 17
-7 0 10 #82cdcd #000000 #000000 0 1;
-#X obj 460 584 tgl 55 0 \$0-stepAct-5-5-s \$0-stepAct-5-5-r empty 17
-7 0 10 #82cdcd #000000 #000000 0 1;
-#X obj 460 639 tgl 55 0 \$0-stepAct-6-5-s \$0-stepAct-6-5-r empty 17
-7 0 10 #82cdcd #000000 #000000 0 1;
-#X obj 515 474 tgl 55 0 \$0-stepAct-3-6-s \$0-stepAct-3-6-r empty 17
-7 0 10 #82cdcd #000000 #000000 0 1;
-#X obj 515 529 tgl 55 0 \$0-stepAct-4-6-s \$0-stepAct-4-6-r empty 17
-7 0 10 #82cdcd #000000 #000000 0 1;
-#X obj 515 584 tgl 55 0 \$0-stepAct-5-6-s \$0-stepAct-5-6-r empty 17
-7 0 10 #82cdcd #000000 #000000 0 1;
-#X obj 515 639 tgl 55 0 \$0-stepAct-6-6-s \$0-stepAct-6-6-r empty 17
-7 0 10 #82cdcd #000000 #000000 0 1;
-#X obj 570 474 tgl 55 0 \$0-stepAct-3-7-s \$0-stepAct-3-7-r empty 17
-7 0 10 #82cdd7 #000000 #000000 0 1;
-#X obj 570 529 tgl 55 0 \$0-stepAct-4-7-s \$0-stepAct-4-7-r empty 17
-7 0 10 #82cdd7 #000000 #000000 0 1;
-#X obj 570 584 tgl 55 0 \$0-stepAct-5-7-s \$0-stepAct-5-7-r empty 17
-7 0 10 #82cdd7 #000000 #000000 0 1;
-#X obj 570 639 tgl 55 0 \$0-stepAct-6-7-s \$0-stepAct-6-7-r empty 17
-7 0 10 #82cdd7 #000000 #000000 0 1;
-#X obj 625 474 tgl 55 0 \$0-stepAct-3-8-s \$0-stepAct-3-8-r empty 17
-7 0 10 #007da5 #000000 #000000 0 1;
-#X obj 625 529 tgl 55 0 \$0-stepAct-4-8-s \$0-stepAct-4-8-r empty 17
-7 0 10 #007da5 #000000 #000000 0 1;
-#X obj 625 584 tgl 55 0 \$0-stepAct-5-8-s \$0-stepAct-5-8-r empty 17
-7 0 10 #007da5 #000000 #000000 0 1;
-#X obj 625 639 tgl 55 0 \$0-stepAct-6-8-s \$0-stepAct-6-8-r empty 17
-7 0 10 #007da5 #000000 #000000 0 1;
-#X obj 680 474 tgl 55 0 \$0-stepAct-3-9-s \$0-stepAct-3-9-r empty 17
-7 0 10 #82cdcd #000000 #000000 0 1;
-#X obj 680 529 tgl 55 0 \$0-stepAct-4-9-s \$0-stepAct-4-9-r empty 17
-7 0 10 #82cdcd #000000 #000000 0 1;
-#X obj 680 584 tgl 55 0 \$0-stepAct-5-9-s \$0-stepAct-5-9-r empty 17
-7 0 10 #82cdcd #000000 #000000 0 1;
-#X obj 680 639 tgl 55 0 \$0-stepAct-6-9-s \$0-stepAct-6-9-r empty 17
-7 0 10 #82cdcd #000000 #000000 0 1;
-#X obj 735 474 tgl 55 0 \$0-stepAct-3-10-s \$0-stepAct-3-10-r empty
-17 7 0 10 #82cdcd #000000 #000000 0 1;
-#X obj 735 529 tgl 55 0 \$0-stepAct-4-10-s \$0-stepAct-4-10-r empty
-17 7 0 10 #82cdcd #000000 #000000 0 1;
-#X obj 735 584 tgl 55 0 \$0-stepAct-5-10-s \$0-stepAct-5-10-r empty
-17 7 0 10 #82cdcd #000000 #000000 0 1;
-#X obj 735 639 tgl 55 0 \$0-stepAct-6-10-s \$0-stepAct-6-10-r empty
-17 7 0 10 #82cdcd #000000 #000000 0 1;
-#X obj 790 474 tgl 55 0 \$0-stepAct-3-11-s \$0-stepAct-3-11-r empty
-17 7 0 10 #82cdd7 #000000 #000000 0 1;
-#X obj 790 529 tgl 55 0 \$0-stepAct-4-11-s \$0-stepAct-4-11-r empty
-17 7 0 10 #82cdd7 #000000 #000000 0 1;
-#X obj 790 584 tgl 55 0 \$0-stepAct-5-11-s \$0-stepAct-5-11-r empty
-17 7 0 10 #82cdd7 #000000 #000000 0 1;
-#X obj 790 639 tgl 55 0 \$0-stepAct-6-11-s \$0-stepAct-6-11-r empty
-17 7 0 10 #82cdd7 #000000 #000000 0 1;
-#X obj 845 474 tgl 55 0 \$0-stepAct-3-12-s \$0-stepAct-3-12-r empty
-17 7 0 10 #007da5 #000000 #000000 0 1;
-#X obj 845 529 tgl 55 0 \$0-stepAct-4-12-s \$0-stepAct-4-12-r empty
-17 7 0 10 #007da5 #000000 #000000 0 1;
-#X obj 845 584 tgl 55 0 \$0-stepAct-5-12-s \$0-stepAct-5-12-r empty
-17 7 0 10 #007da5 #000000 #000000 0 1;
-#X obj 845 639 tgl 55 0 \$0-stepAct-6-12-s \$0-stepAct-6-12-r empty
-17 7 0 10 #007da5 #000000 #000000 0 1;
-#X obj 900 474 tgl 55 0 \$0-stepAct-3-13-s \$0-stepAct-3-13-r empty
-17 7 0 10 #82cdcd #000000 #000000 0 1;
-#X obj 900 529 tgl 55 0 \$0-stepAct-4-13-s \$0-stepAct-4-13-r empty
-17 7 0 10 #82cdcd #000000 #000000 0 1;
-#X obj 900 584 tgl 55 0 \$0-stepAct-5-13-s \$0-stepAct-5-13-r empty
-17 7 0 10 #82cdcd #000000 #000000 0 1;
-#X obj 900 639 tgl 55 0 \$0-stepAct-6-13-s \$0-stepAct-6-13-r empty
-17 7 0 10 #82cdcd #000000 #000000 0 1;
-#X obj 955 474 tgl 55 0 \$0-stepAct-3-14-s \$0-stepAct-3-14-r empty
-17 7 0 10 #82cdcd #000000 #000000 0 1;
-#X obj 955 529 tgl 55 0 \$0-stepAct-4-14-s \$0-stepAct-4-14-r empty
-17 7 0 10 #82cdcd #000000 #000000 0 1;
-#X obj 955 584 tgl 55 0 \$0-stepAct-5-14-s \$0-stepAct-5-14-r empty
-17 7 0 10 #82cdcd #000000 #000000 0 1;
-#X obj 955 639 tgl 55 0 \$0-stepAct-6-14-s \$0-stepAct-6-14-r empty
-17 7 0 10 #82cdcd #000000 #000000 0 1;
-#X obj 1010 474 tgl 55 0 \$0-stepAct-3-15-s \$0-stepAct-3-15-r empty
-17 7 0 10 #82cdd7 #000000 #000000 0 1;
-#X obj 1010 529 tgl 55 0 \$0-stepAct-4-15-s \$0-stepAct-4-15-r empty
-17 7 0 10 #82cdd7 #000000 #000000 0 1;
-#X obj 1010 584 tgl 55 0 \$0-stepAct-5-15-s \$0-stepAct-5-15-r empty
-17 7 0 10 #82cdd7 #000000 #000000 0 1;
-#X obj 1010 639 tgl 55 0 \$0-stepAct-6-15-s \$0-stepAct-6-15-r empty
-17 7 0 10 #82cdd7 #000000 #000000 0 1;
-#X obj 1489 317 bng 20 250 50 0 \$0-selectsound2 - empty 17 7 0 10
-#007da5 #ffffff #000000;
-#X obj 288 897 bng 45 250 50 0 \$0-clearseqBang empty empty 17 7 0
-10 #007da5 #ffffff #000000;
-#X text 289 878 CLEAR;
-#X obj 701 893 hsl 220 45 60 180 0 0 \$0-bpm-in \$0-bpm-out BPM -2
--8 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 257 182 tgl 40 0 \$0-play empty empty 17 7 0 10 #007da5 #000000
-#000000 0 1;
-#X text 259 164 PLAY;
-#X obj 186 236 hradio 55 1 0 16 empty step-number empty 0 -8 0 10 #00324b
-#ffffff #000000 0;
-#X obj 1242 229 bng 55 250 50 0 \$0-click1 \$0-a-click1 empty 17 7
-0 10 #037da4 #00314b #000000;
-#X obj 1317 229 bng 55 250 50 0 \$0-click2 \$0-s-click2 empty 17 7
-0 10 #027da1 #00314b #000000;
-#X obj 1278 343 bng 55 250 50 0 \$0-click4 \$0-z-click4 empty 17 7
-0 10 #027da0 #00314b #000000;
-#X obj 1355 342 bng 55 250 50 0 \$0-click5 \$0-x-click5 empty 17 7
-0 10 #037da4 #00314b #000000;
-#X obj 1422 343 bng 55 250 50 0 \$0-click6 \$0-c-click6 empty 17 7
-0 10 #027da1 #00314b #000000;
-#X obj 1489 341 bng 55 250 50 0 \$0-selclick2 \$0-selclick2-set empty
-17 7 0 10 #037da4 #00314b #000000;
-#X obj 1385 229 bng 55 250 50 0 \$0-click3 \$0-d-click3 empty 17 7
-0 10 #037da4 #00314b #000000;
-#X text 147 324 KICK;
-#X text 106 490 OPEN HIHAT;
-#X obj 185 694 tgl 55 0 \$0-stepAct-7-0-s \$0-stepAct-7-0-r empty 17
-7 0 10 #007da5 #000000 #000000 0 1;
-#X obj 240 694 tgl 55 0 \$0-stepAct-7-1-s \$0-stepAct-7-1-r empty 17
-7 0 10 #82cdcd #000000 #000000 0 1;
-#X obj 295 694 tgl 55 0 \$0-stepAct-7-2-s \$0-stepAct-7-2-r empty 17
-7 0 10 #82cdcd #000000 #000000 0 1;
-#X obj 350 694 tgl 55 0 \$0-stepAct-7-3-s \$0-stepAct-7-3-r empty 17
-7 0 10 #82cdd7 #000000 #000000 0 1;
-#X obj 405 694 tgl 55 0 \$0-stepAct-7-4-s \$0-stepAct-7-4-r empty 17
-7 0 10 #007da5 #000000 #000000 0 1;
-#X obj 460 694 tgl 55 0 \$0-stepAct-7-5-s \$0-stepAct-7-5-r empty 17
-7 0 10 #82cdcd #000000 #000000 0 1;
-#X obj 515 694 tgl 55 0 \$0-stepAct-7-6-s \$0-stepAct-7-6-r empty 17
-7 0 10 #82cdcd #000000 #000000 0 1;
-#X obj 570 694 tgl 55 0 \$0-stepAct-7-7-s \$0-stepAct-7-7-r empty 17
-7 0 10 #82cdd7 #000000 #000000 0 1;
-#X obj 625 694 tgl 55 0 \$0-stepAct-7-8-s \$0-stepAct-7-8-r empty 17
-7 0 10 #007da5 #000000 #000000 0 1;
-#X obj 680 694 tgl 55 0 \$0-stepAct-7-9-s \$0-stepAct-7-9-r empty 17
-7 0 10 #82cdcd #000000 #000000 0 1;
-#X obj 735 694 tgl 55 0 \$0-stepAct-7-10-s \$0-stepAct-7-10-r empty
-17 7 0 10 #82cdcd #000000 #000000 0 1;
-#X obj 790 694 tgl 55 0 \$0-stepAct-7-11-s \$0-stepAct-7-11-r empty
-17 7 0 10 #82cdd7 #000000 #000000 0 1;
-#X obj 845 694 tgl 55 0 \$0-stepAct-7-12-s \$0-stepAct-7-12-r empty
-17 7 0 10 #007da5 #000000 #000000 0 1;
-#X obj 900 694 tgl 55 0 \$0-stepAct-7-13-s \$0-stepAct-7-13-r empty
-17 7 0 10 #82cdcd #000000 #000000 0 1;
-#X obj 955 694 tgl 55 0 \$0-stepAct-7-14-s \$0-stepAct-7-14-r empty
-17 7 0 10 #82cdcd #000000 #000000 0 1;
-#X obj 1010 694 tgl 55 0 \$0-stepAct-7-15-s \$0-stepAct-7-15-r empty
-17 7 0 10 #82cdd7 #000000 #000000 0 1;
-#X text 104 660 SELECTED 1;
-#X text 155 710 TOM;
-#X text 1253 246 KICK;
-#X text 1325 247 SNARE;
-#X text 1398 249 TOM;
-#X text 1492 359 SELECT;
-#X text 1435 361 CLAP;
-#X text 1288 361 HIHAT;
-#X obj 1453 206 bng 20 250 50 0 \$0-selectsound1 - empty 17 7 0 10
-#007da5 #ffffff #000000;
-#X obj 1453 230 bng 55 250 50 0 \$0-selclick1 \$0-selclick1-set empty
-17 7 0 10 #037da4 #00314b #000000;
-#X text 1456 248 SELECT;
-#X text 1264 292 A;
-#X text 1337 290 S;
-#X text 1403 287 D;
-#X text 1470 289 F;
-#X text 1302 410 Z;
-#X text 1372 405 X;
-#X text 1438 408 C;
-#X text 1507 405 V;
-#X obj 1520 228 bng 55 250 50 0 \$0-myclick1 \$0-myclick1-set empty
-17 7 0 10 #027da1 #00314b #000000;
-#X obj 1520 211 bng 15 250 50 0 \$0-mysound1 . empty 17 7 0 10 #ff0400
-#376ea5 #000000;
-#X floatatom 1540 206 5 0 0 0 - \$0-counter1 \$0-counter1-s 0;
-#X obj 1553 340 bng 55 250 50 0 \$0-myclick2 \$0-myclick2-set empty
-17 7 0 10 #027da1 #00314b #000000;
-#X obj 1553 322 bng 15 250 50 0 \$0-mysound2 . empty 17 7 0 10 #ff0400
-#376ea5 #000000;
-#X floatatom 1573 319 5 0 0 0 - \$0-counter2 \$0-counter2-s 0;
-#X text 1538 291 G;
-#X text 1581 412 B;
-#X text 1522 246 RECORD;
-#X text 1557 358 RECORD;
-#X text 1366 127 DRUM KIT;
-#X text 99 591 RECORDING 1;
-#X obj 132 20 cnv 15 1000 100 empty empty empty 20 12 0 14 #e0e0e0
-#404040 0;
-#X floatatom 204 51 5 0 0 0 BPM \$0-bpm-display - 24;
-#X obj 911 55 hsl 128 30 0 127 0 0 \$0-mastervolume \$0-mastervolume
-MASTER\\\ VOLUME -2 -8 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 185 749 tgl 55 0 \$0-stepAct-8-0-s \$0-stepAct-8-0-r empty 17
-7 0 10 #007da5 #000000 #000000 0 1;
-#X obj 240 749 tgl 55 0 \$0-stepAct-8-1-s \$0-stepAct-8-1-r empty 17
-7 0 10 #82cdcd #000000 #000000 0 1;
-#X obj 295 749 tgl 55 0 \$0-stepAct-8-2-s \$0-stepAct-8-2-r empty 17
-7 0 10 #82cdcd #000000 #000000 0 1;
-#X obj 350 749 tgl 55 0 \$0-stepAct-8-3-s \$0-stepAct-8-3-r empty 17
-7 0 10 #82cdd7 #000000 #000000 0 1;
-#X obj 405 749 tgl 55 0 \$0-stepAct-8-4-s \$0-stepAct-8-4-r empty 17
-7 0 10 #007da5 #000000 #000000 0 1;
-#X obj 460 749 tgl 55 0 \$0-stepAct-8-5-s \$0-stepAct-8-5-r empty 17
-7 0 10 #82cdcd #000000 #000000 0 1;
-#X obj 515 749 tgl 55 0 \$0-stepAct-8-6-s \$0-stepAct-8-6-r empty 17
-7 0 10 #82cdcd #000000 #000000 0 1;
-#X obj 570 749 tgl 55 0 \$0-stepAct-8-7-s \$0-stepAct-8-7-r empty 17
-7 0 10 #82cdd7 #000000 #000000 0 1;
-#X obj 625 749 tgl 55 0 \$0-stepAct-8-8-s \$0-stepAct-8-8-r empty 17
-7 0 10 #007da5 #000000 #000000 0 1;
-#X obj 680 749 tgl 55 0 \$0-stepAct-8-9-s \$0-stepAct-8-9-r empty 17
-7 0 10 #82cdcd #000000 #000000 0 1;
-#X obj 735 749 tgl 55 0 \$0-stepAct-8-10-s \$0-stepAct-8-10-r empty
-17 7 0 10 #82cdcd #000000 #000000 0 1;
-#X obj 790 749 tgl 55 0 \$0-stepAct-8-11-s \$0-stepAct-8-11-r empty
-17 7 0 10 #82cdd7 #000000 #000000 0 1;
-#X obj 845 749 tgl 55 0 \$0-stepAct-8-12-s \$0-stepAct-8-12-r empty
-17 7 0 10 #007da5 #000000 #000000 0 1;
-#X obj 900 749 tgl 55 0 \$0-stepAct-8-13-s \$0-stepAct-8-13-r empty
-17 7 0 10 #82cdcd #000000 #000000 0 1;
-#X obj 955 749 tgl 55 0 \$0-stepAct-8-14-s \$0-stepAct-8-14-r empty
-17 7 0 10 #82cdcd #000000 #000000 0 1;
-#X obj 1010 749 tgl 55 0 \$0-stepAct-8-15-s \$0-stepAct-8-15-r empty
-17 7 0 10 #82cdd7 #000000 #000000 0 1;
-#X text 98 767 RECORDING 2;
-#X obj 185 804 tgl 55 0 \$0-stepAct-9-0-s \$0-stepAct-9-0-r empty 17
-7 0 10 #007da5 #000000 #000000 0 1;
-#X obj 240 804 tgl 55 0 \$0-stepAct-9-1-s \$0-stepAct-9-1-r empty 17
-7 0 10 #82cdcd #000000 #000000 0 1;
-#X obj 295 804 tgl 55 0 \$0-stepAct-9-2-s \$0-stepAct-9-2-r empty 17
-7 0 10 #82cdcd #000000 #000000 0 1;
-#X obj 350 804 tgl 55 0 \$0-stepAct-9-3-s \$0-stepAct-9-3-r empty 17
-7 0 10 #82cdd7 #000000 #000000 0 1;
-#X obj 405 804 tgl 55 0 \$0-stepAct-9-4-s \$0-stepAct-9-4-r empty 17
-7 0 10 #007da5 #000000 #000000 0 1;
-#X obj 460 804 tgl 55 0 \$0-stepAct-9-5-s \$0-stepAct-9-5-r empty 17
-7 0 10 #82cdcd #000000 #000000 0 1;
-#X obj 515 804 tgl 55 0 \$0-stepAct-9-6-s \$0-stepAct-9-6-r empty 17
-7 0 10 #82cdcd #000000 #000000 0 1;
-#X obj 570 804 tgl 55 0 \$0-stepAct-9-7-s \$0-stepAct-9-7-r empty 17
-7 0 10 #82cdd7 #000000 #000000 0 1;
-#X obj 625 804 tgl 55 0 \$0-stepAct-9-8-s \$0-stepAct-9-8-r empty 17
-7 0 10 #007da5 #000000 #000000 0 1;
-#X obj 680 804 tgl 55 0 \$0-stepAct-9-9-s \$0-stepAct-9-9-r empty 17
-7 0 10 #82cdcd #000000 #000000 0 1;
-#X obj 735 804 tgl 55 0 \$0-stepAct-9-10-s \$0-stepAct-9-10-r empty
-17 7 0 10 #82cdcd #000000 #000000 0 1;
-#X obj 790 804 tgl 55 0 \$0-stepAct-9-11-s \$0-stepAct-9-11-r empty
-17 7 0 10 #82cdd7 #000000 #000000 0 1;
-#X obj 845 804 tgl 55 0 \$0-stepAct-9-12-s \$0-stepAct-9-12-r empty
-17 7 0 10 #007da5 #000000 #000000 0 1;
-#X obj 900 804 tgl 55 0 \$0-stepAct-9-13-s \$0-stepAct-9-13-r empty
-17 7 0 10 #82cdcd #000000 #000000 0 1;
-#X obj 955 804 tgl 55 0 \$0-stepAct-9-14-s \$0-stepAct-9-14-r empty
-17 7 0 10 #82cdcd #000000 #000000 0 1;
-#X obj 1010 804 tgl 55 0 \$0-stepAct-9-15-s \$0-stepAct-9-15-r empty
-17 7 0 10 #82cdd7 #000000 #000000 0 1;
-#X text 98 822 SELECTED 2;
 #N canvas 101 166 615 448 metronomo 0;
 #X obj 218 115 expr (60/$f1)*1000;
 #X obj 186 202 metro;
@@ -9586,15 +9067,187 @@ de 20 ms;
 #X connect 8 0 0 0;
 #X connect 9 0 1 1;
 #X connect 10 0 1 0;
-#X restore 462 66 pd metronomo;
-#X obj 568 54 tgl 40 0 \$0-indep-metro . empty 17 7 0 10 #fcfcfc #000000
+#X restore 35 159 pd metronomo;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X restore 272 17 pd general;
+#X obj 21 235 *~;
+#X obj 70 137 r \$0-mastervolume;
+#X obj 70 160 / 127;
+#X msg 70 183 \$1 15;
+#X obj 70 209 line~;
+#X obj 17 272 dac~;
+#X connect 1 0 4 0;
+#X connect 2 0 4 0;
+#X connect 4 0 9 0;
+#X connect 4 0 9 1;
+#X connect 5 0 6 0;
+#X connect 6 0 7 0;
+#X connect 7 0 8 0;
+#X connect 8 0 4 1;
+#X restore 1631 12 pd codigo;
+#X obj 10 10 cnv 15 1690 950 empty empty empty 20 12 0 14 #9bd1d1 #404040
+0;
+#X obj 1187 533 cnv 15 420 400 empty empty empty 20 12 0 14 #ccdbdc
+#404040 0;
+#X obj 1241 608 tgl 40 0 \$0-c \$0-qc empty 17 7 0 10 #ffffff #000000
 #000000 0 1;
-#X text 394 30 funciona de forma independiente al secuenciador;
-#X obj 575 176 tgl 30 0 \$0-metro-onoff \$0-metro-onplay empty 17 7
-0 10 #fcfcfc #000000 #000000 0 1;
-#X text 568 207 ON/OFF;
-#X text 493 184 METRONOME;
-#X text 433 150 funciona cuando el sequencer está activado;
+#X obj 1285 608 tgl 40 0 \$0-d \$0-wd empty 17 7 0 10 #ffffff #000000
+#000000 0 1;
+#X obj 1329 608 tgl 40 0 \$0-e \$0-ee empty 17 7 0 10 #ffffff #000000
+#000000 0 1;
+#X obj 1373 608 tgl 40 0 \$0-fN \$0-rfN empty 17 7 0 10 #ffffff #000000
+#000000 0 1;
+#X obj 1417 608 tgl 40 0 \$0-g \$0-tg empty 17 7 0 10 #ffffff #000000
+#000000 0 1;
+#X obj 1461 608 tgl 40 0 \$0-a \$0-ya empty 17 7 0 10 #ffffff #000000
+#000000 0 1;
+#X obj 1505 608 tgl 40 0 \$0-b \$0-ub empty 17 7 0 10 #ffffff #000000
+#000000 0 1;
+#X obj 1486 564 tgl 40 0 \$0-aS \$0-7aS empty 17 7 0 10 #606060 #000000
+#000000 0 1;
+#X obj 1442 564 tgl 40 0 \$0-gS \$0-6gS empty 17 7 0 10 #606060 #000000
+#000000 0 1;
+#X obj 1398 564 tgl 40 0 \$0-fs \$0-5fs empty 17 7 0 10 #606060 #000000
+#000000 0 1;
+#X obj 1309 564 tgl 40 0 \$0-dS \$0-3dS empty 17 7 0 10 #606060 #000000
+#000000 0 1;
+#X obj 1265 564 tgl 40 0 \$0-cS \$0-2cS empty 17 7 0 10 #606060 #000000
+#000000 0 1;
+#X obj 1267 710 hradio 30 1 0 3 \$0-octave \$0-octave OCTAVE 0 -8 0
+10 #00314b #037da4 #000000 0;
+#X obj 1439 711 hsl 90 30 0 127 0 0 \$0-synthvol synthvol VOLUME -2
+-8 0 10 #00314b #037da4 #000000 0 1;
+#X obj 1252 781 hsl 128 15 0 127 0 0 \$0-attack \$0-attack ATTACK -2
+-8 0 10 #9bd1d1 #000000 #000000 0 1;
+#X obj 1253 821 hsl 128 15 0 127 0 0 \$0-release \$0-release RELEASE
+-2 -8 0 10 #9bd1d1 #000000 #000000 0 1;
+#X obj 1253 859 hsl 128 15 0 127 0 0 \$0-synthshape \$0-synthshape
+SHAPE -2 -8 0 10 #9bd1d1 #000000 #000000 0 1;
+#X obj 1413 781 hsl 128 15 0 127 0 0 \$0-index \$0-index VIBRATO -2
+-8 0 10 #9bd1d0 #000000 #000000 0 1;
+#X obj 1413 821 hsl 128 15 0 127 0 0 \$0-synthrate \$0-synthrate VIBRATO\\\ RATE
+-2 -8 0 10 #9bd1cf #000000 #000000 0 1;
+#X obj 1414 859 hsl 128 15 0 127 0 0 \$0-glide \$0-glide GLIDE -2 -8
+0 10 #9bd0ce #000000 #000000 0 1;
+#N canvas 0 28 1440 872 FXsynth 0;
+#X text 79 28 reverb;
+#X text 236 28 distortion;
+#X text 68 159 delay time;
+#X text 77 292 feedback;
+#X obj 39 49 hsl 128 60 0 127 0 0 \$0-reverb \$0-reverb-set empty -2
+-8 0 10 #027da2 #00314b #000000 0 1;
+#X obj 41 180 hsl 128 60 0 127 0 0 \$0-delaytime \$0-delaytime-set
+empty -2 -8 0 10 #027da1 #00314b #000000 0 1;
+#X obj 42 315 hsl 128 60 0 127 0 0 \$0-feedback \$0-feedback-set empty
+-2 -8 0 10 #027da2 #00314b #000000 0 1;
+#X obj 210 315 hsl 128 60 0 127 0 0 \$0-ringMod \$0-ringMod-set empty
+-2 -8 0 10 #027da2 #00314b #000000 0 1;
+#X obj 211 180 hsl 128 60 0 127 0 0 \$0-bitcrush \$0-bitcrush-set empty
+-2 -8 0 10 #027da2 #00314b #000000 0 1;
+#X obj 210 49 hsl 128 60 0 127 0 0 \$0-distortion \$0-distortion-set
+empty -2 -8 0 10 #027da2 #00314b #000000 0 1;
+#X text 258 158 crush;
+#X text 258 293 ring;
+#X restore 1410 902 pd FXsynth;
+#X obj 1188 133 cnv 15 420 390 empty empty empty 20 12 0 14 #ccdbdc
+#404040 0;
+#N canvas 0 25 1440 778 FXdrumbox 0;
+#X text 94 33 reverb;
+#X text 251 33 distortion;
+#X text 83 164 delay time;
+#X text 92 297 feedback;
+#X obj 54 54 hsl 128 60 0 127 0 0 \$0-drumreverb \$0-drumreverb-set
+empty -2 -8 0 10 #027da2 #00314b #000000 0 1;
+#X obj 56 185 hsl 128 60 0 127 0 0 \$0-drumdelaytime \$0-drumdelaytime-set
+empty -2 -8 0 10 #027da1 #00314b #000000 0 1;
+#X obj 57 320 hsl 128 60 0 127 0 0 \$0-drumfeedback \$0-drumfeedback-set
+empty -2 -8 0 10 #027da2 #00314b #000000 0 1;
+#X obj 225 320 hsl 128 60 0 127 0 0 \$0-drumringMod \$0-drumringMod-set
+empty -2 -8 0 10 #027da2 #00314b #000000 0 1;
+#X obj 226 185 hsl 128 60 0 127 0 0 \$0-drumbitcrush \$0-drumbitcrush-set
+empty -2 -8 0 10 #027da2 #00314b #000000 0 1;
+#X obj 225 54 hsl 128 60 0 127 0 0 \$0-drumdistortion \$0-drumdistortion-set
+empty -2 -8 0 10 #027da2 #00314b #000000 0 1;
+#X text 273 163 crush;
+#X text 273 298 ring;
+#X restore 1401 491 pd FXdrumbox;
+#X obj 1425 419 hradio 30 1 0 4 \$0-drumkit \$0-drumkit DRUM\\\ KIT
+0 -8 0 10 #00314b #037da4 #000000 0;
+#X text 1436 449 A;
+#X text 1466 450 B;
+#X text 1496 450 C;
+#X text 1528 450 D;
+#X obj 1263 420 hsl 115 30 0 127 0 0 \$0-drumvol \$0-drumvol DRUM\\\ VOLUME
+-2 -8 0 10 #00314b #037da4 #000000 0 1;
+#X text 1255 649 Q;
+#X text 1298 648 W;
+#X text 1344 648 E;
+#X text 1387 647 R;
+#X text 1433 648 T;
+#X text 1476 648 Y;
+#X text 1521 648 U;
+#X text 1278 547 2;
+#X text 1323 547 3;
+#X text 1413 546 5;
+#X text 1456 546 6;
+#X text 1501 546 7;
+#X obj 1478 268 bng 20 250 50 0 \$0-selectsound2 - empty 17 7 0 10
+#007da5 #ffffff #000000;
+#X obj 1193 164 bng 65 250 50 0 \$0-click1 \$0-a-click1 empty 17 7
+0 10 #037da4 #00314b #000000;
+#X obj 1268 164 bng 65 250 50 0 \$0-click2 \$0-s-click2 empty 17 7
+0 10 #027da1 #00314b #000000;
+#X obj 1233 293 bng 65 250 50 0 \$0-click4 \$0-z-click4 empty 17 7
+0 10 #027da0 #00314b #000000;
+#X obj 1308 293 bng 65 250 50 0 \$0-click5 \$0-x-click5 empty 17 7
+0 10 #037da4 #00314b #000000;
+#X obj 1382 293 bng 65 250 50 0 \$0-click6 \$0-c-click6 empty 17 7
+0 10 #027da1 #00314b #000000;
+#X obj 1457 293 bng 65 250 50 0 \$0-selclick2 \$0-selclick2-set empty
+17 7 0 10 #037da4 #00314b #000000;
+#X obj 1342 164 bng 65 250 50 0 \$0-click3 \$0-d-click3 empty 17 7
+0 10 #037da4 #00314b #000000;
+#X text 1209 188 KICK;
+#X text 1281 188 SNARE;
+#X text 1362 188 TOM;
+#X text 1465 317 SELECT;
+#X text 1400 317 CLAP;
+#X text 1247 318 HIHAT;
+#X obj 1438 139 bng 20 250 50 0 \$0-selectsound1 - empty 17 7 0 10
+#007da5 #ffffff #000000;
+#X obj 1416 164 bng 65 250 50 0 \$0-selclick1 \$0-selclick1-set empty
+17 7 0 10 #037da4 #00314b #000000;
+#X text 1425 188 SELECT;
+#X text 1222 229 A;
+#X text 1297 229 S;
+#X text 1372 229 D;
+#X text 1443 229 F;
+#X text 1261 358 Z;
+#X text 1337 358 X;
+#X text 1411 358 C;
+#X text 1485 359 V;
+#X obj 1490 164 bng 65 250 50 0 \$0-myclick1 \$0-myclick1-set empty
+17 7 0 10 #027da1 #00314b #000000;
+#X obj 1491 139 bng 20 250 50 0 \$0-mysound1 . empty 17 7 0 10 #ff0400
+#376ea5 #000000;
+#X floatatom 1518 141 5 0 0 0 - \$0-counter1 \$0-counter1-s 0;
+#X obj 1532 293 bng 65 250 50 0 \$0-myclick2 \$0-myclick2-set empty
+17 7 0 10 #027da1 #00314b #000000;
+#X obj 1533 268 bng 20 250 50 0 \$0-mysound2 . empty 17 7 0 10 #ff0400
+#376ea5 #000000;
+#X floatatom 1560 270 5 0 0 0 - \$0-counter2 \$0-counter2-s 0;
+#X text 1517 229 G;
+#X text 1561 358 B;
+#X text 1498 188 RECORD;
+#X text 1540 317 RECORD;
+#X obj 99 21 cnv 15 1510 100 empty empty empty 20 12 0 14 #5aa4d6 #404040
+0;
+#X floatatom 204 55 5 0 0 0 BPM \$0-bpm-display - 24;
+#X obj 480 51 hsl 220 45 0 127 0 0 \$0-mastervolume \$0-mastervolume
+MASTER\\\ VOLUME -2 -8 0 10 #00324b #007da4 #000000 0 1;
+#X obj 1020 38 tgl 65 0 \$0-indep-metro . empty 17 7 0 10 #00324b #007da4
+#000000 0 1;
 #N canvas 90 105 1687 743 presets 0;
 #X obj 238 204 textfile;
 #X obj 258 39 bng 15 250 50 0 empty empty load 20 7 0 10 #fcfcfc #000000
@@ -9679,6 +9332,356 @@ de 20 ms;
 #X connect 38 0 4 0;
 #X connect 38 1 37 0;
 #X coords 0 -1 1 1 200 65 2 200 10;
-#X restore 1139 22 pd presets;
-#X text 1362 354 OPEN HIHAT;
+#X restore 1297 38 pd presets;
+#X obj 99 133 cnv 15 1050 800 empty empty empty 20 12 0 14 #ccdbdc
+#404040 0;
+#X obj 205 309 tgl 55 0 \$0-stepAct-0-0-s \$0-stepAct-0-0-r empty 17
+7 0 10 #007da5 #000000 #000000 0 1;
+#X obj 260 309 tgl 55 0 \$0-stepAct-0-1-s \$0-stepAct-0-1-r empty 17
+7 0 10 #82cdcd #000000 #000000 0 1;
+#X obj 315 309 tgl 55 0 \$0-stepAct-0-2-s \$0-stepAct-0-2-r empty 17
+7 0 10 #82cdcd #000000 #000000 0 1;
+#X obj 370 309 tgl 55 0 \$0-stepAct-0-3-s \$0-stepAct-0-3-r empty 17
+7 0 10 #82cdd7 #000000 #000000 0 1;
+#X obj 425 309 tgl 55 0 \$0-stepAct-0-4-s \$0-stepAct-0-4-r empty 17
+7 0 10 #007da5 #000000 #000000 0 1;
+#X obj 480 309 tgl 55 0 \$0-stepAct-0-5-s \$0-stepAct-0-5-r empty 17
+7 0 10 #82cdcd #000000 #000000 0 1;
+#X obj 535 309 tgl 55 0 \$0-stepAct-0-6-s \$0-stepAct-0-6-r empty 17
+7 0 10 #82cdcd #000000 #000000 0 1;
+#X obj 590 309 tgl 55 0 \$0-stepAct-0-7-s \$0-stepAct-0-7-r empty 17
+7 0 10 #82cdd7 #000000 #000000 0 1;
+#X obj 645 309 tgl 55 0 \$0-stepAct-0-8-s \$0-stepAct-0-8-r empty 17
+7 0 10 #007da5 #000000 #000000 0 1;
+#X obj 700 309 tgl 55 0 \$0-stepAct-0-9-s \$0-stepAct-0-9-r empty 17
+7 0 10 #82cdcd #000000 #000000 0 1;
+#X obj 755 309 tgl 55 0 \$0-stepAct-0-10-s \$0-stepAct-0-10-r empty
+17 7 0 10 #82cdcd #000000 #000000 0 1;
+#X obj 810 309 tgl 55 0 \$0-stepAct-0-11-s \$0-stepAct-0-11-r empty
+17 7 0 10 #82cdd7 #000000 #000000 0 1;
+#X obj 865 309 tgl 55 0 \$0-stepAct-0-12-s \$0-stepAct-0-12-r empty
+17 7 0 10 #007da5 #000000 #000000 0 1;
+#X obj 920 309 tgl 55 0 \$0-stepAct-0-13-s \$0-stepAct-0-13-r empty
+17 7 0 10 #82cdcd #000000 #000000 0 1;
+#X obj 975 309 tgl 55 0 \$0-stepAct-0-14-s \$0-stepAct-0-14-r empty
+17 7 0 10 #82cdcd #000000 #000000 0 1;
+#X obj 1030 309 tgl 55 0 \$0-stepAct-0-15-s \$0-stepAct-0-15-r empty
+17 7 0 10 #82cdd7 #000000 #000000 0 1;
+#X obj 205 364 tgl 55 0 \$0-stepAct-1-0-s \$0-stepAct-1-0-r empty 17
+7 0 10 #007da5 #000000 #000000 0 1;
+#X obj 260 364 tgl 55 0 \$0-stepAct-1-1-s \$0-stepAct-1-1-r empty 17
+7 0 10 #82cdcd #000000 #000000 0 1;
+#X obj 315 364 tgl 55 0 \$0-stepAct-1-2-s \$0-stepAct-1-2-r empty 17
+7 0 10 #82cdcd #000000 #000000 0 1;
+#X obj 370 364 tgl 55 0 \$0-stepAct-1-3-s \$0-stepAct-1-3-r empty 17
+7 0 10 #82cdd7 #000000 #000000 0 1;
+#X obj 425 364 tgl 55 0 \$0-stepAct-1-4-s \$0-stepAct-1-4-r empty 17
+7 0 10 #007da5 #000000 #000000 0 1;
+#X obj 480 364 tgl 55 0 \$0-stepAct-1-5-s \$0-stepAct-1-5-r empty 17
+7 0 10 #82cdcd #000000 #000000 0 1;
+#X obj 535 364 tgl 55 0 \$0-stepAct-1-6-s \$0-stepAct-1-6-r empty 17
+7 0 10 #82cdcd #000000 #000000 0 1;
+#X obj 590 364 tgl 55 0 \$0-stepAct-1-7-s \$0-stepAct-1-7-r empty 17
+7 0 10 #82cdd7 #000000 #000000 0 1;
+#X obj 645 364 tgl 55 0 \$0-stepAct-1-8-s \$0-stepAct-1-8-r empty 17
+7 0 10 #007da5 #000000 #000000 0 1;
+#X obj 700 364 tgl 55 0 \$0-stepAct-1-9-s \$0-stepAct-1-9-r empty 17
+7 0 10 #82cdcd #000000 #000000 0 1;
+#X obj 755 364 tgl 55 0 \$0-stepAct-1-10-s \$0-stepAct-1-10-r empty
+17 7 0 10 #82cdcd #000000 #000000 0 1;
+#X obj 810 364 tgl 55 0 \$0-stepAct-1-11-s \$0-stepAct-1-11-r empty
+17 7 0 10 #82cdd7 #000000 #000000 0 1;
+#X obj 865 364 tgl 55 0 \$0-stepAct-1-12-s \$0-stepAct-1-12-r empty
+17 7 0 10 #007da5 #000000 #000000 0 1;
+#X obj 920 364 tgl 55 0 \$0-stepAct-1-13-s \$0-stepAct-1-13-r empty
+17 7 0 10 #82cdcd #000000 #000000 0 1;
+#X obj 975 364 tgl 55 0 \$0-stepAct-1-14-s \$0-stepAct-1-14-r empty
+17 7 0 10 #82cdcd #000000 #000000 0 1;
+#X obj 1030 364 tgl 55 0 \$0-stepAct-1-15-s \$0-stepAct-1-15-r empty
+17 7 0 10 #82cdd7 #000000 #000000 0 1;
+#X obj 205 419 tgl 55 0 \$0-stepAct-2-0-s \$0-stepAct-2-0-r empty 17
+7 0 10 #007da5 #000000 #000000 0 1;
+#X obj 260 419 tgl 55 0 \$0-stepAct-2-1-s \$0-stepAct-2-1-r empty 17
+7 0 10 #82cdcd #000000 #000000 0 1;
+#X obj 315 419 tgl 55 0 \$0-stepAct-2-2-s \$0-stepAct-2-2-r empty 17
+7 0 10 #82cdcd #000000 #000000 0 1;
+#X obj 370 419 tgl 55 0 \$0-stepAct-2-3-s \$0-stepAct-2-3-r empty 17
+7 0 10 #82cdd7 #000000 #000000 0 1;
+#X obj 425 419 tgl 55 0 \$0-stepAct-2-4-s \$0-stepAct-2-4-r empty 17
+7 0 10 #007da5 #000000 #000000 0 1;
+#X obj 480 419 tgl 55 0 \$0-stepAct-2-5-s \$0-stepAct-2-5-r empty 17
+7 0 10 #82cdcd #000000 #000000 0 1;
+#X obj 535 419 tgl 55 0 \$0-stepAct-2-6-s \$0-stepAct-2-6-r empty 17
+7 0 10 #82cdcd #000000 #000000 0 1;
+#X obj 590 419 tgl 55 0 \$0-stepAct-2-7-s \$0-stepAct-2-7-r empty 17
+7 0 10 #82cdd7 #000000 #000000 0 1;
+#X obj 645 419 tgl 55 0 \$0-stepAct-2-8-s \$0-stepAct-2-8-r empty 17
+7 0 10 #007da5 #000000 #000000 0 1;
+#X obj 700 419 tgl 55 0 \$0-stepAct-2-9-s \$0-stepAct-2-9-r empty 17
+7 0 10 #82cdcd #000000 #000000 0 1;
+#X obj 755 419 tgl 55 0 \$0-stepAct-2-10-s \$0-stepAct-2-10-r empty
+17 7 0 10 #82cdcd #000000 #000000 0 1;
+#X obj 810 419 tgl 55 0 \$0-stepAct-2-11-s \$0-stepAct-2-11-r empty
+17 7 0 10 #82cdd7 #000000 #000000 0 1;
+#X obj 865 419 tgl 55 0 \$0-stepAct-2-12-s \$0-stepAct-2-12-r empty
+17 7 0 10 #007da5 #000000 #000000 0 1;
+#X obj 920 419 tgl 55 0 \$0-stepAct-2-13-s \$0-stepAct-2-13-r empty
+17 7 0 10 #82cdcd #000000 #000000 0 1;
+#X obj 975 419 tgl 55 0 \$0-stepAct-2-14-s \$0-stepAct-2-14-r empty
+17 7 0 10 #82cdcd #000000 #000000 0 1;
+#X obj 1030 419 tgl 55 0 \$0-stepAct-2-15-s \$0-stepAct-2-15-r empty
+17 7 0 10 #82cdd7 #000000 #000000 0 1;
+#X text 161 380 SNARE;
+#X text 158 434 HIHAT;
+#X text 164 548 CLAP;
+#X obj 205 474 tgl 55 0 \$0-stepAct-3-0-s \$0-stepAct-3-0-r empty 17
+7 0 10 #007da5 #000000 #000000 0 1;
+#X obj 205 529 tgl 55 0 \$0-stepAct-4-0-s \$0-stepAct-4-0-r empty 17
+7 0 10 #007da5 #000000 #000000 0 1;
+#X obj 205 584 tgl 55 0 \$0-stepAct-5-0-s \$0-stepAct-5-0-r empty 17
+7 0 10 #007da5 #000000 #000000 0 1;
+#X obj 205 639 tgl 55 0 \$0-stepAct-6-0-s \$0-stepAct-6-0-r empty 17
+7 0 10 #007da5 #000000 #000000 0 1;
+#X obj 260 474 tgl 55 0 \$0-stepAct-3-1-s \$0-stepAct-3-1-r empty 17
+7 0 10 #82cdcd #000000 #000000 0 1;
+#X obj 260 529 tgl 55 0 \$0-stepAct-4-1-s \$0-stepAct-4-1-r empty 17
+7 0 10 #82cdcd #000000 #000000 0 1;
+#X obj 260 584 tgl 55 0 \$0-stepAct-5-1-s \$0-stepAct-5-1-r empty 17
+7 0 10 #82cdcd #000000 #000000 0 1;
+#X obj 260 639 tgl 55 0 \$0-stepAct-6-1-s \$0-stepAct-6-1-r empty 17
+7 0 10 #82cdcd #000000 #000000 0 1;
+#X obj 315 474 tgl 55 0 \$0-stepAct-3-2-s \$0-stepAct-3-2-r empty 17
+7 0 10 #82cdcd #000000 #000000 0 1;
+#X obj 315 529 tgl 55 0 \$0-stepAct-4-2-s \$0-stepAct-4-2-r empty 17
+7 0 10 #82cdcd #000000 #000000 0 1;
+#X obj 315 584 tgl 55 0 \$0-stepAct-5-2-s \$0-stepAct-5-2-r empty 17
+7 0 10 #82cdcd #000000 #000000 0 1;
+#X obj 315 639 tgl 55 0 \$0-stepAct-6-2-s \$0-stepAct-6-2-r empty 17
+7 0 10 #82cdcd #000000 #000000 0 1;
+#X obj 370 474 tgl 55 0 \$0-stepAct-3-3-s \$0-stepAct-3-3-r empty 17
+7 0 10 #82cdd7 #000000 #000000 0 1;
+#X obj 370 529 tgl 55 0 \$0-stepAct-4-3-s \$0-stepAct-4-3-r empty 17
+7 0 10 #82cdd7 #000000 #000000 0 1;
+#X obj 370 584 tgl 55 0 \$0-stepAct-5-3-s \$0-stepAct-5-3-r empty 17
+7 0 10 #82cdd7 #000000 #000000 0 1;
+#X obj 370 639 tgl 55 0 \$0-stepAct-6-3-s \$0-stepAct-6-3-r empty 17
+7 0 10 #82cdd7 #000000 #000000 0 1;
+#X obj 425 474 tgl 55 0 \$0-stepAct-3-4-s \$0-stepAct-3-4-r empty 17
+7 0 10 #007da5 #000000 #000000 0 1;
+#X obj 425 529 tgl 55 0 \$0-stepAct-4-4-s \$0-stepAct-4-4-r empty 17
+7 0 10 #007da5 #000000 #000000 0 1;
+#X obj 425 584 tgl 55 0 \$0-stepAct-5-4-s \$0-stepAct-5-4-r empty 17
+7 0 10 #007da5 #000000 #000000 0 1;
+#X obj 425 639 tgl 55 0 \$0-stepAct-6-4-s \$0-stepAct-6-4-r empty 17
+7 0 10 #007da5 #000000 #000000 0 1;
+#X obj 480 474 tgl 55 0 \$0-stepAct-3-5-s \$0-stepAct-3-5-r empty 17
+7 0 10 #82cdcd #000000 #000000 0 1;
+#X obj 480 529 tgl 55 0 \$0-stepAct-4-5-s \$0-stepAct-4-5-r empty 17
+7 0 10 #82cdcd #000000 #000000 0 1;
+#X obj 480 584 tgl 55 0 \$0-stepAct-5-5-s \$0-stepAct-5-5-r empty 17
+7 0 10 #82cdcd #000000 #000000 0 1;
+#X obj 480 639 tgl 55 0 \$0-stepAct-6-5-s \$0-stepAct-6-5-r empty 17
+7 0 10 #82cdcd #000000 #000000 0 1;
+#X obj 535 474 tgl 55 0 \$0-stepAct-3-6-s \$0-stepAct-3-6-r empty 17
+7 0 10 #82cdcd #000000 #000000 0 1;
+#X obj 535 529 tgl 55 0 \$0-stepAct-4-6-s \$0-stepAct-4-6-r empty 17
+7 0 10 #82cdcd #000000 #000000 0 1;
+#X obj 535 584 tgl 55 0 \$0-stepAct-5-6-s \$0-stepAct-5-6-r empty 17
+7 0 10 #82cdcd #000000 #000000 0 1;
+#X obj 535 639 tgl 55 0 \$0-stepAct-6-6-s \$0-stepAct-6-6-r empty 17
+7 0 10 #82cdcd #000000 #000000 0 1;
+#X obj 590 474 tgl 55 0 \$0-stepAct-3-7-s \$0-stepAct-3-7-r empty 17
+7 0 10 #82cdd7 #000000 #000000 0 1;
+#X obj 590 529 tgl 55 0 \$0-stepAct-4-7-s \$0-stepAct-4-7-r empty 17
+7 0 10 #82cdd7 #000000 #000000 0 1;
+#X obj 590 584 tgl 55 0 \$0-stepAct-5-7-s \$0-stepAct-5-7-r empty 17
+7 0 10 #82cdd7 #000000 #000000 0 1;
+#X obj 590 639 tgl 55 0 \$0-stepAct-6-7-s \$0-stepAct-6-7-r empty 17
+7 0 10 #82cdd7 #000000 #000000 0 1;
+#X obj 645 474 tgl 55 0 \$0-stepAct-3-8-s \$0-stepAct-3-8-r empty 17
+7 0 10 #007da5 #000000 #000000 0 1;
+#X obj 645 529 tgl 55 0 \$0-stepAct-4-8-s \$0-stepAct-4-8-r empty 17
+7 0 10 #007da5 #000000 #000000 0 1;
+#X obj 645 584 tgl 55 0 \$0-stepAct-5-8-s \$0-stepAct-5-8-r empty 17
+7 0 10 #007da5 #000000 #000000 0 1;
+#X obj 645 639 tgl 55 0 \$0-stepAct-6-8-s \$0-stepAct-6-8-r empty 17
+7 0 10 #007da5 #000000 #000000 0 1;
+#X obj 700 474 tgl 55 0 \$0-stepAct-3-9-s \$0-stepAct-3-9-r empty 17
+7 0 10 #82cdcd #000000 #000000 0 1;
+#X obj 700 529 tgl 55 0 \$0-stepAct-4-9-s \$0-stepAct-4-9-r empty 17
+7 0 10 #82cdcd #000000 #000000 0 1;
+#X obj 700 584 tgl 55 0 \$0-stepAct-5-9-s \$0-stepAct-5-9-r empty 17
+7 0 10 #82cdcd #000000 #000000 0 1;
+#X obj 700 639 tgl 55 0 \$0-stepAct-6-9-s \$0-stepAct-6-9-r empty 17
+7 0 10 #82cdcd #000000 #000000 0 1;
+#X obj 755 474 tgl 55 0 \$0-stepAct-3-10-s \$0-stepAct-3-10-r empty
+17 7 0 10 #82cdcd #000000 #000000 0 1;
+#X obj 755 529 tgl 55 0 \$0-stepAct-4-10-s \$0-stepAct-4-10-r empty
+17 7 0 10 #82cdcd #000000 #000000 0 1;
+#X obj 755 584 tgl 55 0 \$0-stepAct-5-10-s \$0-stepAct-5-10-r empty
+17 7 0 10 #82cdcd #000000 #000000 0 1;
+#X obj 755 639 tgl 55 0 \$0-stepAct-6-10-s \$0-stepAct-6-10-r empty
+17 7 0 10 #82cdcd #000000 #000000 0 1;
+#X obj 810 474 tgl 55 0 \$0-stepAct-3-11-s \$0-stepAct-3-11-r empty
+17 7 0 10 #82cdd7 #000000 #000000 0 1;
+#X obj 810 529 tgl 55 0 \$0-stepAct-4-11-s \$0-stepAct-4-11-r empty
+17 7 0 10 #82cdd7 #000000 #000000 0 1;
+#X obj 810 584 tgl 55 0 \$0-stepAct-5-11-s \$0-stepAct-5-11-r empty
+17 7 0 10 #82cdd7 #000000 #000000 0 1;
+#X obj 810 639 tgl 55 0 \$0-stepAct-6-11-s \$0-stepAct-6-11-r empty
+17 7 0 10 #82cdd7 #000000 #000000 0 1;
+#X obj 865 474 tgl 55 0 \$0-stepAct-3-12-s \$0-stepAct-3-12-r empty
+17 7 0 10 #007da5 #000000 #000000 0 1;
+#X obj 865 529 tgl 55 0 \$0-stepAct-4-12-s \$0-stepAct-4-12-r empty
+17 7 0 10 #007da5 #000000 #000000 0 1;
+#X obj 865 584 tgl 55 0 \$0-stepAct-5-12-s \$0-stepAct-5-12-r empty
+17 7 0 10 #007da5 #000000 #000000 0 1;
+#X obj 865 639 tgl 55 0 \$0-stepAct-6-12-s \$0-stepAct-6-12-r empty
+17 7 0 10 #007da5 #000000 #000000 0 1;
+#X obj 920 474 tgl 55 0 \$0-stepAct-3-13-s \$0-stepAct-3-13-r empty
+17 7 0 10 #82cdcd #000000 #000000 0 1;
+#X obj 920 529 tgl 55 0 \$0-stepAct-4-13-s \$0-stepAct-4-13-r empty
+17 7 0 10 #82cdcd #000000 #000000 0 1;
+#X obj 920 584 tgl 55 0 \$0-stepAct-5-13-s \$0-stepAct-5-13-r empty
+17 7 0 10 #82cdcd #000000 #000000 0 1;
+#X obj 920 639 tgl 55 0 \$0-stepAct-6-13-s \$0-stepAct-6-13-r empty
+17 7 0 10 #82cdcd #000000 #000000 0 1;
+#X obj 975 474 tgl 55 0 \$0-stepAct-3-14-s \$0-stepAct-3-14-r empty
+17 7 0 10 #82cdcd #000000 #000000 0 1;
+#X obj 975 529 tgl 55 0 \$0-stepAct-4-14-s \$0-stepAct-4-14-r empty
+17 7 0 10 #82cdcd #000000 #000000 0 1;
+#X obj 975 584 tgl 55 0 \$0-stepAct-5-14-s \$0-stepAct-5-14-r empty
+17 7 0 10 #82cdcd #000000 #000000 0 1;
+#X obj 975 639 tgl 55 0 \$0-stepAct-6-14-s \$0-stepAct-6-14-r empty
+17 7 0 10 #82cdcd #000000 #000000 0 1;
+#X obj 1030 474 tgl 55 0 \$0-stepAct-3-15-s \$0-stepAct-3-15-r empty
+17 7 0 10 #82cdd7 #000000 #000000 0 1;
+#X obj 1030 529 tgl 55 0 \$0-stepAct-4-15-s \$0-stepAct-4-15-r empty
+17 7 0 10 #82cdd7 #000000 #000000 0 1;
+#X obj 1030 584 tgl 55 0 \$0-stepAct-5-15-s \$0-stepAct-5-15-r empty
+17 7 0 10 #82cdd7 #000000 #000000 0 1;
+#X obj 1030 639 tgl 55 0 \$0-stepAct-6-15-s \$0-stepAct-6-15-r empty
+17 7 0 10 #82cdd7 #000000 #000000 0 1;
+#X obj 481 167 bng 55 250 50 0 \$0-clearseqBang . empty 17 7 0 10 #007da5
+#00324b #000000;
+#X text 489 148 CLEAR;
+#X obj 864 176 hsl 220 40 60 180 0 0 \$0-bpm-in \$0-bpm-out BPM -2
+-8 0 10 #007da4 #00324b #000000 0 1;
+#X obj 206 167 tgl 55 0 \$0-play . empty 17 7 0 10 #007da5 #000000
+#000000 0 1;
+#X text 219 149 PLAY;
+#X obj 206 236 hradio 55 1 0 16 empty step-number empty 0 -8 0 10 #00324b
+#ffffff #000000 0;
+#X text 167 324 KICK;
+#X text 126 490 OPEN HIHAT;
+#X obj 205 694 tgl 55 0 \$0-stepAct-7-0-s \$0-stepAct-7-0-r empty 17
+7 0 10 #007da5 #000000 #000000 0 1;
+#X obj 260 694 tgl 55 0 \$0-stepAct-7-1-s \$0-stepAct-7-1-r empty 17
+7 0 10 #82cdcd #000000 #000000 0 1;
+#X obj 315 694 tgl 55 0 \$0-stepAct-7-2-s \$0-stepAct-7-2-r empty 17
+7 0 10 #82cdcd #000000 #000000 0 1;
+#X obj 370 694 tgl 55 0 \$0-stepAct-7-3-s \$0-stepAct-7-3-r empty 17
+7 0 10 #82cdd7 #000000 #000000 0 1;
+#X obj 425 694 tgl 55 0 \$0-stepAct-7-4-s \$0-stepAct-7-4-r empty 17
+7 0 10 #007da5 #000000 #000000 0 1;
+#X obj 480 694 tgl 55 0 \$0-stepAct-7-5-s \$0-stepAct-7-5-r empty 17
+7 0 10 #82cdcd #000000 #000000 0 1;
+#X obj 535 694 tgl 55 0 \$0-stepAct-7-6-s \$0-stepAct-7-6-r empty 17
+7 0 10 #82cdcd #000000 #000000 0 1;
+#X obj 590 694 tgl 55 0 \$0-stepAct-7-7-s \$0-stepAct-7-7-r empty 17
+7 0 10 #82cdd7 #000000 #000000 0 1;
+#X obj 645 694 tgl 55 0 \$0-stepAct-7-8-s \$0-stepAct-7-8-r empty 17
+7 0 10 #007da5 #000000 #000000 0 1;
+#X obj 700 694 tgl 55 0 \$0-stepAct-7-9-s \$0-stepAct-7-9-r empty 17
+7 0 10 #82cdcd #000000 #000000 0 1;
+#X obj 755 694 tgl 55 0 \$0-stepAct-7-10-s \$0-stepAct-7-10-r empty
+17 7 0 10 #82cdcd #000000 #000000 0 1;
+#X obj 810 694 tgl 55 0 \$0-stepAct-7-11-s \$0-stepAct-7-11-r empty
+17 7 0 10 #82cdd7 #000000 #000000 0 1;
+#X obj 865 694 tgl 55 0 \$0-stepAct-7-12-s \$0-stepAct-7-12-r empty
+17 7 0 10 #007da5 #000000 #000000 0 1;
+#X obj 920 694 tgl 55 0 \$0-stepAct-7-13-s \$0-stepAct-7-13-r empty
+17 7 0 10 #82cdcd #000000 #000000 0 1;
+#X obj 975 694 tgl 55 0 \$0-stepAct-7-14-s \$0-stepAct-7-14-r empty
+17 7 0 10 #82cdcd #000000 #000000 0 1;
+#X obj 1030 694 tgl 55 0 \$0-stepAct-7-15-s \$0-stepAct-7-15-r empty
+17 7 0 10 #82cdd7 #000000 #000000 0 1;
+#X text 124 660 SELECTED 1;
+#X text 175 710 TOM;
+#X text 119 591 RECORDING 1;
+#X obj 205 749 tgl 55 0 \$0-stepAct-8-0-s \$0-stepAct-8-0-r empty 17
+7 0 10 #007da5 #000000 #000000 0 1;
+#X obj 260 749 tgl 55 0 \$0-stepAct-8-1-s \$0-stepAct-8-1-r empty 17
+7 0 10 #82cdcd #000000 #000000 0 1;
+#X obj 315 749 tgl 55 0 \$0-stepAct-8-2-s \$0-stepAct-8-2-r empty 17
+7 0 10 #82cdcd #000000 #000000 0 1;
+#X obj 370 749 tgl 55 0 \$0-stepAct-8-3-s \$0-stepAct-8-3-r empty 17
+7 0 10 #82cdd7 #000000 #000000 0 1;
+#X obj 425 749 tgl 55 0 \$0-stepAct-8-4-s \$0-stepAct-8-4-r empty 17
+7 0 10 #007da5 #000000 #000000 0 1;
+#X obj 480 749 tgl 55 0 \$0-stepAct-8-5-s \$0-stepAct-8-5-r empty 17
+7 0 10 #82cdcd #000000 #000000 0 1;
+#X obj 535 749 tgl 55 0 \$0-stepAct-8-6-s \$0-stepAct-8-6-r empty 17
+7 0 10 #82cdcd #000000 #000000 0 1;
+#X obj 590 749 tgl 55 0 \$0-stepAct-8-7-s \$0-stepAct-8-7-r empty 17
+7 0 10 #82cdd7 #000000 #000000 0 1;
+#X obj 645 749 tgl 55 0 \$0-stepAct-8-8-s \$0-stepAct-8-8-r empty 17
+7 0 10 #007da5 #000000 #000000 0 1;
+#X obj 700 749 tgl 55 0 \$0-stepAct-8-9-s \$0-stepAct-8-9-r empty 17
+7 0 10 #82cdcd #000000 #000000 0 1;
+#X obj 755 749 tgl 55 0 \$0-stepAct-8-10-s \$0-stepAct-8-10-r empty
+17 7 0 10 #82cdcd #000000 #000000 0 1;
+#X obj 810 749 tgl 55 0 \$0-stepAct-8-11-s \$0-stepAct-8-11-r empty
+17 7 0 10 #82cdd7 #000000 #000000 0 1;
+#X obj 865 749 tgl 55 0 \$0-stepAct-8-12-s \$0-stepAct-8-12-r empty
+17 7 0 10 #007da5 #000000 #000000 0 1;
+#X obj 920 749 tgl 55 0 \$0-stepAct-8-13-s \$0-stepAct-8-13-r empty
+17 7 0 10 #82cdcd #000000 #000000 0 1;
+#X obj 975 749 tgl 55 0 \$0-stepAct-8-14-s \$0-stepAct-8-14-r empty
+17 7 0 10 #82cdcd #000000 #000000 0 1;
+#X obj 1030 749 tgl 55 0 \$0-stepAct-8-15-s \$0-stepAct-8-15-r empty
+17 7 0 10 #82cdd7 #000000 #000000 0 1;
+#X text 118 767 RECORDING 2;
+#X obj 205 804 tgl 55 0 \$0-stepAct-9-0-s \$0-stepAct-9-0-r empty 17
+7 0 10 #007da5 #000000 #000000 0 1;
+#X obj 260 804 tgl 55 0 \$0-stepAct-9-1-s \$0-stepAct-9-1-r empty 17
+7 0 10 #82cdcd #000000 #000000 0 1;
+#X obj 315 804 tgl 55 0 \$0-stepAct-9-2-s \$0-stepAct-9-2-r empty 17
+7 0 10 #82cdcd #000000 #000000 0 1;
+#X obj 370 804 tgl 55 0 \$0-stepAct-9-3-s \$0-stepAct-9-3-r empty 17
+7 0 10 #82cdd7 #000000 #000000 0 1;
+#X obj 425 804 tgl 55 0 \$0-stepAct-9-4-s \$0-stepAct-9-4-r empty 17
+7 0 10 #007da5 #000000 #000000 0 1;
+#X obj 480 804 tgl 55 0 \$0-stepAct-9-5-s \$0-stepAct-9-5-r empty 17
+7 0 10 #82cdcd #000000 #000000 0 1;
+#X obj 535 804 tgl 55 0 \$0-stepAct-9-6-s \$0-stepAct-9-6-r empty 17
+7 0 10 #82cdcd #000000 #000000 0 1;
+#X obj 590 804 tgl 55 0 \$0-stepAct-9-7-s \$0-stepAct-9-7-r empty 17
+7 0 10 #82cdd7 #000000 #000000 0 1;
+#X obj 645 804 tgl 55 0 \$0-stepAct-9-8-s \$0-stepAct-9-8-r empty 17
+7 0 10 #007da5 #000000 #000000 0 1;
+#X obj 700 804 tgl 55 0 \$0-stepAct-9-9-s \$0-stepAct-9-9-r empty 17
+7 0 10 #82cdcd #000000 #000000 0 1;
+#X obj 755 804 tgl 55 0 \$0-stepAct-9-10-s \$0-stepAct-9-10-r empty
+17 7 0 10 #82cdcd #000000 #000000 0 1;
+#X obj 810 804 tgl 55 0 \$0-stepAct-9-11-s \$0-stepAct-9-11-r empty
+17 7 0 10 #82cdd7 #000000 #000000 0 1;
+#X obj 865 804 tgl 55 0 \$0-stepAct-9-12-s \$0-stepAct-9-12-r empty
+17 7 0 10 #007da5 #000000 #000000 0 1;
+#X obj 920 804 tgl 55 0 \$0-stepAct-9-13-s \$0-stepAct-9-13-r empty
+17 7 0 10 #82cdcd #000000 #000000 0 1;
+#X obj 975 804 tgl 55 0 \$0-stepAct-9-14-s \$0-stepAct-9-14-r empty
+17 7 0 10 #82cdcd #000000 #000000 0 1;
+#X obj 1030 804 tgl 55 0 \$0-stepAct-9-15-s \$0-stepAct-9-15-r empty
+17 7 0 10 #82cdd7 #000000 #000000 0 1;
+#X text 118 822 SELECTED 2;
+#X obj 756 168 tgl 55 0 \$0-metro-onoff \$0-metro-onplay empty 17 7
+0 10 #007da4 #000000 #000000 0 1;
+#X text 761 150 ON/OFF;
+#X text 1297 491 SOUND EFFECTS;
+#X text 1306 903 SOUND EFFECTS;
+#X text 614 186 SEQUENCER METRONOME;
+#X text 940 62 METRONOME;
+#X text 1322 328 HIHAT;
+#X text 1324 312 OPEN;
 #X coords 0 -1 1 1 1690 950 1 10 10;
