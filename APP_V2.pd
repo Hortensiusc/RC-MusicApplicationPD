@@ -1,5 +1,5 @@
 #N canvas 0 25 1440 778 12;
-#N canvas 446 222 436 349 codigo 0;
+#N canvas 614 181 436 349 codigo 0;
 #N canvas 1010 77 430 402 sequencer 0;
 #N canvas 995 39 445 764 triggerActivations 0;
 #N canvas 134 13 1756 926 clearsequencer 0;
@@ -1607,7 +1607,7 @@
 #X restore 12 44 pd triggerActivations;
 #X obj 12 121 catch~;
 #X obj 12 348 dac~;
-#N canvas 592 126 450 300 init 0;
+#N canvas 509 355 450 300 init 0;
 #X obj 21 29 loadbang;
 #X obj 21 59 float \$0;
 #X obj 187 22 r \$0-bpm-in;
@@ -5168,7 +5168,7 @@
 #X connect 68 0 64 2;
 #X connect 69 0 64 3;
 #X restore 12 69 pd sequencer2;
-#N canvas 0 28 1440 872 presetssequencer 0;
+#N canvas 0 25 1440 778 presetssequencer 0;
 #X obj 21 33 r \$0-preset1;
 #X obj 21 185 f \$0;
 #X msg 21 218 \; \$1-stepAct-0-0-r 1 \; \$1-stepAct-2-1-r 1 \; \$1-stepAct-1-2-r
@@ -5396,13 +5396,13 @@
 #N canvas 560 230 185 177 init 0;
 #X obj 47 40 loadbang;
 #X obj 47 65 float \$0;
-#X msg 47 91 \; pd dsp 1 \; \$1-drumkit 1 \;;
+#X msg 47 91 \; pd dsp 1 \; \$1-drumkit-r 1 \;;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X restore 577 25 pd init;
 #X obj 298 459 outlet~;
 #X obj 362 73 r \$0-drumkit;
-#N canvas 927 53 868 779 mysamples 0;
+#N canvas 572 25 868 778 mysamples 0;
 #X obj 556 551 r \$0-recorded2trigger;
 #X obj 36 365 adc~;
 #X obj 128 442 delay 1000;
@@ -5854,13 +5854,13 @@
 #X obj 310 293 expr 1 - $f1;
 #X obj 296 59 loadbang;
 #X obj 112 119 hsl 128 15 0 1 0 1 empty empty 'roomsize' 20 8 0 10
-#fcfcfc #fc8000 #000000 5000 0;
+#fcfcfc #fc8000 #000000 0 0;
 #X obj 127 162 hsl 128 15 0 2.4 0 1 empty empty damp 20 8 0 10 #fcfcfc
 #fc8000 #000000 0 0;
 #X obj 157 255 hsl 128 15 0 1 0 1 empty empty wet 20 8 0 10 #fcfcfc
-#fc8000 #000000 1250 0;
+#fc8000 #000000 0 0;
 #X obj 142 205 hsl 128 15 0 1 0 1 empty empty dry 20 8 0 10 #fcfcfc
-#fc8000 #000000 11450 0;
+#fc8000 #000000 12700 0;
 #N canvas 256 339 634 321 vfreeverb~ 0;
 #N canvas 824 312 778 367 combfilters-left1 0;
 #X obj 46 244 +~;
@@ -6778,8 +6778,8 @@ milliseconds \, based on samplerate.;
 #N canvas 256 150 300 217 init 0;
 #X obj 34 39 loadbang;
 #X obj 34 71 float \$0;
-#X msg 34 103 \; pd dsp 1 \; \$1-drumvol 60 \; \$1-drumreverb-set 50
-\; \$1-drumbitcrush-set 0 \; \$1-drumringMod-set 0 \; \$1-drumdistortion-set
+#X msg 34 103 \; pd dsp 1 \; \$1-drumvol-r 60 \; \$1-drumreverb-set
+50 \; \$1-drumbitcrush-set 0 \; \$1-drumringMod-set 0 \; \$1-drumdistortion-set
 20 \; \$1-drumdelaytime-set 30 \; \$1-drumfeedback-set 50 \;;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
@@ -6801,16 +6801,7 @@ milliseconds \, based on samplerate.;
 #X obj 23 74 outlet~;
 #X connect 1 0 2 0;
 #X restore 90 17 pd drumbox;
-#N canvas 432 309 450 300 synth 0;
-#N canvas 256 150 234 265 init 0;
-#X obj 34 39 loadbang;
-#X obj 34 71 float \$0;
-#X msg 34 105 \; pd dsp 1 \; synthvol 60 \; \$1-reverb-set 50 \; \$1-bitcrush-set
-0 \; \$1-ringMod-set 0 \; \$1-distortion-set 20 \; \$1-delaytime-set
-30 \; \$1-feedback-set 50 \;;
-#X connect 0 0 1 0;
-#X connect 1 0 2 0;
-#X restore 41 12 pd init;
+#N canvas 432 309 197 125 synth 0;
 #N canvas 222 58 683 715 keys 0;
 #X obj 39 37 key;
 #X obj 113 37 keyup;
@@ -7078,7 +7069,7 @@ milliseconds \, based on samplerate.;
 #X connect 118 0 86 0;
 #X connect 119 0 91 0;
 #X connect 120 0 94 0;
-#X restore 40 36 pd keys;
+#X restore 30 20 pd keys;
 #N canvas 708 168 278 367 FX 0;
 #N canvas 394 119 652 394 keyboard 0;
 #X obj 25 38 poly 4 1;
@@ -7811,9 +7802,9 @@ milliseconds \, based on samplerate.;
 #N canvas 556 397 276 237 init 0;
 #X obj 83 19 loadbang;
 #X obj 83 43 float \$0;
-#X msg 83 67 \; pd dsp 1 \; \$1-octave 1 \; \$1-attack 10 \; \$1-release
-10 \; \$1-synthshape 10 \; \$1-index 0 \; \$1-synthrate 0 \; \$1-glide
-10 \;;
+#X msg 83 67 \; pd dsp 1 \; \$1-octave-r 1 \; \$1-attack-set 10 \;
+\$1-release-set 10 \; \$1-synthshape-set 10 \; \$1-index-set 20 \;
+\$1-synthrate-set 20 \; \$1-glide-set 10 \;;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X restore 565 21 pd init;
@@ -8788,34 +8779,33 @@ milliseconds \, based on samplerate.;
 #N canvas 256 150 234 265 init 0;
 #X obj 34 39 loadbang;
 #X obj 34 71 float \$0;
-#X msg 34 105 \; pd dsp 1 \; \$1-synthvol 60 \; \$1-reverb-set 50 \;
-\$1-bitcrush-set 0 \; \$1-ringMod-set 0 \; \$1-distortion-set 20 \;
-\$1-delaytime-set 30 \; \$1-feedback-set 50 \;;
+#X msg 34 105 \; pd dsp 1 \; \$1-synthvol-r 60 \; \$1-reverb-set 50
+\; \$1-bitcrush-set 0 \; \$1-ringMod-set 0 \; \$1-distortion-set 20
+\; \$1-delaytime-set 30 \; \$1-feedback-set 50 \;;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X restore 41 12 pd init;
-#X obj 120 189 r \$0-synthvol;
 #X obj 41 321 outlet~;
+#X obj 120 189 r \$0-synthvol;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;
 #X connect 3 0 5 0;
 #X connect 4 0 6 0;
 #X connect 5 0 4 0;
-#X connect 6 0 12 0;
+#X connect 6 0 11 0;
 #X connect 7 0 8 0;
 #X connect 8 0 9 0;
 #X connect 9 0 6 1;
-#X connect 11 0 7 0;
-#X restore 39 60 pd FX;
-#X obj 36 88 outlet~;
-#X connect 2 0 3 0;
+#X connect 12 0 7 0;
+#X restore 30 44 pd FX;
+#X obj 30 72 outlet~;
+#X connect 1 0 2 0;
 #X restore 21 17 pd synth;
 #N canvas 410 139 450 300 general 0;
 #X obj 33 25 loadbang;
 #X obj 33 52 float \$0;
-#X msg 33 86 \; \$1-mastervolume 60;
-#N canvas 189 84 1262 854 lospresets 0;
+#N canvas 178 25 1262 778 lospresets 0;
 #X obj 25 32 r \$0-stepAct-0-0-s;
 #X obj 78 55 r \$0-int;
 #X obj 25 81 pack 0 0;
@@ -9068,8 +9058,9 @@ de 20 ms;
 #X connect 9 0 1 1;
 #X connect 10 0 1 0;
 #X restore 35 159 pd metronomo;
+#X msg 33 86 \; \$1-mastervolume-r 60;
 #X connect 0 0 1 0;
-#X connect 1 0 2 0;
+#X connect 1 0 4 0;
 #X restore 272 17 pd general;
 #X obj 21 235 *~;
 #X obj 70 137 r \$0-mastervolume;
@@ -9077,10 +9068,12 @@ de 20 ms;
 #X msg 70 183 \$1 15;
 #X obj 70 209 line~;
 #X obj 17 272 dac~;
+#X obj 63 274 s~ audio;
 #X connect 1 0 4 0;
 #X connect 2 0 4 0;
 #X connect 4 0 9 0;
 #X connect 4 0 9 1;
+#X connect 4 0 10 0;
 #X connect 5 0 6 0;
 #X connect 6 0 7 0;
 #X connect 7 0 8 0;
@@ -9114,23 +9107,23 @@ de 20 ms;
 #000000 0 1;
 #X obj 1265 564 tgl 40 0 \$0-cS \$0-2cS empty 17 7 0 10 #606060 #000000
 #000000 0 1;
-#X obj 1267 710 hradio 30 1 0 3 \$0-octave \$0-octave OCTAVE 0 -8 0
-10 #00314b #037da4 #000000 0;
-#X obj 1439 711 hsl 90 30 0 127 0 0 \$0-synthvol synthvol VOLUME -2
--8 0 10 #00314b #037da4 #000000 0 1;
-#X obj 1252 781 hsl 128 15 0 127 0 0 \$0-attack \$0-attack ATTACK -2
--8 0 10 #9bd1d1 #000000 #000000 0 1;
-#X obj 1253 821 hsl 128 15 0 127 0 0 \$0-release \$0-release RELEASE
+#X obj 1267 710 hradio 30 1 0 3 \$0-octave \$0-octave-r OCTAVE 0 -8
+0 10 #00314b #037da4 #000000 0;
+#X obj 1439 711 hsl 90 30 0 127 0 0 \$0-synthvol \$0-synthvol-r VOLUME
+-2 -8 0 10 #00314b #037da4 #000000 0 1;
+#X obj 1252 781 hsl 128 15 0 127 0 0 \$0-attack \$0-attack-set ATTACK
 -2 -8 0 10 #9bd1d1 #000000 #000000 0 1;
-#X obj 1253 859 hsl 128 15 0 127 0 0 \$0-synthshape \$0-synthshape
+#X obj 1253 821 hsl 128 15 0 127 0 0 \$0-release \$0-release-set RELEASE
+-2 -8 0 10 #9bd1d1 #000000 #000000 0 1;
+#X obj 1253 859 hsl 128 15 0 127 0 0 \$0-synthshape \$0-synthshape-set
 SHAPE -2 -8 0 10 #9bd1d1 #000000 #000000 0 1;
-#X obj 1413 781 hsl 128 15 0 127 0 0 \$0-index \$0-index VIBRATO -2
--8 0 10 #9bd1d0 #000000 #000000 0 1;
-#X obj 1413 821 hsl 128 15 0 127 0 0 \$0-synthrate \$0-synthrate VIBRATO\\\ RATE
--2 -8 0 10 #9bd1cf #000000 #000000 0 1;
-#X obj 1414 859 hsl 128 15 0 127 0 0 \$0-glide \$0-glide GLIDE -2 -8
-0 10 #9bd0ce #000000 #000000 0 1;
-#N canvas 0 28 1440 872 FXsynth 0;
+#X obj 1413 781 hsl 128 15 0 127 0 0 \$0-index \$0-index-set VIBRATO
+-2 -8 0 10 #9bd1d0 #000000 #000000 0 1;
+#X obj 1413 821 hsl 128 15 0 127 0 0 \$0-synthrate \$0-synthrate-set
+VIBRATO\\\ RATE -2 -8 0 10 #9bd1cf #000000 #000000 0 1;
+#X obj 1414 859 hsl 128 15 0 127 0 0 \$0-glide \$0-glide-set GLIDE
+-2 -8 0 10 #9bd0ce #000000 #000000 0 1;
+#N canvas 0 25 388 421 FXsynth 0;
 #X text 79 28 reverb;
 #X text 236 28 distortion;
 #X text 68 159 delay time;
@@ -9152,7 +9145,7 @@ empty -2 -8 0 10 #027da2 #00314b #000000 0 1;
 #X restore 1410 902 pd FXsynth;
 #X obj 1188 133 cnv 15 420 390 empty empty empty 20 12 0 14 #ccdbdc
 #404040 0;
-#N canvas 0 25 1440 778 FXdrumbox 0;
+#N canvas 0 25 439 435 FXdrumbox 0;
 #X text 94 33 reverb;
 #X text 251 33 distortion;
 #X text 83 164 delay time;
@@ -9172,13 +9165,13 @@ empty -2 -8 0 10 #027da2 #00314b #000000 0 1;
 #X text 273 163 crush;
 #X text 273 298 ring;
 #X restore 1401 491 pd FXdrumbox;
-#X obj 1425 419 hradio 30 1 0 4 \$0-drumkit \$0-drumkit DRUM\\\ KIT
+#X obj 1425 419 hradio 30 1 0 4 \$0-drumkit \$0-drumkit-r DRUM\\\ KIT
 0 -8 0 10 #00314b #037da4 #000000 0;
 #X text 1436 449 A;
 #X text 1466 450 B;
 #X text 1496 450 C;
 #X text 1528 450 D;
-#X obj 1263 420 hsl 115 30 0 127 0 0 \$0-drumvol \$0-drumvol DRUM\\\ VOLUME
+#X obj 1263 420 hsl 115 30 0 127 0 0 \$0-drumvol \$0-drumvol-r DRUM\\\ VOLUME
 -2 -8 0 10 #00314b #037da4 #000000 0 1;
 #X text 1255 649 Q;
 #X text 1298 648 W;
@@ -9244,9 +9237,9 @@ empty -2 -8 0 10 #027da2 #00314b #000000 0 1;
 #X obj 99 21 cnv 15 1510 100 empty empty empty 20 12 0 14 #5aa4d6 #404040
 0;
 #X floatatom 204 55 5 0 0 0 BPM \$0-bpm-display - 24;
-#X obj 480 51 hsl 220 45 0 127 0 0 \$0-mastervolume \$0-mastervolume
+#X obj 362 51 hsl 220 45 0 127 0 0 \$0-mastervolume \$0-mastervolume-r
 MASTER\\\ VOLUME -2 -8 0 10 #00324b #007da4 #000000 0 1;
-#X obj 1020 38 tgl 65 0 \$0-indep-metro . empty 17 7 0 10 #00324b #007da4
+#X obj 697 45 tgl 55 0 \$0-indep-metro . empty 17 7 0 10 #00324b #007da4
 #000000 0 1;
 #N canvas 90 105 1687 743 presets 0;
 #X obj 238 204 textfile;
@@ -9681,7 +9674,80 @@ MASTER\\\ VOLUME -2 -8 0 10 #00324b #007da4 #000000 0 1;
 #X text 1297 491 SOUND EFFECTS;
 #X text 1306 903 SOUND EFFECTS;
 #X text 614 186 SEQUENCER METRONOME;
-#X text 940 62 METRONOME;
+#X text 617 62 METRONOME;
 #X text 1322 328 HIHAT;
 #X text 1324 312 OPEN;
+#X obj 949 51 bng 40 250 50 0 \$0-rec-s \$0-rec-r START 2 -10 0 10
+#00324b #007da4 #000000;
+#X obj 1020 51 bng 40 250 50 0 \$0-stoprec-s \$0-stoprec-r STOP 2 -10
+0 10 #00324b #007da4 #000000;
+#X floatatom 901 62 5 0 0 0 - \$0-counter - 0;
+#X obj 847 51 bng 40 250 50 0 \$0-selaudio-s \$0-selaudio-r SELECT
+2 -10 0 10 #00324b #007da4 #000000;
+#X obj 1092 51 bng 40 250 50 0 \$0-playrec-s \$0-playrec-r PLAY 2 -10
+0 10 #00324b #007da4 #000000;
+#N canvas 534 25 889 777 recordings 0;
+#X msg 201 442 stop;
+#X obj 397 100 metro 1000;
+#X msg 437 54 stop, f 5;
+#X obj 397 210 int;
+#X obj 444 212 - 1;
+#X floatatom 397 248 5 0 0 0 - - - 0;
+#X obj 531 275 sel 0;
+#X obj 415 143 loadbang;
+#X obj 588 244 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 106 476 writesf~ 1;
+#X msg 415 170 5;
+#X obj 22 290 s \$0-counter;
+#X obj 398 22 r \$0-rec-s;
+#X obj 39 439 r~ audio;
+#X obj 200 409 r \$0-stoprec-s;
+#X obj 133 36 r \$0-selaudio-s;
+#X obj 130 68 savepanel;
+#X obj 123 320 pack f s;
+#X msg 111 383 open \$2 \, start;
+#X listbox 216 349 65 0 0 0 - - - 0;
+#X obj 131 93 makefilename %s.wav;
+#X listbox 39 123 38 0 0 0 - - - 0;
+#X obj 361 448 r \$0-playrec-s;
+#X obj 443 477 pack f s;
+#X msg 442 512 \$2;
+#X obj 438 552 list;
+#X msg 438 579 open \$1 \, 1;
+#X obj 445 604 readsf~;
+#X obj 432 637 dac~;
+#X connect 0 0 9 0;
+#X connect 1 0 3 0;
+#X connect 2 0 1 0;
+#X connect 3 0 4 0;
+#X connect 3 0 5 0;
+#X connect 4 0 3 1;
+#X connect 5 0 6 0;
+#X connect 5 0 11 0;
+#X connect 6 0 10 0;
+#X connect 6 0 2 0;
+#X connect 6 0 8 0;
+#X connect 6 0 17 0;
+#X connect 7 0 10 0;
+#X connect 10 0 3 1;
+#X connect 12 0 1 0;
+#X connect 13 0 9 0;
+#X connect 14 0 0 0;
+#X connect 15 0 16 0;
+#X connect 16 0 20 0;
+#X connect 17 0 19 0;
+#X connect 17 0 18 0;
+#X connect 18 0 9 0;
+#X connect 20 0 21 0;
+#X connect 20 0 17 1;
+#X connect 20 0 23 1;
+#X connect 22 0 23 0;
+#X connect 23 0 24 0;
+#X connect 24 0 25 0;
+#X connect 25 0 26 0;
+#X connect 26 0 27 0;
+#X connect 27 0 28 0;
+#X connect 27 0 28 1;
+#X restore 820 102 pd recordings;
 #X coords 0 -1 1 1 1690 950 1 10 10;
