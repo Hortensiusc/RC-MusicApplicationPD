@@ -1,4 +1,4 @@
-#N canvas 0 25 1920 976 12;
+#N canvas 28 25 1440 777 12;
 #X declare -path patches;
 #X declare -path patches;
 #X declare -path patches;
@@ -4209,13 +4209,13 @@
 #X obj 310 293 expr 1 - $f1;
 #X obj 296 59 loadbang;
 #X obj 112 119 hsl 128 15 0 1 0 1 empty empty 'roomsize' 20 8 0 10
-#fcfcfc #fc8000 #000000 0 0;
+#fcfcfc #fc8000 #000000 5000 0;
 #X obj 127 162 hsl 128 15 0 2.4 0 1 empty empty damp 20 8 0 10 #fcfcfc
 #fc8000 #000000 0 0;
 #X obj 157 255 hsl 128 15 0 1 0 1 empty empty wet 20 8 0 10 #fcfcfc
-#fc8000 #000000 0 0;
+#fc8000 #000000 1250 0;
 #X obj 142 205 hsl 128 15 0 1 0 1 empty empty dry 20 8 0 10 #fcfcfc
-#fc8000 #000000 12700 0;
+#fc8000 #000000 11450 0;
 #N canvas 256 339 634 321 vfreeverb~ 0;
 #N canvas 824 312 778 367 combfilters-left1 0;
 #X obj 46 244 +~;
@@ -7165,7 +7165,7 @@ DISTORSION -2 -8 0 15 #027da2 #00314b #000000 0 1;
 #X restore 1347 890 pd FXsynth;
 #X obj 1188 133 cnv 15 420 390 empty empty empty 20 12 0 14 #ccdbdc
 #404040 0;
-#N canvas 1027 137 743 435 FXdrumbox 0;
+#N canvas 360 237 743 435 FXdrumbox 0;
 #X obj 167 47 hsl 128 45 0 127 0 0 \$0-drumreverb \$0-drumreverb-set
 REVERB -2 -8 0 15 #027da2 #00314b #000000 0 1;
 #X obj 169 178 hsl 128 45 0 127 0 0 \$0-drumdelaytime \$0-drumdelaytime-set
@@ -8063,20 +8063,20 @@ MASTER\\\ VOLUME -2 -8 0 15 #00324b #007da4 #000000 0 1;
 #X obj 1110 51 bng 40 250 50 0 \$0-playrec-s \$0-playrec-r PLAY 2 -10
 0 10 #00324b #007da4 #000000;
 #N canvas 333 127 450 300 foto 0;
-#X obj 34 33 moonlib/image patches/images/church.gif 0;
+#X obj 34 33 moonlib/image patches/images/turtle.gif 0;
 #X obj 67 62 t a;
 #X obj 67 11 loadbang;
-#X msg 67 38 open patches/images/church.gif;
+#X msg 67 38 open patches/images/turtle.gif;
 #X connect 1 0 0 0;
 #X connect 2 0 3 0;
 #X connect 3 0 1 0;
 #X coords 0 -1 1 1 45 45 2 10 10;
 #X restore 748 174 pd foto;
 #N canvas 333 127 450 300 foto 0;
-#X obj 34 33 moonlib/image patches/images/church.gif 0;
+#X obj 34 33 moonlib/image patches/images/rabbit.gif 0;
 #X obj 67 62 t a;
 #X obj 67 11 loadbang;
-#X msg 67 38 open patches/images/church.gif;
+#X msg 67 38 open patches/images/rabbit.gif;
 #X connect 1 0 0 0;
 #X connect 2 0 3 0;
 #X connect 3 0 1 0;
