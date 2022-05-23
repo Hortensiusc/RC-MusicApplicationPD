@@ -1,4 +1,4 @@
-#N canvas 0 25 1440 778 12;
+#N canvas 0 25 1920 976 12;
 #X declare -path patches;
 #X declare -path patches;
 #X declare -path patches;
@@ -4209,13 +4209,13 @@
 #X obj 310 293 expr 1 - $f1;
 #X obj 296 59 loadbang;
 #X obj 112 119 hsl 128 15 0 1 0 1 empty empty 'roomsize' 20 8 0 10
-#fcfcfc #fc8000 #000000 5000 0;
+#fcfcfc #fc8000 #000000 0 0;
 #X obj 127 162 hsl 128 15 0 2.4 0 1 empty empty damp 20 8 0 10 #fcfcfc
 #fc8000 #000000 0 0;
 #X obj 157 255 hsl 128 15 0 1 0 1 empty empty wet 20 8 0 10 #fcfcfc
-#fc8000 #000000 1250 0;
+#fc8000 #000000 0 0;
 #X obj 142 205 hsl 128 15 0 1 0 1 empty empty dry 20 8 0 10 #fcfcfc
-#fc8000 #000000 11450 0;
+#fc8000 #000000 12700 0;
 #N canvas 256 339 634 321 vfreeverb~ 0;
 #N canvas 824 312 778 367 combfilters-left1 0;
 #X obj 46 244 +~;
@@ -7087,110 +7087,158 @@ SHAPE -2 -8 0 10 #9bd1d1 #000000 #000000 0 1;
 VIBRATO\\\ RATE -2 -8 0 10 #9bd1cf #000000 #000000 0 1;
 #X obj 1414 859 hsl 128 15 0 127 0 0 \$0-glide \$0-glide-set GLIDE
 -2 -8 0 10 #9bd0ce #000000 #000000 0 1;
-#N canvas 628 140 812 544 FXsynth 0;
-#X text 239 48 reverb;
-#X text 566 48 distortion;
-#X text 228 179 delay time;
-#X text 237 312 feedback;
-#X obj 199 69 hsl 128 60 0 127 0 0 \$0-reverb \$0-reverb-set empty
--2 -8 0 10 #027da2 #00314b #000000 0 1;
-#X obj 201 200 hsl 128 60 0 127 0 0 \$0-delaytime \$0-delaytime-set
-empty -2 -8 0 10 #027da1 #00314b #000000 0 1;
-#X obj 202 335 hsl 128 60 0 127 0 0 \$0-feedback \$0-feedback-set empty
--2 -8 0 10 #027da2 #00314b #000000 0 1;
-#X obj 540 335 hsl 128 60 0 127 0 0 \$0-ringMod \$0-ringMod-set empty
--2 -8 0 10 #027da2 #00314b #000000 0 1;
-#X obj 541 200 hsl 128 60 0 127 0 0 \$0-bitcrush \$0-bitcrush-set empty
--2 -8 0 10 #027da2 #00314b #000000 0 1;
-#X obj 540 69 hsl 128 60 0 127 0 0 \$0-distortion \$0-distortion-set
-empty -2 -8 0 10 #027da2 #00314b #000000 0 1;
-#X text 588 178 crush;
-#X text 588 313 ring;
+#N canvas 195 134 700 433 FXsynth 0;
+#X obj 171 54 hsl 128 45 0 127 0 0 \$0-reverb \$0-reverb-set REVERB
+-2 -8 0 15 #027da2 #00314b #000000 0 1;
+#X obj 173 185 hsl 128 45 0 127 0 0 \$0-delaytime \$0-delaytime-set
+DELAY\\\ TIME -2 -8 0 15 #027da1 #00314b #000000 0 1;
+#X obj 174 320 hsl 128 45 0 127 0 0 \$0-feedback \$0-feedback-set FEEDBACK
+-2 -8 0 15 #027da2 #00314b #000000 0 1;
+#X obj 472 320 hsl 128 45 0 127 0 0 \$0-ringMod \$0-ringMod-set RING
+-2 -8 0 15 #027da2 #00314b #000000 0 1;
+#X obj 473 185 hsl 128 45 0 127 0 0 \$0-bitcrush \$0-bitcrush-set CRUSH
+-2 -8 0 15 #027da2 #00314b #000000 0 1;
+#X obj 472 54 hsl 128 45 0 127 0 0 \$0-distortion \$0-distortion-set
+DISTORSION -2 -8 0 15 #027da2 #00314b #000000 0 1;
 #X text 12 17 SOUND EFFECTS;
+#N canvas 333 127 450 300 foto 0;
+#X obj 34 33 moonlib/image patches/images/church.gif 0;
+#X obj 67 62 t a;
+#X obj 67 11 loadbang;
+#X msg 67 38 open patches/images/church.gif;
+#X connect 1 0 0 0;
+#X connect 2 0 3 0;
+#X connect 3 0 1 0;
+#X coords 0 -1 1 1 45 45 2 10 10;
+#X restore 121 54 pd foto;
+#N canvas 32 32 450 300 foto 0;
+#X obj 33 34 moonlib/image patches/images/eco.gif 0;
+#X obj 67 62 t a;
+#X obj 67 11 loadbang;
+#X msg 67 38 open patches/images/eco.gif;
+#X connect 1 0 0 0;
+#X connect 2 0 3 0;
+#X connect 3 0 1 0;
+#X coords 0 -1 1 1 45 45 2 10 10;
+#X restore 123 185 pd foto;
+#N canvas 32 32 450 300 foto 0;
+#X obj 33 33 moonlib/image patches/images/cave.gif 0;
+#X obj 67 62 t a;
+#X obj 67 11 loadbang;
+#X msg 67 38 open patches/images/cave.gif;
+#X connect 1 0 0 0;
+#X connect 2 0 3 0;
+#X connect 3 0 1 0;
+#X coords 0 -1 1 1 45 45 2 10 10;
+#X restore 123 320 pd foto;
+#N canvas 32 32 450 300 foto 0;
+#X obj 34 36 moonlib/image patches/images/radio.gif 0;
+#X obj 67 62 t a;
+#X obj 67 11 loadbang;
+#X msg 67 38 open patches/images/radio.gif;
+#X connect 1 0 0 0;
+#X connect 2 0 3 0;
+#X connect 3 0 1 0;
+#X coords 0 -1 1 1 45 45 2 10 10;
+#X restore 422 54 pd foto;
+#N canvas 32 32 450 300 foto 0;
+#X obj 34 33 moonlib/image patches/images/can.gif 0;
+#X obj 67 62 t a;
+#X obj 67 11 loadbang;
+#X msg 67 38 open patches/images/can.gif;
+#X connect 1 0 0 0;
+#X connect 2 0 3 0;
+#X connect 3 0 1 0;
+#X coords 0 -1 1 1 45 45 2 10 10;
+#X restore 423 185 pd foto;
+#N canvas 32 32 450 300 foto 0;
+#X obj 34 33 moonlib/image patches/images/ring.gif 0;
+#X obj 67 62 t a;
+#X obj 67 11 loadbang;
+#X msg 67 38 open patches/images/ring.gif;
+#X connect 1 0 0 0;
+#X connect 2 0 3 0;
+#X connect 3 0 1 0;
+#X coords 0 -1 1 1 45 45 2 10 10;
+#X restore 422 320 pd foto;
 #X coords 0 -1 1 1 100 30 2 10 10;
 #X restore 1347 890 pd FXsynth;
 #X obj 1188 133 cnv 15 420 390 empty empty empty 20 12 0 14 #ccdbdc
 #404040 0;
-#N canvas 437 108 743 435 FXdrumbox 0;
-#X text 204 33 reverb;
-#X text 471 33 distortion;
-#X text 193 164 delay time;
-#X text 202 297 feedback;
-#X obj 164 54 hsl 128 45 0 127 0 0 \$0-drumreverb \$0-drumreverb-set
-empty -2 -8 0 10 #027da2 #00314b #000000 0 1;
-#X obj 166 185 hsl 128 45 0 127 0 0 \$0-drumdelaytime \$0-drumdelaytime-set
-empty -2 -8 0 10 #027da1 #00314b #000000 0 1;
-#X obj 167 320 hsl 128 45 0 127 0 0 \$0-drumfeedback \$0-drumfeedback-set
-empty -2 -8 0 10 #027da2 #00314b #000000 0 1;
-#X obj 445 320 hsl 128 45 0 127 0 0 \$0-drumringMod \$0-drumringMod-set
-empty -2 -8 0 10 #027da2 #00314b #000000 0 1;
-#X obj 446 185 hsl 128 45 0 127 0 0 \$0-drumbitcrush \$0-drumbitcrush-set
-empty -2 -8 0 10 #027da2 #00314b #000000 0 1;
-#X obj 445 54 hsl 128 45 0 127 0 0 \$0-drumdistortion \$0-drumdistortion-set
-empty -2 -8 0 10 #027da2 #00314b #000000 0 1;
-#X text 493 163 crush;
-#X text 493 298 ring;
+#N canvas 1027 137 743 435 FXdrumbox 0;
+#X obj 167 47 hsl 128 45 0 127 0 0 \$0-drumreverb \$0-drumreverb-set
+REVERB -2 -8 0 15 #027da2 #00314b #000000 0 1;
+#X obj 169 178 hsl 128 45 0 127 0 0 \$0-drumdelaytime \$0-drumdelaytime-set
+DELAY\\\ TIME -2 -8 0 15 #027da1 #00314b #000000 0 1;
+#X obj 170 313 hsl 128 45 0 127 0 0 \$0-drumfeedback \$0-drumfeedback-set
+FEEDBACK -2 -8 0 15 #027da2 #00314b #000000 0 1;
+#X obj 472 313 hsl 128 45 0 127 0 0 \$0-drumringMod \$0-drumringMod-set
+RING -2 -8 0 15 #027da2 #00314b #000000 0 1;
+#X obj 473 178 hsl 128 45 0 127 0 0 \$0-drumbitcrush \$0-drumbitcrush-set
+CRUSH -2 -8 0 15 #027da2 #00314b #000000 0 1;
+#X obj 472 47 hsl 128 45 0 127 0 0 \$0-drumdistortion \$0-drumdistortion-set
+DISTORSION -2 -8 0 15 #027da2 #00314b #000000 0 1;
 #X text 12 17 SOUND EFFECTS;
-#N canvas 32 32 450 300 foto 0;
-#X obj 34 33 moonlib/image patches/images/church.png 0;
+#N canvas 333 127 450 300 foto 0;
+#X obj 34 33 moonlib/image patches/images/church.gif 0;
 #X obj 67 62 t a;
 #X obj 67 11 loadbang;
-#X msg 67 38 open patches/images/church.png;
+#X msg 67 38 open patches/images/church.gif;
 #X connect 1 0 0 0;
 #X connect 2 0 3 0;
 #X connect 3 0 1 0;
 #X coords 0 -1 1 1 45 45 2 10 10;
-#X restore 114 54 pd foto;
+#X restore 117 47 pd foto;
 #N canvas 32 32 450 300 foto 0;
-#X obj 33 34 moonlib/image patches/images/eco.png 0;
+#X obj 33 34 moonlib/image patches/images/eco.gif 0;
 #X obj 67 62 t a;
 #X obj 67 11 loadbang;
-#X msg 67 38 open patches/images/eco.png;
+#X msg 67 38 open patches/images/eco.gif;
 #X connect 1 0 0 0;
 #X connect 2 0 3 0;
 #X connect 3 0 1 0;
 #X coords 0 -1 1 1 45 45 2 10 10;
-#X restore 116 185 pd foto;
+#X restore 119 178 pd foto;
 #N canvas 32 32 450 300 foto 0;
-#X obj 33 33 moonlib/image patches/images/cave.png 0;
+#X obj 33 33 moonlib/image patches/images/cave.gif 0;
 #X obj 67 62 t a;
 #X obj 67 11 loadbang;
-#X msg 67 38 open patches/images/cave.png;
+#X msg 67 38 open patches/images/cave.gif;
 #X connect 1 0 0 0;
 #X connect 2 0 3 0;
 #X connect 3 0 1 0;
 #X coords 0 -1 1 1 45 45 2 10 10;
-#X restore 116 320 pd foto;
+#X restore 119 313 pd foto;
 #N canvas 32 32 450 300 foto 0;
-#X obj 34 36 moonlib/image patches/images/radio.png 0;
+#X obj 34 36 moonlib/image patches/images/radio.gif 0;
 #X obj 67 62 t a;
 #X obj 67 11 loadbang;
-#X msg 67 38 open patches/images/radio.png;
+#X msg 67 38 open patches/images/radio.gif;
 #X connect 1 0 0 0;
 #X connect 2 0 3 0;
 #X connect 3 0 1 0;
 #X coords 0 -1 1 1 45 45 2 10 10;
-#X restore 394 54 pd foto;
+#X restore 421 47 pd foto;
 #N canvas 32 32 450 300 foto 0;
-#X obj 34 33 moonlib/image patches/images/can.png 0;
+#X obj 34 33 moonlib/image patches/images/can.gif 0;
 #X obj 67 62 t a;
 #X obj 67 11 loadbang;
-#X msg 67 38 open patches/images/can.png;
+#X msg 67 38 open patches/images/can.gif;
 #X connect 1 0 0 0;
 #X connect 2 0 3 0;
 #X connect 3 0 1 0;
 #X coords 0 -1 1 1 45 45 2 10 10;
-#X restore 395 185 pd foto;
+#X restore 422 178 pd foto;
 #N canvas 32 32 450 300 foto 0;
-#X obj 34 33 moonlib/image patches/images/ring.png 0;
+#X obj 34 33 moonlib/image patches/images/ring.gif 0;
 #X obj 67 62 t a;
 #X obj 67 11 loadbang;
-#X msg 67 38 open patches/images/ring.png;
+#X msg 67 38 open patches/images/ring.gif;
 #X connect 1 0 0 0;
 #X connect 2 0 3 0;
 #X connect 3 0 1 0;
 #X coords 0 -1 1 1 45 45 2 10 10;
-#X restore 394 320 pd foto;
+#X restore 421 313 pd foto;
 #X coords 0 -1 1 1 100 30 2 10 10;
 #X restore 1350 479 pd FXdrumbox;
 #X obj 1425 419 hradio 30 1 0 4 \$0-drumkit \$0-drumkit-r DRUM\\\ KIT
@@ -7266,14 +7314,14 @@ empty -2 -8 0 10 #027da2 #00314b #000000 0 1;
 0;
 #X floatatom 204 55 5 0 0 0 BPM \$0-bpm-display - 24;
 #X obj 362 51 hsl 220 45 0 127 0 0 \$0-mastervolume \$0-mastervolume-r
-MASTER\\\ VOLUME -2 -8 0 10 #00324b #007da4 #000000 0 1;
+MASTER\\\ VOLUME -2 -8 0 15 #00324b #007da4 #000000 0 1;
 #X obj 697 45 tgl 55 0 \$0-indep-metro . empty 17 7 0 10 #00324b #007da4
 #000000 0 1;
 #N canvas 18 25 1029 778 presets 0;
 #X obj 624 207 textfile;
-#X obj 117 28 bng 40 250 50 0 empty empty LOAD 10 -7 0 10 #00324b #007da4
+#X obj 121 26 bng 40 250 50 0 empty empty LOAD 10 -7 0 10 #00324b #007da4
 #000000;
-#X obj 47 28 bng 40 250 50 0 empty empty SAVE 10 -7 0 10 #00324b #007da4
+#X obj 51 26 bng 40 250 50 0 empty empty SAVE 10 -7 0 10 #00324b #007da4
 #000000;
 #X msg 17 169 write \$1;
 #X msg 648 178 read \$1;
@@ -7885,11 +7933,11 @@ MASTER\\\ VOLUME -2 -8 0 10 #00324b #007da4 #000000 0 1;
 17 7 0 10 #82cdd7 #000000 #000000 0 1;
 #X obj 1030 639 tgl 55 0 \$0-stepAct-6-15-s \$0-stepAct-6-15-r empty
 17 7 0 10 #82cdd7 #000000 #000000 0 1;
-#X obj 481 167 bng 55 250 50 0 \$0-clearseqBang . empty 17 7 0 10 #007da5
+#X obj 371 167 bng 55 250 50 0 \$0-clearseqBang . empty 17 7 0 10 #007da5
 #00324b #000000;
-#X text 489 148 CLEAR;
-#X obj 864 176 hsl 220 40 60 180 0 0 \$0-bpm-in \$0-bpm-out BPM -2
--8 0 10 #007da4 #00324b #000000 0 1;
+#X text 379 148 CLEAR;
+#X obj 798 174 hsl 220 45 60 180 0 0 \$0-bpm-in \$0-bpm-out BPM -2
+-8 0 20 #007da4 #00324b #000000 0 1;
 #X obj 206 167 tgl 55 0 \$0-play . empty 17 7 0 10 #007da5 #000000
 #000000 0 1;
 #X text 219 149 PLAY;
@@ -7998,20 +8046,40 @@ MASTER\\\ VOLUME -2 -8 0 10 #00324b #007da4 #000000 0 1;
 #X obj 1030 804 tgl 55 0 \$0-stepAct-9-15-s \$0-stepAct-9-15-r empty
 17 7 0 10 #82cdd7 #000000 #000000 0 1;
 #X text 124 824 SELECTED 2;
-#X obj 756 168 tgl 55 0 \$0-metro-onoff \$0-metro-onplay empty 17 7
+#X obj 606 168 tgl 55 0 \$0-metro-onoff \$0-metro-onplay empty 17 7
 0 10 #007da4 #000000 #000000 0 1;
-#X text 761 150 ON/OFF;
-#X text 614 186 SEQUENCER METRONOME;
-#X text 617 62 METRONOME;
+#X text 611 150 ON/OFF;
+#X text 464 186 SEQUENCER METRONOME;
+#X text 692 27 METRONOME;
 #X text 1322 328 HIHAT;
 #X text 1324 312 OPEN;
-#X obj 909 51 bng 40 250 50 0 \$0-rec-s \$0-rec-r START 2 -10 0 10
-#00324b #007da4 #000000;
-#X obj 970 51 bng 40 250 50 0 \$0-stoprec-s \$0-stoprec-r STOP 2 -10
+#X obj 859 51 bng 40 250 50 0 \$0-rec-s \$0-rec-r START 2 -10 0 10
+#ff0400 #007da4 #000000;
+#X obj 920 51 bng 40 250 50 0 \$0-stoprec-s \$0-stoprec-r STOP 2 -10
 0 10 #00324b #007da4 #000000;
-#X floatatom 911 95 5 0 0 0 - \$0-counter - 0;
-#X obj 847 51 bng 40 250 50 0 \$0-selaudio-s \$0-selaudio-r SELECT
+#X floatatom 861 95 5 0 0 0 - \$0-counter - 0;
+#X obj 1057 51 bng 40 250 50 0 \$0-selaudio-s \$0-selaudio-r SELECT
 2 -10 0 10 #00324b #007da4 #000000;
-#X obj 1030 51 bng 40 250 50 0 \$0-playrec-s \$0-playrec-r PLAY 2 -10
+#X obj 1110 51 bng 40 250 50 0 \$0-playrec-s \$0-playrec-r PLAY 2 -10
 0 10 #00324b #007da4 #000000;
+#N canvas 333 127 450 300 foto 0;
+#X obj 34 33 moonlib/image patches/images/church.gif 0;
+#X obj 67 62 t a;
+#X obj 67 11 loadbang;
+#X msg 67 38 open patches/images/church.gif;
+#X connect 1 0 0 0;
+#X connect 2 0 3 0;
+#X connect 3 0 1 0;
+#X coords 0 -1 1 1 45 45 2 10 10;
+#X restore 748 174 pd foto;
+#N canvas 333 127 450 300 foto 0;
+#X obj 34 33 moonlib/image patches/images/church.gif 0;
+#X obj 67 62 t a;
+#X obj 67 11 loadbang;
+#X msg 67 38 open patches/images/church.gif;
+#X connect 1 0 0 0;
+#X connect 2 0 3 0;
+#X connect 3 0 1 0;
+#X coords 0 -1 1 1 45 45 2 10 10;
+#X restore 1022 174 pd foto;
 #X coords 0 -1 1 1 1690 950 1 10 10;
