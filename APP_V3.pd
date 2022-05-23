@@ -1,4 +1,4 @@
-#N canvas 28 25 1440 777 12;
+#N canvas 28 25 1920 976 12;
 #X declare -path patches;
 #X declare -path patches;
 #X declare -path patches;
@@ -8057,7 +8057,7 @@ MASTER\\\ VOLUME -2 -8 0 15 #00324b #007da4 #000000 0 1;
 #ff0400 #007da4 #000000;
 #X obj 920 51 bng 40 250 50 0 \$0-stoprec-s \$0-stoprec-r STOP 2 -10
 0 10 #00324b #007da4 #000000;
-#X floatatom 861 95 5 0 0 0 - \$0-counter - 0;
+#X floatatom 861 95 5 0 0 0 - \$0-counter -- 0;
 #X obj 1057 51 bng 40 250 50 0 \$0-selaudio-s \$0-selaudio-r SELECT
 2 -10 0 10 #00324b #007da4 #000000;
 #X obj 1110 51 bng 40 250 50 0 \$0-playrec-s \$0-playrec-r PLAY 2 -10
