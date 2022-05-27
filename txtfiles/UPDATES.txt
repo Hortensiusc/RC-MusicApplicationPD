@@ -1,0 +1,28 @@
+CARLOS HORTENSIUS:
+- (30/03), 18:30: Añadida la opcion de poder subir un sonido a elegir en el sequencer, unicamente solo en la ultima barra del sequencer
+- (30/03), 19:45: En la penultima barra del sequencer, al darle al boton se puede grabar un audio de 1s de duracion, que se guarda como recorded sound.
+El problema principal es que no se puede reproducir el audio dos veces simultaneamente, por lo tanto, si en el sequencer tenemos dos toggles activados muy seguidos,
+los sonidos se entrecortan
+- (31/03), 12:00: he añadido una pequeña cuenta atrás para que al apretar el boton de grabar tengas un cierto margen a la hora de la grabación
+- (06/04), 12:00: añadidos los botones para poder escuchar cual es el sonido que esta en cada pista antes de colocarlo en el sequencer. Puede servir ademas para saber si
+el sonido que hemos grabado nos gusta, o  si el sonido que se ha subido se ha hecho de manera correcta.
+- (06/04), 12:00: añadidos dos presets default, no se aun como hacer para que cada usuario pueda guardar su propio preset (se que una forma de hacer es que se puede ir escribiendo dentro de un mensaje
+pero por ejemplo borrar de forma dinamica es mucho mas complicado)
+- (26/04), hemos añadido las funcionalidades de grabar cada uno de los modulos y seleccionar la carpeta donde se guarda el archivo de audio
+- (29/04), ahora estos archivos de audio no tienen una duraciín concreta, puede el usuario inicia la grabación y la para cuando lo cree conveniente
+- (02/05), ya se puede poner nombre al archivo
+
+
+RAUL:
+-(01/04): Separación de las apps de Synth y Drumbox, ahora son INDEPENDIENTES y cada una se abre desde el menú principal
+-(01/04): Añadidos los dos botones en el menú principal para Synth y Drumbox
+PROBLEMA: Una vez abierto el Drumbox, si lo cerramos y no abrimos una de las otras dos herramientas, las teclas usadas en el Drumbox siguen activando el sonido, debemos abrir el Sequencer o el Synth para que esto no ocurra
+-(02/04): Implementación de 3 botones para grabar audio samples en el Drumbox
+-(02/04): Implementación de 3 botones para seleccionar audio samples de la carpeta de sonidos en el Drumbox
+-(02/04): Implementación de 2 opciones predeterminadas de presets en Synth y Drumbox
+-(20/04): Asignación de teclas a los toggles que conforman las teclas del piano del Synth.
+-(20/04): Corrección en el menú principal--> Cuando se abre el menú las teclas asignadas al piano del Synth no suenan.
+PROBLEMA: Una vez abierto el Synth, si lo cerramos y no abrimos el Drumbox, las teclas del Synth siguen activando el sonido, debemos abrir el Drumbox para que no ocurra, pero posteriormente tendremos el mismo problema con el Drumbox.
+-(22/04): Implementación de dos opciones para grabar composiciones de 5s de Drumbox y Synth y reproducirlas en bucle.
+-(29/04): Implementación de botones para para grabación de audio de Synth y Sequencer (en MENÚ PRINCIPAL) + Eliminación de reproducción en bucle + Aplicación de gama de colores en MENÚ.
+-(05/05): Bloque de Synth y Drumbox implementado en APP_V2.
