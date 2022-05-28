@@ -4,7 +4,7 @@ Consultar previamente el documento instal_PdSoftware.pdf para la correcta instal
 
 Guía de uso:
 
-- Abrir el patch con nombre APP_V3.pd para iniciar la aplicación.
+- Abrir el patch con nombre MAIN_APP.pd para iniciar la aplicación.
 
 - El usuario puede interactuar con 3 modos distintos (Caja de ritmos, Sintetizador y Secuenciador):
 

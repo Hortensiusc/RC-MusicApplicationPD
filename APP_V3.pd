@@ -1,4 +1,4 @@
-#N canvas 3 19 1920 976 12;
+#N canvas 0 25 1440 778 12;
 #X declare -path patches;
 #X declare -path patches;
 #X declare -path patches;
@@ -3635,7 +3635,7 @@
 #X connect 19 0 20 0;
 #X connect 21 0 22 0;
 #X restore 23 23 pd drumkeys;
-#N canvas 593 25 250 262 FX 0;
+#N canvas 593 25 266 366 FX 0;
 #N canvas 591 62 751 504 drums 0;
 #N canvas 119 215 1199 480 initA 0;
 #X obj 463 13 loadbang;
@@ -5131,8 +5131,8 @@ milliseconds \, based on samplerate.;
 #X obj 34 39 loadbang;
 #X obj 34 71 float \$0;
 #X msg 34 103 \; pd dsp 1 \; \$1-drumvol-r 60 \; \$1-drumreverb-set
-50 \; \$1-drumbitcrush-set 0 \; \$1-drumringMod-set 0 \; \$1-drumdistortion-set
-20 \; \$1-drumdelaytime-set 30 \; \$1-drumfeedback-set 50 \;;
+0 \; \$1-drumbitcrush-set 0 \; \$1-drumringMod-set 0 \; \$1-drumdistortion-set
+0 \; \$1-drumdelaytime-set 0 \; \$1-drumfeedback-set 0 \;;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X restore 41 12 pd init;
@@ -6902,9 +6902,9 @@ milliseconds \, based on samplerate.;
 #N canvas 256 150 234 265 init 0;
 #X obj 34 39 loadbang;
 #X obj 34 71 float \$0;
-#X msg 34 105 \; pd dsp 1 \; \$1-synthvol-r 60 \; \$1-reverb-set 50
-\; \$1-bitcrush-set 0 \; \$1-ringMod-set 0 \; \$1-distortion-set 20
-\; \$1-delaytime-set 30 \; \$1-feedback-set 50 \;;
+#X msg 34 105 \; pd dsp 1 \; \$1-synthvol-r 60 \; \$1-reverb-set 0
+\; \$1-bitcrush-set 0 \; \$1-ringMod-set 0 \; \$1-distortion-set 0
+\; \$1-delaytime-set 0 \; \$1-feedback-set 0 \;;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X restore 41 12 pd init;
@@ -6925,7 +6925,7 @@ milliseconds \, based on samplerate.;
 #X obj 30 72 outlet~;
 #X connect 1 0 2 0;
 #X restore 21 17 pd synth;
-#N canvas 1139 130 696 458 general 0;
+#N canvas 744 130 696 458 general 0;
 #X obj 33 25 loadbang;
 #X obj 33 52 float \$0;
 #N canvas 101 166 882 448 metronomo 0;
