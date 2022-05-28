@@ -1,4 +1,4 @@
-#N canvas 0 25 1440 778 12;
+#N canvas 0 25 1751 778 12;
 #X declare -path patches;
 #X declare -path patches;
 #X declare -path patches;
@@ -4206,13 +4206,13 @@
 #X obj 310 293 expr 1 - $f1;
 #X obj 296 59 loadbang;
 #X obj 112 119 hsl 128 15 0 1 0 1 empty empty 'roomsize' 20 8 0 10
-#fcfcfc #fc8000 #000000 5000 0;
+#fcfcfc #fc8000 #000000 0 0;
 #X obj 127 162 hsl 128 15 0 2.4 0 1 empty empty damp 20 8 0 10 #fcfcfc
 #fc8000 #000000 0 0;
 #X obj 157 255 hsl 128 15 0 1 0 1 empty empty wet 20 8 0 10 #fcfcfc
-#fc8000 #000000 1250 0;
+#fc8000 #000000 0 0;
 #X obj 142 205 hsl 128 15 0 1 0 1 empty empty dry 20 8 0 10 #fcfcfc
-#fc8000 #000000 11450 0;
+#fc8000 #000000 12700 0;
 #N canvas 256 339 634 321 vfreeverb~ 0;
 #N canvas 824 312 778 367 combfilters-left1 0;
 #X obj 46 244 +~;
@@ -5978,13 +5978,13 @@ milliseconds \, based on samplerate.;
 #X obj 310 293 expr 1 - $f1;
 #X obj 296 59 loadbang;
 #X obj 112 119 hsl 128 15 0 1 0 1 empty empty 'roomsize' 20 8 0 10
-#fcfcfc #fc8000 #000000 5000 0;
+#fcfcfc #fc8000 #000000 0 0;
 #X obj 127 162 hsl 128 15 0 2.4 0 1 empty empty damp 20 8 0 10 #fcfcfc
 #fc8000 #000000 0 0;
 #X obj 157 255 hsl 128 15 0 1 0 1 empty empty wet 20 8 0 10 #fcfcfc
-#fc8000 #000000 1250 0;
+#fc8000 #000000 0 0;
 #X obj 142 205 hsl 128 15 0 1 0 1 empty empty dry 20 8 0 10 #fcfcfc
-#fc8000 #000000 11450 0;
+#fc8000 #000000 12700 0;
 #N canvas 256 339 634 321 vfreeverb~ 0;
 #N canvas 662 312 778 367 combfilters-left1 0;
 #X obj 46 244 +~;
@@ -7724,7 +7724,7 @@ MASTER\\\ VOLUME -2 -8 0 15 #00324b #007da4 #000000 0 1;
 #X connect 57 11 56 0;
 #X connect 58 0 54 1;
 #X coords 0 -1 1 1 200 65 2 10 10;
-#X restore 1098 43 pd presets;
+#X restore 1355 43 pd presets;
 #X obj 59 133 cnv 15 1100 800 empty empty empty 20 12 0 14 #ccdbdc
 #404040 0;
 #X obj 205 309 tgl 55 0 \$0-stepAct-0-0-s \$0-stepAct-0-0-r empty 17
@@ -8077,9 +8077,9 @@ MASTER\\\ VOLUME -2 -8 0 15 #00324b #007da4 #000000 0 1;
 #X obj 920 51 bng 40 250 50 0 \$0-stoprec-s \$0-stoprec-r STOP 2 -10
 0 10 #00324b #007da4 #000000;
 #X floatatom 861 95 5 0 0 0 - \$0-counter -- 0;
-#X obj 1446 51 bng 40 250 50 0 \$0-selaudio-s \$0-selaudio-r SELECT
+#X obj 1161 51 bng 40 250 50 0 \$0-selaudio-s \$0-selaudio-r SELECT
 2 -10 0 10 #00324b #007da4 #000000;
-#X obj 1499 51 bng 40 250 50 0 \$0-playrec-s \$0-playrec-r PLAY 2 -10
+#X obj 1214 51 bng 40 250 50 0 \$0-playrec-s \$0-playrec-r PLAY 2 -10
 0 10 #00324b #007da4 #000000;
 #N canvas 333 127 450 300 foto 0;
 #X obj 34 33 moonlib/image patches/images/turtle.gif 0;
@@ -8165,7 +8165,7 @@ MASTER\\\ VOLUME -2 -8 0 15 #00324b #007da4 #000000 0 1;
 #X text 1482 140 1;
 #X text 1463 269 2;
 #X text 1519 269 2;
-#X text 1169 25 PRESETS;
+#X text 1426 25 PRESETS;
 #X text 105 713 SELECT FILE 1;
 #X text 105 824 SELECT FILE 2;
 #X obj 1450 893 bng 25 250 50 0 \$0-open-syntheffects-s \$0-open-syntheffects-r
