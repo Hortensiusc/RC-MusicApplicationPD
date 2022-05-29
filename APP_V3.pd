@@ -1,4 +1,4 @@
-#N canvas 0 25 1440 778 12;
+#N canvas 0 25 1920 976 12;
 #X declare -path patches;
 #X declare -path patches;
 #X declare -path patches;
@@ -3635,7 +3635,7 @@
 #X connect 19 0 20 0;
 #X connect 21 0 22 0;
 #X restore 23 23 pd drumkeys;
-#N canvas 593 25 266 366 FX 0;
+#N canvas 593 25 266 318 FX 0;
 #N canvas 591 62 751 504 drums 0;
 #N canvas 119 215 1199 480 initA 0;
 #X obj 463 13 loadbang;
@@ -5127,10 +5127,10 @@ milliseconds \, based on samplerate.;
 #X obj 120 215 / 127;
 #X msg 120 241 \$1 15;
 #X obj 120 267 line~;
-#N canvas 495 211 300 389 init 0;
+#N canvas 495 211 300 365 init 0;
 #X obj 34 39 loadbang;
 #X obj 34 71 float \$0;
-#X msg 34 103 \; pd dsp 1 \; \$1-drumvol-r 60 \; \$1-drumreverb-set
+#X msg 34 103 \; pd dsp 1 \; \$1-drumvol-r 100 \; \$1-drumreverb-set
 0 \; \$1-drumbitcrush-set 0 \; \$1-drumringMod-set 0 \; \$1-drumdistortion-set
 0 \; \$1-drumdelaytime-set 0 \; \$1-drumfeedback-set 0 \;;
 #X connect 0 0 1 0;
@@ -8077,9 +8077,9 @@ MASTER\\\ VOLUME -2 -8 0 15 #00324b #007da4 #000000 0 1;
 #X obj 920 51 bng 40 250 50 0 \$0-stoprec-s \$0-stoprec-r STOP 2 -10
 0 10 #00324b #007da4 #000000;
 #X floatatom 861 95 5 0 0 0 - \$0-counter -- 0;
-#X obj 1161 51 bng 40 250 50 0 \$0-selaudio-s \$0-selaudio-r SELECT
+#X obj 1162 51 bng 40 250 50 0 \$0-selaudio-s \$0-selaudio-r SELECT
 2 -10 0 10 #00324b #007da4 #000000;
-#X obj 1214 51 bng 40 250 50 0 \$0-playrec-s \$0-playrec-r PLAY 2 -10
+#X obj 1215 51 bng 40 250 50 0 \$0-playrec-s \$0-playrec-r PLAY 2 -10
 0 10 #00324b #007da4 #000000;
 #N canvas 333 127 450 300 foto 0;
 #X obj 34 33 moonlib/image patches/images/turtle.gif 0;
